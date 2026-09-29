@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>UD1. Entornos de desarrollo en Python - My Docs</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../css/brands.min.css" rel="stylesheet">
+        <link href="../css/solid.min.css" rel="stylesheet">
+        <link href="../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">My Docs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href=".." class="nav-link">🐍 Desarrollo de Aplicaciones en Python</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Ud1</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">UD1. Entornos de desarrollo en Python</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href=".." class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" class="nav-link disabled">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#ud1-entornos-de-desarrollo-en-python" class="nav-link">UD1. Entornos de desarrollo en Python</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#1-introduccion" class="nav-link">1. Introducción</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#2-que-es-un-ide" class="nav-link">2. ¿Qué es un IDE?</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#3-ide-frente-a-editor-de-codigo" class="nav-link">3. IDE frente a editor de código</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#4-idle" class="nav-link">4. IDLE</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#5-pycharm" class="nav-link">5. PyCharm</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#6-visual-studio-code" class="nav-link">6. Visual Studio Code</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#7-otros-entornos-para-python" class="nav-link">7. Otros entornos para Python</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#8-que-entorno-debemos-utilizar" class="nav-link">8. ¿Qué entorno debemos utilizar?</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="ud1-entornos-de-desarrollo-en-python">UD1. Entornos de desarrollo en Python</h1>
+<h2 id="1-introduccion">1. Introducción</h2>
+<p>Para desarrollar aplicaciones en Python no basta con conocer la sintaxis del lenguaje. También es importante disponer de herramientas que faciliten la escritura, ejecución, organización y depuración del código.</p>
+<p>Aunque un programa Python puede escribirse utilizando cualquier editor de texto, en proyectos reales es habitual utilizar un <strong>entorno de desarrollo integrado</strong>, conocido habitualmente por sus siglas <strong>IDE</strong> (<em>Integrated Development Environment</em>).</p>
+<p>Un IDE reúne en una misma aplicación diferentes herramientas que ayudan al programador durante todo el proceso de desarrollo.</p>
+<p>Entre otras funcionalidades, un IDE puede proporcionar:</p>
+<ul>
+<li>Editor de código fuente.</li>
+<li>Resaltado de sintaxis.</li>
+<li>Autocompletado de código.</li>
+<li>Detección de errores.</li>
+<li>Ejecución de programas.</li>
+<li>Depuración de código.</li>
+<li>Terminal integrada.</li>
+<li>Gestión de proyectos.</li>
+<li>Integración con sistemas de control de versiones como Git.</li>
+<li>Gestión de entornos virtuales y dependencias.</li>
+</ul>
+<hr />
+<h2 id="2-que-es-un-ide">2. ¿Qué es un IDE?</h2>
+<p>Un <strong>IDE (Integrated Development Environment)</strong> es una aplicación que proporciona un conjunto de herramientas destinadas al desarrollo de software.</p>
+<p>Su principal objetivo es facilitar el trabajo del programador agrupando en una única interfaz las herramientas que normalmente serían utilizadas de forma independiente.</p>
+<p>Por ejemplo, sin utilizar un IDE podríamos escribir nuestro programa en un editor de texto:</p>
+<pre><code class="language-python">print(&quot;Hola mundo&quot;)
+</code></pre>
+<p>Guardar el archivo como:</p>
+<pre><code class="language-text">programa.py
+</code></pre>
+<p>Y posteriormente ejecutarlo desde una terminal:</p>
+<pre><code class="language-bash">python programa.py
+</code></pre>
+<p>Un IDE permite realizar estas operaciones desde una misma aplicación.</p>
+<p>!!! info "IDE"
+    Un IDE no es necesario para programar en Python, pero puede aumentar considerablemente la productividad durante el desarrollo de aplicaciones.</p>
+<hr />
+<h2 id="3-ide-frente-a-editor-de-codigo">3. IDE frente a editor de código</h2>
+<p>Un <strong>editor de código</strong> y un <strong>IDE</strong> no son exactamente lo mismo.</p>
+<p>Un editor de código está principalmente diseñado para escribir y modificar código fuente. Un IDE proporciona además herramientas específicas para desarrollar, ejecutar y depurar aplicaciones.</p>
+<table>
+<thead>
+<tr>
+<th>Característica</th>
+<th style="text-align: center;">Editor de código</th>
+<th style="text-align: center;">IDE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Edición de código</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+</tr>
+<tr>
+<td>Resaltado de sintaxis</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+</tr>
+<tr>
+<td>Autocompletado</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+</tr>
+<tr>
+<td>Ejecución de programas</td>
+<td style="text-align: center;">Depende</td>
+<td style="text-align: center;">✅</td>
+</tr>
+<tr>
+<td>Depurador</td>
+<td style="text-align: center;">Depende</td>
+<td style="text-align: center;">✅</td>
+</tr>
+<tr>
+<td>Gestión de proyectos</td>
+<td style="text-align: center;">Limitada</td>
+<td style="text-align: center;">✅</td>
+</tr>
+<tr>
+<td>Gestión de entornos Python</td>
+<td style="text-align: center;">Depende</td>
+<td style="text-align: center;">✅</td>
+</tr>
+<tr>
+<td>Integración con Git</td>
+<td style="text-align: center;">Depende</td>
+<td style="text-align: center;">✅</td>
+</tr>
+</tbody>
+</table>
+<p>Actualmente esta diferencia es menos evidente, ya que muchos editores permiten instalar extensiones que incorporan funcionalidades propias de un IDE.</p>
+<hr />
+<h2 id="4-idle">4. IDLE</h2>
+<p>Python incluye su propio entorno de desarrollo denominado <strong>IDLE (Integrated Development and Learning Environment)</strong>.</p>
+<p>IDLE se instala habitualmente junto con Python y proporciona un entorno sencillo para comenzar a trabajar con el lenguaje.</p>
+<p>Dispone principalmente de dos herramientas:</p>
+<h3 id="python-shell">Python Shell</h3>
+<p>Permite ejecutar instrucciones Python de forma interactiva.</p>
+<pre><code class="language-python">&gt;&gt;&gt; 5 + 3
+8
+
+&gt;&gt;&gt; nombre = &quot;Ana&quot;
+
+&gt;&gt;&gt; print(nombre)
+Ana
+</code></pre>
+<p>Es especialmente útil para realizar pruebas rápidas y aprender el funcionamiento de determinadas instrucciones.</p>
+<h3 id="editor">Editor</h3>
+<p>IDLE también permite crear archivos <code>.py</code> que contienen programas completos.</p>
+<p>Por su sencillez, IDLE resulta adecuado para comenzar a aprender Python, aunque para proyectos de mayor tamaño existen alternativas con muchas más funcionalidades.</p>
+<hr />
+<h2 id="5-pycharm">5. PyCharm</h2>
+<p><strong>PyCharm</strong> es un IDE especializado en el desarrollo con Python.</p>
+<p>Proporciona numerosas herramientas destinadas específicamente al ecosistema Python:</p>
+<ul>
+<li>Autocompletado inteligente.</li>
+<li>Análisis del código.</li>
+<li>Detección de errores.</li>
+<li>Refactorización.</li>
+<li>Depurador.</li>
+<li>Terminal integrada.</li>
+<li>Gestión de paquetes.</li>
+<li>Gestión de entornos virtuales.</li>
+<li>Integración con Git.</li>
+<li>Ejecución de pruebas.</li>
+<li>Gestión de proyectos.</li>
+</ul>
+<p>Una característica especialmente interesante es la gestión de los <strong>intérpretes de Python</strong> y los <strong>entornos virtuales</strong> directamente desde el IDE.</p>
+<p>Esto permite que cada proyecto pueda utilizar sus propias librerías y versiones sin interferir con otros proyectos.</p>
+<hr />
+<h2 id="6-visual-studio-code">6. Visual Studio Code</h2>
+<p><strong>Visual Studio Code (VS Code)</strong> es un editor de código que puede ampliar enormemente sus funcionalidades mediante extensiones.</p>
+<p>Aunque inicialmente no es un IDE específico de Python, instalando las extensiones adecuadas puede convertirse en un entorno de desarrollo muy completo.</p>
+<p>Para trabajar con Python podemos incorporar funcionalidades como:</p>
+<ul>
+<li>Autocompletado.</li>
+<li>Ejecución de programas.</li>
+<li>Depuración.</li>
+<li>Formateo de código.</li>
+<li>Análisis estático.</li>
+<li>Jupyter Notebooks.</li>
+<li>Gestión de entornos virtuales.</li>
+<li>Integración con Git.</li>
+</ul>
+<p>Una de sus principales ventajas es que puede utilizarse para trabajar con numerosos lenguajes y tecnologías dentro de una misma herramienta.</p>
+<hr />
+<h2 id="7-otros-entornos-para-python">7. Otros entornos para Python</h2>
+<p>Además de IDLE, PyCharm y Visual Studio Code existen otras herramientas utilizadas para desarrollar aplicaciones Python.</p>
+<h3 id="jupyter-notebook">Jupyter Notebook</h3>
+<p>Permite combinar código Python, texto, fórmulas y resultados en documentos interactivos.</p>
+<p>Es especialmente utilizado en ámbitos como:</p>
+<ul>
+<li>Ciencia de datos.</li>
+<li>Inteligencia artificial.</li>
+<li>Análisis de datos.</li>
+<li>Investigación.</li>
+<li>Enseñanza.</li>
+</ul>
+<h3 id="spyder">Spyder</h3>
+<p>Es un entorno de desarrollo orientado principalmente a programación científica y análisis de datos.</p>
+<p>Integra herramientas como un editor, consola interactiva, explorador de variables y visualización de datos.</p>
+<h3 id="editores-de-texto">Editores de texto</h3>
+<p>También podemos escribir programas Python utilizando editores más sencillos.</p>
+<p>El único requisito es poder guardar el archivo utilizando la extensión:</p>
+<pre><code class="language-text">.py
+</code></pre>
+<p>Posteriormente podremos ejecutarlo utilizando el intérprete de Python.</p>
+<hr />
+<h2 id="8-que-entorno-debemos-utilizar">8. ¿Qué entorno debemos utilizar?</h2>
+<p>No existe un entorno de desarrollo que sea el mejor para todas las situaciones.</p>
+<p>La elección dependerá de factores como:</p>
+<ul>
+<li>Tipo de proyecto.</li>
+<li>Tamaño de la aplicación.</li>
+<li>Experiencia del programador.</li>
+<li>Lenguajes utilizados.</li>
+<li>Necesidad de extensiones.</li>
+<li>Herramientas de depuración.</li>
+<li>Integración con otras tecnologías.</li>
+</ul>
+<p>Por ejemplo:</p>
+<table>
+<thead>
+<tr>
+<th>Situación</th>
+<th>Herramienta posible</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Primeros pasos con Python</td>
+<td>IDLE</td>
+</tr>
+<tr>
+<td>Desarrollo profesional con Python</td>
+<td>PyCharm</td>
+</tr>
+<tr>
+<td>Desarrollo con varios lenguajes</td>
+<td>Visual Studio Code</td>
+</tr>
+<tr>
+<td>Ciencia y análisis de datos</td>
+<td>Jupyter / Spyder</td>
+</tr>
+<tr>
+<td>Pruebas rápidas</td>
+<td>Python Shell</td>
+</tr>
+</tbody>
+</table>
+<p>!!! tip "Elección del entorno"
+    Lo importante no es únicamente conocer una herramienta concreta, sino comprender qué funcionalidades proporciona y ser capaces de seleccionar el entorno adecuado según las necesidades del proyecto.</p>
+<hr /></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

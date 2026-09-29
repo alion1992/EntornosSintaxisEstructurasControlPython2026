@@ -25,9 +25,28 @@
         <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
             <div class="container">
                 <a class="navbar-brand" href=".">My Docs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
                 <!-- Expanded navigation -->
                 <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="." class="nav-link active" aria-current="page">🐍 Desarrollo de Aplicaciones en Python</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Ud1</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="ud1/" class="dropdown-item">UD1. Entornos de desarrollo en Python</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
 
                     <ul class="nav navbar-nav ms-md-auto">
                         <li class="nav-item">
@@ -35,6 +54,16 @@
                                 <i class="fa fa-search"></i> Search
                             </a>
                         </li>
+                            <li class="nav-item">
+                                <a rel="prev" class="nav-link disabled">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="ud1/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
                     </ul>
                 </div>
             </div>
@@ -73,6 +102,10 @@
 <h1 id="desarrollo-de-aplicaciones-en-python">🐍 Desarrollo de Aplicaciones en Python</h1>
 <p>Apuntes del <strong>Curso de Especialización en Desarrollo de Aplicaciones en Python</strong>.</p>
 <hr />
+<h3 id="unidades-didacticas">Unidades didácticas</h3>
+<ul>
+<li><a href="ud1/"><strong>UD1. Entornos de desarrollo en Python</strong></a></li>
+</ul>
 <h2 id="modulo-profesional-5098-entornos-y-sintaxis-en-python">📘 Módulo Profesional 5098: Entornos y sintaxis en Python</h2>
 <table>
 <thead>
@@ -319,5 +352,5 @@
 
 <!--
 MkDocs version : 1.6.1
-Build Date UTC : 2026-09-29 16:46:54.127681+00:00
+Build Date UTC : 2026-09-29 16:52:46.502616+00:00
 -->
