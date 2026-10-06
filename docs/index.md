@@ -100,6 +100,20 @@ Apuntes del **Curso de Especialización en Desarrollo de Aplicaciones en Python*
 |:------:|--------------------|:-----:|:----:|
 | **5099** | **Estructuras de control en Python** | **40** | **5** |
 
+## 📘 Unidades Didácticas
+
+- [UD1. Estructuras de control en Python](estructuras/ud1/estru_control.md)
+- [UD2. Funciones y gestión de errores en Python](ud2.md)
+- [UD3. Desarrollo de aplicaciones web con Django](ud3.md)
+- [UD4. Programación y control de drones con Python](ud4.md)
+
+![alt text](image.png)
+
+## Ejercicios
+
+- [UD1. Estructuras de control en Python](estructuras/ud1/ud1_ejercicios.md)
+
+
 ### Resultados de aprendizaje
 
 ### RA1. Estructuras de control
