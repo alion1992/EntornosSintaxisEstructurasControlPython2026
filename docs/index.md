@@ -4,10 +4,6 @@ Apuntes del **Curso de Especialización en Desarrollo de Aplicaciones en Python*
 
 ---
 
-### Unidades didácticas
-
-- [**UD1. Entornos de desarrollo en Python**](entornos/ud1.md)
-- [**UD2. Entornos de desarrollo en Python**](entornos/ud2.md)
 
 
 
@@ -16,6 +12,12 @@ Apuntes del **Curso de Especialización en Desarrollo de Aplicaciones en Python*
 | Código | Módulo Profesional | Horas | ECTS |
 |:------:|--------------------|:-----:|:----:|
 | **5098** | **Entornos y sintaxis en Python** | **25** | **3** |
+
+### Unidades didácticas
+
+- [**UD1. Entornos de desarrollo en Python**](entornos/ud1.md)
+- [**UD2. Entornos de desarrollo en Python**](entornos/ud2.md)
+
 
 ### Resultados de aprendizaje
 
