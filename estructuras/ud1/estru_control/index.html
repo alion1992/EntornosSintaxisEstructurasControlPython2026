@@ -1,0 +1,1715 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>UD1. Estructuras de control en Python - My Docs</title>
+        <link href="../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../../css/brands.min.css" rel="stylesheet">
+        <link href="../../../css/solid.min.css" rel="stylesheet">
+        <link href="../../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../..">My Docs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../../.." class="nav-link">🐍 Desarrollo de Aplicaciones en Python</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Estructuras</a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Ud1</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">UD1. Estructuras de control en Python</a>
+</li>
+            
+<li>
+    <a href="../ud1_ejercicios/" class="dropdown-item">UD1. Ejercicios: Estructuras de control en Python</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Ud1</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../ud1/" class="dropdown-item">UD1. Entornos de desarrollo en Python</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../../.." class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../ud1_ejercicios/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#ud1-estructuras-de-control-en-python" class="nav-link">UD1. Estructuras de control en Python</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#indice" class="nav-link">📑 Índice</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#1-introduccion" class="nav-link">1. Introducción</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#2-resultados-de-aprendizaje" class="nav-link">2. Resultados de aprendizaje</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#3-que-es-el-flujo-de-ejecucion" class="nav-link">3. ¿Qué es el flujo de ejecución?</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#4-tipos-de-estructuras-de-control" class="nav-link">4. Tipos de estructuras de control</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#41-secuencia" class="nav-link">4.1. Secuencia</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#42-seleccion" class="nav-link">4.2. Selección</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#43-repeticion" class="nav-link">4.3. Repetición</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#5-la-importancia-de-la-indentacion-en-python" class="nav-link">5. La importancia de la indentación en Python</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#ejemplo-correcto" class="nav-link">Ejemplo correcto</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#ejemplo-incorrecto" class="nav-link">Ejemplo incorrecto</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#recomendacion" class="nav-link">Recomendación</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#6-operadores-necesarios-para-trabajar-con-condiciones" class="nav-link">6. Operadores necesarios para trabajar con condiciones</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#61-operadores-de-comparacion" class="nav-link">6.1. Operadores de comparación</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#7-operadores-logicos" class="nav-link">7. Operadores lógicos</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#71-and" class="nav-link">7.1. and</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#72-or" class="nav-link">7.2. or</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#73-not" class="nav-link">7.3. not</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#8-tablas-de-verdad-basicas" class="nav-link">8. Tablas de verdad básicas</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#and" class="nav-link">and</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#or" class="nav-link">or</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#not" class="nav-link">not</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#9-estructuras-secuenciales" class="nav-link">9. Estructuras secuenciales</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#ejemplo-calculo-de-precio" class="nav-link">Ejemplo: cálculo de precio</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#ejemplo-area-de-un-rectangulo" class="nav-link">Ejemplo: área de un rectángulo</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#ejemplo-conversion-de-temperatura" class="nav-link">Ejemplo: conversión de temperatura</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#10-diagramas-de-flujo" class="nav-link">10. Diagramas de flujo</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#11-estructuras-de-seleccion" class="nav-link">11. Estructuras de selección</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#12-ifelse" class="nav-link">12. if...else</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#13-ifelifelse" class="nav-link">13. if...elif...else</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#14-condiciones-compuestas" class="nav-link">14. Condiciones compuestas</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#15-condicionales-anidados" class="nav-link">15. Condicionales anidados</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#16-condicionales-compactos" class="nav-link">16. Condicionales compactos</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#17-valores-booleanos" class="nav-link">17. Valores booleanos</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#18-comparacion-de-cadenas" class="nav-link">18. Comparación de cadenas</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#19-comprobar-si-un-dato-esta-vacio" class="nav-link">19. Comprobar si un dato está vacío</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#20-bucles" class="nav-link">20. Bucles</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#21-bucle-for" class="nav-link">21. Bucle for</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#22-range" class="nav-link">22. range()</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#un-parametro" class="nav-link">Un parámetro</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#dos-parametros" class="nav-link">Dos parámetros</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#tres-parametros" class="nav-link">Tres parámetros</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#23-ejemplo-tabla-de-multiplicar" class="nav-link">23. Ejemplo: tabla de multiplicar</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#24-recorrer-una-cadena" class="nav-link">24. Recorrer una cadena</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#25-recorrer-una-lista" class="nav-link">25. Recorrer una lista</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#26-bucle-while" class="nav-link">26. Bucle while</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#27-bucle-infinito" class="nav-link">27. Bucle infinito</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#28-break" class="nav-link">28. break</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#29-continue" class="nav-link">29. continue</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#30-bucles-anidados" class="nav-link">30. Bucles anidados</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#31-combinacion-de-estructuras" class="nav-link">31. Combinación de estructuras</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#32-ejemplo-practico-cajero-automatico" class="nav-link">32. Ejemplo práctico: cajero automático</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#33-ejemplo-practico-sistema-de-notas" class="nav-link">33. Ejemplo práctico: sistema de notas</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#34-ejemplo-practico-contrasena" class="nav-link">34. Ejemplo práctico: contraseña</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#35-ejemplo-practico-menu-de-aplicacion" class="nav-link">35. Ejemplo práctico: menú de aplicación</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#36-ejemplo-practico-programacion-de-drones" class="nav-link">36. Ejemplo práctico: programación de drones</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#37-buenas-practicas" class="nav-link">37. Buenas prácticas</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#utilizar-nombres-descriptivos" class="nav-link">Utilizar nombres descriptivos</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#evitar-condiciones-innecesariamente-complejas" class="nav-link">Evitar condiciones innecesariamente complejas</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#mantener-una-indentacion-consistente" class="nav-link">Mantener una indentación consistente</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#evitar-bucles-infinitos-accidentales" class="nav-link">Evitar bucles infinitos accidentales</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#dividir-problemas-grandes" class="nav-link">Dividir problemas grandes</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#38-errores-frecuentes" class="nav-link">38. Errores frecuentes</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#39-actividades-propuestas" class="nav-link">39. Actividades propuestas</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#actividad-1-mayor-de-edad" class="nav-link">Actividad 1. Mayor de edad</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#actividad-2-numero-positivo-negativo-o-cero" class="nav-link">Actividad 2. Número positivo, negativo o cero</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#actividad-3-calculadora" class="nav-link">Actividad 3. Calculadora</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#actividad-4-calificacion" class="nav-link">Actividad 4. Calificación</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#actividad-5-tabla-de-multiplicar" class="nav-link">Actividad 5. Tabla de multiplicar</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#actividad-6-contador" class="nav-link">Actividad 6. Contador</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#actividad-7-suma-acumulada" class="nav-link">Actividad 7. Suma acumulada</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#actividad-8-contrasena" class="nav-link">Actividad 8. Contraseña</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#actividad-9-menu" class="nav-link">Actividad 9. Menú</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#actividad-10-numero-secreto" class="nav-link">Actividad 10. Número secreto</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#40-reto-final-de-la-unidad" class="nav-link">40. Reto final de la unidad</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#sistema-de-gestion-de-acceso" class="nav-link">Sistema de gestión de acceso</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#41-resumen" class="nav-link">41. Resumen</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="ud1-estructuras-de-control-en-python">UD1. Estructuras de control en Python</h1>
+<blockquote>
+<p><strong>Módulo Profesional 5099: Estructuras de control en Python</strong><br />
+<strong>Resultados de aprendizaje:</strong> RA1, RA2 y RA3<br />
+<strong>Duración orientativa:</strong> primer trimestre</p>
+</blockquote>
+<hr />
+<h2 id="indice">📑 Índice</h2>
+<ul>
+<li><a href="#1-introducción">1. Introducción</a></li>
+<li><a href="#2-resultados-de-aprendizaje">2. Resultados de aprendizaje</a></li>
+<li><a href="#ra1-estructuras-de-control">RA1. Estructuras de control</a></li>
+<li><a href="#ra2-sentencias-condicionales">RA2. Sentencias condicionales</a></li>
+<li><a href="#ra3-sentencias-iterativas">RA3. Sentencias iterativas</a></li>
+<li><a href="#3-qué-es-el-flujo-de-ejecución">3. ¿Qué es el flujo de ejecución?</a></li>
+<li><a href="#4-tipos-de-estructuras-de-control">4. Tipos de estructuras de control</a></li>
+<li><a href="#5-la-importancia-de-la-indentación-en-python">5. La importancia de la indentación en Python</a></li>
+<li><a href="#6-operadores-necesarios-para-trabajar-con-condiciones">6. Operadores necesarios para trabajar con condiciones</a></li>
+<li><a href="#7-operadores-lógicos">7. Operadores lógicos</a></li>
+<li><a href="#8-tablas-de-verdad-básicas">8. Tablas de verdad básicas</a></li>
+<li><a href="#9-estructuras-secuenciales">9. Estructuras secuenciales</a></li>
+<li><a href="#10-estructuras-de-selección">10. Estructuras de selección</a></li>
+<li><a href="#11-if">11. <code>if</code></a></li>
+<li><a href="#12-ifelse">12. <code>if...else</code></a></li>
+<li><a href="#13-ifelifelse">13. <code>if...elif...else</code></a></li>
+<li><a href="#14-condiciones-compuestas">14. Condiciones compuestas</a></li>
+<li><a href="#15-condicionales-anidados">15. Condicionales anidados</a></li>
+<li><a href="#16-condicionales-compactos">16. Condicionales compactos</a></li>
+<li><a href="#17-valores-booleanos">17. Valores booleanos</a></li>
+<li><a href="#18-comparación-de-cadenas">18. Comparación de cadenas</a></li>
+<li><a href="#19-comprobar-si-un-dato-está-vacío">19. Comprobar si un dato está vacío</a></li>
+<li><a href="#20-bucles">20. Bucles</a></li>
+<li><a href="#21-bucle-for">21. Bucle <code>for</code></a></li>
+<li><a href="#22-range">22. <code>range()</code></a></li>
+<li><a href="#23-ejemplo-tabla-de-multiplicar">23. Ejemplo: tabla de multiplicar</a></li>
+<li><a href="#24-recorrer-una-cadena">24. Recorrer una cadena</a></li>
+<li><a href="#25-recorrer-una-lista">25. Recorrer una lista</a></li>
+<li><a href="#26-bucle-while">26. Bucle <code>while</code></a></li>
+<li><a href="#27-bucle-infinito">27. Bucle infinito</a></li>
+<li><a href="#28-break">28. <code>break</code></a></li>
+<li><a href="#29-continue">29. <code>continue</code></a></li>
+<li><a href="#30-bucles-anidados">30. Bucles anidados</a></li>
+<li><a href="#31-combinación-de-estructuras">31. Combinación de estructuras</a></li>
+<li><a href="#32-ejemplo-práctico-cajero-automático">32. Ejemplo práctico: cajero automático</a></li>
+<li><a href="#33-ejemplo-práctico-sistema-de-notas">33. Ejemplo práctico: sistema de notas</a></li>
+<li><a href="#34-ejemplo-práctico-contraseña">34. Ejemplo práctico: contraseña</a></li>
+<li><a href="#35-ejemplo-práctico-menú-de-aplicación">35. Ejemplo práctico: menú de aplicación</a></li>
+<li><a href="#36-ejemplo-práctico-programación-de-drones">36. Ejemplo práctico: programación de drones</a></li>
+<li><a href="#37-buenas-prácticas">37. Buenas prácticas</a></li>
+<li><a href="#38-errores-frecuentes">38. Errores frecuentes</a></li>
+<li><a href="#39-actividades-propuestas">39. Actividades propuestas</a></li>
+<li><a href="#40-reto-final-de-la-unidad">40. Reto final de la unidad</a></li>
+<li><a href="#41-resumen">41. Resumen</a></li>
+</ul>
+<hr />
+<h2 id="1-introduccion">1. Introducción</h2>
+<p><a href="#-índice">⬆️ Volver al índice</a></p>
+<p>Un programa informático está formado por una serie de instrucciones que el ordenador ejecuta siguiendo unas determinadas reglas. En los programas más sencillos, las instrucciones se ejecutan una detrás de otra, pero en aplicaciones reales necesitamos tomar decisiones y repetir determinadas operaciones.</p>
+<p>Las <strong>estructuras de control</strong> permiten modificar el flujo normal de ejecución de un programa.</p>
+<p>En Python podemos trabajar principalmente con:</p>
+<ul>
+<li><strong>Estructuras secuenciales:</strong> las instrucciones se ejecutan en orden.</li>
+<li><strong>Estructuras de selección:</strong> permiten tomar decisiones.</li>
+<li><strong>Estructuras de repetición:</strong> permiten ejecutar un bloque varias veces.</li>
+</ul>
+<p>En esta unidad aprenderemos a utilizar estas estructuras y a combinarlas para resolver problemas reales.</p>
+<hr />
+<h2 id="2-resultados-de-aprendizaje">2. Resultados de aprendizaje</h2>
+<p><a href="#-índice">⬆️ Volver al índice</a></p>
+<h3 id="ra1-estructuras-de-control">RA1. Estructuras de control</h3>
+<p><strong>Identifica las estructuras de control en Python relacionándolas con aplicaciones reales.</strong></p>
+<h3 id="criterios-de-evaluacion">Criterios de evaluación</h3>
+<ul>
+<li><strong>CE a)</strong> Se han identificado las estructuras de control que permiten modificar el flujo de las instrucciones.</li>
+<li><strong>CE b)</strong> Se han representado en un diagrama de flujo gráfico las estructuras de control.</li>
+<li><strong>CE c)</strong> Se ha analizado la importancia de las condiciones en cada estructura de control.</li>
+<li><strong>CE d)</strong> Se han tenido en cuenta la importancia de los sangrados en las estructuras de control.</li>
+<li><strong>CE e)</strong> Se han escrito bloques de control secuencial.</li>
+<li><strong>CE f)</strong> Se han escrito bloques de control de selección.</li>
+<li><strong>CE g)</strong> Se han escrito bloques de control de repetición.</li>
+</ul>
+<h3 id="ra2-sentencias-condicionales">RA2. Sentencias condicionales</h3>
+<p><strong>Reconoce las sentencias condicionales en Python aplicándolas a la resolución de problemas que impliquen toma de decisiones.</strong></p>
+<h3 id="ra3-sentencias-iterativas">RA3. Sentencias iterativas</h3>
+<p><strong>Utiliza sentencias iterativas analizando las necesidades del código para resolver un problema.</strong></p>
+<hr />
+<h1 id="3-que-es-el-flujo-de-ejecucion">3. ¿Qué es el flujo de ejecución?</h1>
+<p>El <strong>flujo de ejecución</strong> indica el orden en el que se ejecutan las instrucciones de un programa.</p>
+<p>Por defecto, Python ejecuta las instrucciones de arriba hacia abajo.</p>
+<pre><code class="language-python">print(&quot;Inicio&quot;)
+
+nombre = &quot;Ana&quot;
+
+print(&quot;Hola&quot;, nombre)
+
+print(&quot;Fin&quot;)
+</code></pre>
+<p>El resultado será:</p>
+<pre><code class="language-text">Inicio
+Hola Ana
+Fin
+</code></pre>
+<p>Podemos representar este funcionamiento mediante un esquema:</p>
+<p><img alt="alt text" src="../image.png" /></p>
+<p>Sin estructuras de control, nuestros programas serían muy limitados.</p>
+<hr />
+<h1 id="4-tipos-de-estructuras-de-control">4. Tipos de estructuras de control</h1>
+<p>Podemos clasificar las estructuras de control en tres grandes grupos:</p>
+<p><img alt="alt text" src="../image-1.png" /></p>
+<h2 id="41-secuencia">4.1. Secuencia</h2>
+<p><a href="#-índice">⬆️ Volver al índice</a></p>
+<p>Las instrucciones se ejecutan una detrás de otra.</p>
+<pre><code class="language-python">nombre = input(&quot;Nombre: &quot;)
+edad = int(input(&quot;Edad: &quot;))
+
+print(&quot;Hola&quot;, nombre)
+print(&quot;Tienes&quot;, edad, &quot;años&quot;)
+</code></pre>
+<h2 id="42-seleccion">4.2. Selección</h2>
+<p><a href="#-índice">⬆️ Volver al índice</a></p>
+<p>El programa decide qué instrucciones ejecutar dependiendo de una condición.</p>
+<pre><code class="language-python">edad = int(input(&quot;Edad: &quot;))
+
+if edad &gt;= 18:
+    print(&quot;Eres mayor de edad&quot;)
+</code></pre>
+<h2 id="43-repeticion">4.3. Repetición</h2>
+<p><a href="#-índice">⬆️ Volver al índice</a></p>
+<p>Permite ejecutar varias veces un bloque de instrucciones.</p>
+<pre><code class="language-python">for i in range(5):
+    print(&quot;Hola&quot;)
+</code></pre>
+<hr />
+<h1 id="5-la-importancia-de-la-indentacion-en-python">5. La importancia de la indentación en Python</h1>
+<p>Una de las características fundamentales de Python es que utiliza la <strong>indentación para delimitar bloques de código</strong>.</p>
+<p>En otros lenguajes se utilizan llaves:</p>
+<pre><code class="language-text">if (edad &gt;= 18) {
+    mostrar(&quot;Mayor de edad&quot;);
+}
+</code></pre>
+<p>En Python utilizamos dos puntos y sangrado:</p>
+<pre><code class="language-python">if edad &gt;= 18:
+    print(&quot;Mayor de edad&quot;)
+</code></pre>
+<p>La indentación forma parte de la sintaxis del lenguaje.</p>
+<h2 id="ejemplo-correcto">Ejemplo correcto</h2>
+<pre><code class="language-python">edad = 20
+
+if edad &gt;= 18:
+    print(&quot;Puedes acceder&quot;)
+</code></pre>
+<h2 id="ejemplo-incorrecto">Ejemplo incorrecto</h2>
+<pre><code class="language-python">edad = 20
+
+if edad &gt;= 18:
+print(&quot;Puedes acceder&quot;)
+</code></pre>
+<p>Python producirá un error porque la instrucción que pertenece al <code>if</code> no está indentada.</p>
+<h2 id="recomendacion">Recomendación</h2>
+<p>Utilizaremos normalmente <strong>4 espacios</strong> para cada nivel de indentación.</p>
+<pre><code class="language-python">if condicion:
+    instruccion_1()
+    instruccion_2()
+</code></pre>
+<p>Para estructuras anidadas:</p>
+<pre><code class="language-python">if edad &gt;= 18:
+    if tiene_entrada:
+        print(&quot;Puede acceder&quot;)
+</code></pre>
+<p>Cada bloque aumenta un nivel de indentación.</p>
+<hr />
+<h1 id="6-operadores-necesarios-para-trabajar-con-condiciones">6. Operadores necesarios para trabajar con condiciones</h1>
+<p>Las estructuras de selección e iteración utilizan condiciones.</p>
+<h2 id="61-operadores-de-comparacion">6.1. Operadores de comparación</h2>
+<p><a href="#-índice">⬆️ Volver al índice</a></p>
+<table>
+<thead>
+<tr>
+<th>Operador</th>
+<th>Significado</th>
+<th>Ejemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>==</code></td>
+<td>Igual</td>
+<td><code>edad == 18</code></td>
+</tr>
+<tr>
+<td><code>!=</code></td>
+<td>Distinto</td>
+<td><code>edad != 18</code></td>
+</tr>
+<tr>
+<td><code>&gt;</code></td>
+<td>Mayor que</td>
+<td><code>edad &gt; 18</code></td>
+</tr>
+<tr>
+<td><code>&lt;</code></td>
+<td>Menor que</td>
+<td><code>edad &lt; 18</code></td>
+</tr>
+<tr>
+<td><code>&gt;=</code></td>
+<td>Mayor o igual</td>
+<td><code>edad &gt;= 18</code></td>
+</tr>
+<tr>
+<td><code>&lt;=</code></td>
+<td>Menor o igual</td>
+<td><code>edad &lt;= 18</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="ejemplos">Ejemplos</h3>
+<pre><code class="language-python">edad = 25
+
+print(edad == 25)
+print(edad &gt; 18)
+print(edad &lt; 30)
+print(edad != 20)
+</code></pre>
+<p>Resultado:</p>
+<pre><code class="language-text">True
+True
+True
+True
+</code></pre>
+<hr />
+<h1 id="7-operadores-logicos">7. Operadores lógicos</h1>
+<p>Podemos combinar varias condiciones utilizando:</p>
+<ul>
+<li><code>and</code></li>
+<li><code>or</code></li>
+<li><code>not</code></li>
+</ul>
+<h2 id="71-and">7.1. <code>and</code></h2>
+<p><a href="#-índice">⬆️ Volver al índice</a></p>
+<p>Todas las condiciones deben cumplirse.</p>
+<pre><code class="language-python">edad = 25
+tiene_entrada = True
+
+if edad &gt;= 18 and tiene_entrada:
+    print(&quot;Puede acceder&quot;)
+</code></pre>
+<h2 id="72-or">7.2. <code>or</code></h2>
+<p><a href="#-índice">⬆️ Volver al índice</a></p>
+<p>Es suficiente con que se cumpla una condición.</p>
+<pre><code class="language-python">es_admin = False
+es_profesor = True
+
+if es_admin or es_profesor:
+    print(&quot;Puede acceder&quot;)
+</code></pre>
+<h2 id="73-not">7.3. <code>not</code></h2>
+<p><a href="#-índice">⬆️ Volver al índice</a></p>
+<p>Invierte el resultado de una condición.</p>
+<pre><code class="language-python">activo = False
+
+if not activo:
+    print(&quot;El usuario está inactivo&quot;)
+</code></pre>
+<hr />
+<h1 id="8-tablas-de-verdad-basicas">8. Tablas de verdad básicas</h1>
+<h2 id="and"><code>and</code></h2>
+<table>
+<thead>
+<tr>
+<th>A</th>
+<th>B</th>
+<th>A and B</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>False</td>
+<td>False</td>
+<td>False</td>
+</tr>
+<tr>
+<td>False</td>
+<td>True</td>
+<td>False</td>
+</tr>
+<tr>
+<td>True</td>
+<td>False</td>
+<td>False</td>
+</tr>
+<tr>
+<td>True</td>
+<td>True</td>
+<td>True</td>
+</tr>
+</tbody>
+</table>
+<h2 id="or"><code>or</code></h2>
+<table>
+<thead>
+<tr>
+<th>A</th>
+<th>B</th>
+<th>A or B</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>False</td>
+<td>False</td>
+<td>False</td>
+</tr>
+<tr>
+<td>False</td>
+<td>True</td>
+<td>True</td>
+</tr>
+<tr>
+<td>True</td>
+<td>False</td>
+<td>True</td>
+</tr>
+<tr>
+<td>True</td>
+<td>True</td>
+<td>True</td>
+</tr>
+</tbody>
+</table>
+<h2 id="not"><code>not</code></h2>
+<table>
+<thead>
+<tr>
+<th>A</th>
+<th>not A</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>False</td>
+<td>True</td>
+</tr>
+<tr>
+<td>True</td>
+<td>False</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1 id="9-estructuras-secuenciales">9. Estructuras secuenciales</h1>
+<p>La estructura secuencial es la más sencilla.</p>
+<p>Las instrucciones se ejecutan en el mismo orden en el que aparecen.</p>
+<h2 id="ejemplo-calculo-de-precio">Ejemplo: cálculo de precio</h2>
+<pre><code class="language-python">precio = 25
+cantidad = 3
+
+total = precio * cantidad
+
+print(&quot;Total:&quot;, total)
+</code></pre>
+<p>Flujo:</p>
+<pre><code class="language-text">precio
+  ↓
+cantidad
+  ↓
+calcular total
+  ↓
+mostrar total
+</code></pre>
+<h2 id="ejemplo-area-de-un-rectangulo">Ejemplo: área de un rectángulo</h2>
+<pre><code class="language-python">base = float(input(&quot;Base: &quot;))
+altura = float(input(&quot;Altura: &quot;))
+
+area = base * altura
+
+print(&quot;Área:&quot;, area)
+</code></pre>
+<h2 id="ejemplo-conversion-de-temperatura">Ejemplo: conversión de temperatura</h2>
+<pre><code class="language-python">celsius = float(input(&quot;Temperatura en ºC: &quot;))
+
+fahrenheit = celsius * 9 / 5 + 32
+
+print(&quot;Temperatura:&quot;, fahrenheit, &quot;ºF&quot;)
+</code></pre>
+<hr />
+<h1 id="10-diagramas-de-flujo">10. Diagramas de flujo</h1>
+<p>Los diagramas de flujo permiten representar gráficamente un algoritmo.</p>
+<p>Elementos habituales:</p>
+<table>
+<thead>
+<tr>
+<th>Elemento</th>
+<th>Uso</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Óvalo</td>
+<td>Inicio / fin</td>
+</tr>
+<tr>
+<td>Rectángulo</td>
+<td>Proceso</td>
+</tr>
+<tr>
+<td>Rombo</td>
+<td>Decisión</td>
+</tr>
+<tr>
+<td>Paralelogramo</td>
+<td>Entrada / salida</td>
+</tr>
+<tr>
+<td>Flecha</td>
+<td>Dirección del flujo</td>
+</tr>
+</tbody>
+</table>
+<p>Ejemplo conceptual:</p>
+<pre><code class="language-text">       ┌───────────┐
+       │  INICIO   │
+       └─────┬─────┘
+             ↓
+      ┌──────────────┐
+      │ Pedir edad   │
+      └──────┬───────┘
+             ↓
+       ◇ edad &gt;= 18? ◇
+          /       \
+       Sí           No
+        ↓            ↓
+  &quot;Mayor&quot;        &quot;Menor&quot;
+        \            /
+         └─────┬──────┘
+               ↓
+          ┌─────────┐
+          │   FIN   │
+          └─────────┘
+</code></pre>
+<hr />
+<h1 id="11-estructuras-de-seleccion">11. Estructuras de selección</h1>
+<p>Las estructuras de selección permiten que un programa tome decisiones.</p>
+<p>La estructura básica es:</p>
+<pre><code class="language-python">if condicion:
+    instrucciones
+</code></pre>
+<p>Ejemplo:</p>
+<pre><code class="language-python">edad = int(input(&quot;Introduce tu edad: &quot;))
+
+if edad &gt;= 18:
+    print(&quot;Eres mayor de edad&quot;)
+</code></pre>
+<p>Si la condición es <code>True</code>, se ejecuta el bloque.</p>
+<p>Si es <code>False</code>, se continúa después del bloque.</p>
+<hr />
+<h1 id="12-ifelse">12. <code>if...else</code></h1>
+<p>Cuando necesitamos ejecutar una alternativa si la condición no se cumple:</p>
+<pre><code class="language-python">edad = int(input(&quot;Edad: &quot;))
+
+if edad &gt;= 18:
+    print(&quot;Mayor de edad&quot;)
+else:
+    print(&quot;Menor de edad&quot;)
+</code></pre>
+<p>Tenemos dos caminos:</p>
+<pre><code class="language-text">             edad &gt;= 18?
+              /       \
+            Sí         No
+             ↓          ↓
+          Mayor       Menor
+</code></pre>
+<hr />
+<h1 id="13-ifelifelse">13. <code>if...elif...else</code></h1>
+<p>Cuando existen varias posibilidades podemos utilizar <code>elif</code>.</p>
+<pre><code class="language-python">nota = float(input(&quot;Nota: &quot;))
+
+if nota &lt; 5:
+    print(&quot;Suspenso&quot;)
+elif nota &lt; 7:
+    print(&quot;Aprobado&quot;)
+elif nota &lt; 9:
+    print(&quot;Notable&quot;)
+else:
+    print(&quot;Sobresaliente&quot;)
+</code></pre>
+<p>Python evalúa las condiciones de arriba hacia abajo.</p>
+<p>En cuanto encuentra una condición verdadera, ejecuta ese bloque y continúa después de toda la estructura.</p>
+<hr />
+<h1 id="14-condiciones-compuestas">14. Condiciones compuestas</h1>
+<p>Podemos combinar operadores.</p>
+<pre><code class="language-python">edad = 25
+nacionalidad = &quot;ES&quot;
+
+if edad &gt;= 18 and nacionalidad == &quot;ES&quot;:
+    print(&quot;Puede realizar el trámite&quot;)
+</code></pre>
+<p>Otro ejemplo:</p>
+<pre><code class="language-python">dia = &quot;sábado&quot;
+
+if dia == &quot;sábado&quot; or dia == &quot;domingo&quot;:
+    print(&quot;Fin de semana&quot;)
+</code></pre>
+<hr />
+<h1 id="15-condicionales-anidados">15. Condicionales anidados</h1>
+<p>Una estructura condicional puede contener otra estructura condicional.</p>
+<pre><code class="language-python">edad = int(input(&quot;Edad: &quot;))
+
+if edad &gt;= 18:
+    carnet = input(&quot;¿Tienes carnet? &quot;)
+
+    if carnet == &quot;si&quot;:
+        print(&quot;Puedes conducir&quot;)
+    else:
+        print(&quot;Necesitas carnet&quot;)
+else:
+    print(&quot;No puedes conducir&quot;)
+</code></pre>
+<p>Debemos prestar especial atención a la indentación.</p>
+<hr />
+<h1 id="16-condicionales-compactos">16. Condicionales compactos</h1>
+<p>Python permite escribir determinadas condiciones de forma compacta.</p>
+<pre><code class="language-python">edad = 20
+
+mensaje = &quot;Mayor&quot; if edad &gt;= 18 else &quot;Menor&quot;
+
+print(mensaje)
+</code></pre>
+<p>Es equivalente a:</p>
+<pre><code class="language-python">if edad &gt;= 18:
+    mensaje = &quot;Mayor&quot;
+else:
+    mensaje = &quot;Menor&quot;
+</code></pre>
+<p>La versión compacta es útil cuando la decisión es sencilla.</p>
+<hr />
+<h1 id="17-valores-booleanos">17. Valores booleanos</h1>
+<p>Las condiciones trabajan con valores booleanos:</p>
+<pre><code class="language-python">True
+False
+</code></pre>
+<p>Ejemplo:</p>
+<pre><code class="language-python">activo = True
+
+if activo:
+    print(&quot;Usuario activo&quot;)
+</code></pre>
+<p>También podemos guardar directamente el resultado de una comparación:</p>
+<pre><code class="language-python">edad = 25
+
+es_mayor = edad &gt;= 18
+
+print(es_mayor)
+</code></pre>
+<p>Resultado:</p>
+<pre><code class="language-text">True
+</code></pre>
+<hr />
+<h1 id="18-comparacion-de-cadenas">18. Comparación de cadenas</h1>
+<p>Las cadenas también pueden utilizarse en condiciones.</p>
+<pre><code class="language-python">usuario = input(&quot;Usuario: &quot;)
+
+if usuario == &quot;admin&quot;:
+    print(&quot;Acceso de administrador&quot;)
+</code></pre>
+<p>Podemos utilizar métodos:</p>
+<pre><code class="language-python">respuesta = input(&quot;¿Continuar? &quot;)
+
+if respuesta.lower() == &quot;si&quot;:
+    print(&quot;Continuamos&quot;)
+</code></pre>
+<hr />
+<h1 id="19-comprobar-si-un-dato-esta-vacio">19. Comprobar si un dato está vacío</h1>
+<p>Las cadenas vacías se consideran falsas en un contexto booleano.</p>
+<pre><code class="language-python">nombre = input(&quot;Nombre: &quot;)
+
+if nombre:
+    print(&quot;Nombre introducido&quot;)
+else:
+    print(&quot;No has introducido ningún nombre&quot;)
+</code></pre>
+<hr />
+<h1 id="20-bucles">20. Bucles</h1>
+<p>Los bucles permiten repetir instrucciones.</p>
+<p>Python dispone principalmente de:</p>
+<pre><code class="language-python">for
+while
+</code></pre>
+<p>La elección depende del problema.</p>
+<hr />
+<h1 id="21-bucle-for">21. Bucle <code>for</code></h1>
+<p>Utilizamos <code>for</code> cuando normalmente conocemos el conjunto de elementos que queremos recorrer o el número de repeticiones.</p>
+<pre><code class="language-python">for i in range(5):
+    print(i)
+</code></pre>
+<p>Resultado:</p>
+<pre><code class="language-text">0
+1
+2
+3
+4
+</code></pre>
+<p>Importante: <code>range(5)</code> genera valores desde <code>0</code> hasta <code>4</code>.</p>
+<hr />
+<h1 id="22-range">22. <code>range()</code></h1>
+<p>Podemos utilizar diferentes formas.</p>
+<h2 id="un-parametro">Un parámetro</h2>
+<pre><code class="language-python">for i in range(5):
+    print(i)
+</code></pre>
+<p>Genera:</p>
+<pre><code class="language-text">0 1 2 3 4
+</code></pre>
+<h2 id="dos-parametros">Dos parámetros</h2>
+<pre><code class="language-python">for i in range(2, 6):
+    print(i)
+</code></pre>
+<p>Genera:</p>
+<pre><code class="language-text">2 3 4 5
+</code></pre>
+<h2 id="tres-parametros">Tres parámetros</h2>
+<pre><code class="language-python">for i in range(0, 10, 2):
+    print(i)
+</code></pre>
+<p>Genera:</p>
+<pre><code class="language-text">0 2 4 6 8
+</code></pre>
+<p>También podemos utilizar pasos negativos:</p>
+<pre><code class="language-python">for i in range(10, 0, -1):
+    print(i)
+</code></pre>
+<hr />
+<h1 id="23-ejemplo-tabla-de-multiplicar">23. Ejemplo: tabla de multiplicar</h1>
+<pre><code class="language-python">numero = int(input(&quot;Número: &quot;))
+
+for i in range(1, 11):
+    print(numero, &quot;x&quot;, i, &quot;=&quot;, numero * i)
+</code></pre>
+<p>Ejemplo de salida:</p>
+<pre><code class="language-text">5 x 1 = 5
+5 x 2 = 10
+5 x 3 = 15
+...
+5 x 10 = 50
+</code></pre>
+<hr />
+<h1 id="24-recorrer-una-cadena">24. Recorrer una cadena</h1>
+<p><code>for</code> también permite recorrer caracteres.</p>
+<pre><code class="language-python">nombre = &quot;Python&quot;
+
+for letra in nombre:
+    print(letra)
+</code></pre>
+<p>Resultado:</p>
+<pre><code class="language-text">P
+y
+t
+h
+o
+n
+</code></pre>
+<hr />
+<h1 id="25-recorrer-una-lista">25. Recorrer una lista</h1>
+<pre><code class="language-python">frutas = [&quot;manzana&quot;, &quot;pera&quot;, &quot;plátano&quot;]
+
+for fruta in frutas:
+    print(fruta)
+</code></pre>
+<p>Podemos utilizar condiciones dentro del bucle:</p>
+<pre><code class="language-python">notas = [4, 7, 9, 3, 8]
+
+for nota in notas:
+    if nota &gt;= 5:
+        print(nota, &quot;Aprobado&quot;)
+    else:
+        print(nota, &quot;Suspenso&quot;)
+</code></pre>
+<hr />
+<h1 id="26-bucle-while">26. Bucle <code>while</code></h1>
+<p><code>while</code> repite un bloque mientras una condición sea verdadera.</p>
+<pre><code class="language-python">contador = 0
+
+while contador &lt; 5:
+    print(contador)
+    contador += 1
+</code></pre>
+<p>Resultado:</p>
+<pre><code class="language-text">0
+1
+2
+3
+4
+</code></pre>
+<p>Es fundamental modificar las variables que intervienen en la condición para evitar bucles infinitos.</p>
+<hr />
+<h1 id="27-bucle-infinito">27. Bucle infinito</h1>
+<p>Este código genera un bucle infinito:</p>
+<pre><code class="language-python">contador = 0
+
+while contador &lt; 5:
+    print(contador)
+</code></pre>
+<p>La variable <code>contador</code> nunca cambia.</p>
+<p>La condición siempre será verdadera.</p>
+<p>La solución:</p>
+<pre><code class="language-python">contador = 0
+
+while contador &lt; 5:
+    print(contador)
+    contador += 1
+</code></pre>
+<hr />
+<h1 id="28-break">28. <code>break</code></h1>
+<p><code>break</code> permite salir inmediatamente de un bucle.</p>
+<pre><code class="language-python">while True:
+    palabra = input(&quot;Escribe una palabra: &quot;)
+
+    if palabra == &quot;salir&quot;:
+        break
+
+    print(&quot;Has escrito:&quot;, palabra)
+</code></pre>
+<p>El bucle continúa hasta que el usuario escribe <code>salir</code>.</p>
+<hr />
+<h1 id="29-continue">29. <code>continue</code></h1>
+<p><code>continue</code> hace que Python pase directamente a la siguiente iteración.</p>
+<pre><code class="language-python">for numero in range(1, 11):
+
+    if numero % 2 == 0:
+        continue
+
+    print(numero)
+</code></pre>
+<p>Resultado:</p>
+<pre><code class="language-text">1
+3
+5
+7
+9
+</code></pre>
+<p>Estamos ignorando los números pares.</p>
+<hr />
+<h1 id="30-bucles-anidados">30. Bucles anidados</h1>
+<p>Podemos colocar un bucle dentro de otro.</p>
+<pre><code class="language-python">for fila in range(3):
+    for columna in range(4):
+        print(fila, columna)
+</code></pre>
+<p>Esto resulta especialmente útil para trabajar con estructuras bidimensionales.</p>
+<p>Ejemplo:</p>
+<pre><code class="language-python">for fila in range(3):
+    for columna in range(3):
+        print(&quot;*&quot;, end=&quot; &quot;)
+    print()
+</code></pre>
+<p>Resultado:</p>
+<pre><code class="language-text">* * *
+* * *
+* * *
+</code></pre>
+<hr />
+<h1 id="31-combinacion-de-estructuras">31. Combinación de estructuras</h1>
+<p>Los programas reales combinan secuencias, condiciones y bucles.</p>
+<p>Ejemplo:</p>
+<pre><code class="language-python">for numero in range(1, 11):
+
+    if numero % 2 == 0:
+        print(numero, &quot;es par&quot;)
+    else:
+        print(numero, &quot;es impar&quot;)
+</code></pre>
+<p>Aquí tenemos:</p>
+<ul>
+<li>Un bucle <code>for</code>.</li>
+<li>Una condición <code>if</code>.</li>
+<li>Un <code>else</code>.</li>
+<li>Un operador <code>%</code>.</li>
+<li>Una secuencia de instrucciones.</li>
+</ul>
+<hr />
+<h1 id="32-ejemplo-practico-cajero-automatico">32. Ejemplo práctico: cajero automático</h1>
+<p>Podemos utilizar las estructuras de control para crear un pequeño cajero.</p>
+<pre><code class="language-python">saldo = 1000
+
+opcion = &quot;&quot;
+
+while opcion != &quot;4&quot;:
+
+    print(&quot;\n--- CAJERO ---&quot;)
+    print(&quot;1. Consultar saldo&quot;)
+    print(&quot;2. Ingresar dinero&quot;)
+    print(&quot;3. Retirar dinero&quot;)
+    print(&quot;4. Salir&quot;)
+
+    opcion = input(&quot;Opción: &quot;)
+
+    if opcion == &quot;1&quot;:
+        print(&quot;Saldo:&quot;, saldo)
+
+    elif opcion == &quot;2&quot;:
+        cantidad = float(input(&quot;Cantidad: &quot;))
+        saldo += cantidad
+        print(&quot;Ingreso realizado&quot;)
+
+    elif opcion == &quot;3&quot;:
+        cantidad = float(input(&quot;Cantidad: &quot;))
+
+        if cantidad &lt;= saldo:
+            saldo -= cantidad
+            print(&quot;Retirada realizada&quot;)
+        else:
+            print(&quot;Saldo insuficiente&quot;)
+
+    elif opcion == &quot;4&quot;:
+        print(&quot;Hasta pronto&quot;)
+
+    else:
+        print(&quot;Opción incorrecta&quot;)
+</code></pre>
+<p>Este ejemplo combina:</p>
+<ul>
+<li>Variables.</li>
+<li>Entrada de datos.</li>
+<li>Secuencia.</li>
+<li>Condicionales.</li>
+<li>Condicionales anidados.</li>
+<li>Bucles.</li>
+<li>Operadores.</li>
+<li>Control del flujo.</li>
+</ul>
+<hr />
+<h1 id="33-ejemplo-practico-sistema-de-notas">33. Ejemplo práctico: sistema de notas</h1>
+<pre><code class="language-python">cantidad = int(input(&quot;Número de alumnos: &quot;))
+
+aprobados = 0
+suspensos = 0
+
+for i in range(cantidad):
+
+    nota = float(input(f&quot;Nota del alumno {i + 1}: &quot;))
+
+    if nota &gt;= 5:
+        aprobados += 1
+    else:
+        suspensos += 1
+
+print(&quot;Aprobados:&quot;, aprobados)
+print(&quot;Suspensos:&quot;, suspensos)
+</code></pre>
+<hr />
+<h1 id="34-ejemplo-practico-contrasena">34. Ejemplo práctico: contraseña</h1>
+<pre><code class="language-python">usuario_correcto = &quot;admin&quot;
+password_correcta = &quot;1234&quot;
+
+intentos = 0
+acceso = False
+
+while intentos &lt; 3:
+
+    usuario = input(&quot;Usuario: &quot;)
+    password = input(&quot;Contraseña: &quot;)
+
+    if usuario == usuario_correcto and password == password_correcta:
+        acceso = True
+        break
+
+    print(&quot;Datos incorrectos&quot;)
+    intentos += 1
+
+if acceso:
+    print(&quot;Acceso permitido&quot;)
+else:
+    print(&quot;Cuenta bloqueada&quot;)
+</code></pre>
+<p>Este ejemplo permite trabajar con:</p>
+<ul>
+<li><code>while</code>.</li>
+<li><code>if</code>.</li>
+<li><code>and</code>.</li>
+<li><code>break</code>.</li>
+<li>Variables booleanas.</li>
+<li>Contadores.</li>
+</ul>
+<hr />
+<h1 id="35-ejemplo-practico-menu-de-aplicacion">35. Ejemplo práctico: menú de aplicación</h1>
+<p>Los menús son un caso habitual de utilización de estructuras de control.</p>
+<pre><code class="language-python">opcion = &quot;&quot;
+
+while opcion != &quot;0&quot;:
+
+    print(&quot;&quot;&quot;
+    1. Alta de usuario
+    2. Mostrar usuarios
+    3. Eliminar usuario
+    0. Salir
+    &quot;&quot;&quot;)
+
+    opcion = input(&quot;Selecciona una opción: &quot;)
+
+    if opcion == &quot;1&quot;:
+        print(&quot;Alta de usuario&quot;)
+
+    elif opcion == &quot;2&quot;:
+        print(&quot;Mostrar usuarios&quot;)
+
+    elif opcion == &quot;3&quot;:
+        print(&quot;Eliminar usuario&quot;)
+
+    elif opcion == &quot;0&quot;:
+        print(&quot;Saliendo...&quot;)
+
+    else:
+        print(&quot;Opción no válida&quot;)
+</code></pre>
+<p>Este patrón aparecerá posteriormente en aplicaciones más complejas.</p>
+<hr />
+<h1 id="36-ejemplo-practico-programacion-de-drones">36. Ejemplo práctico: programación de drones</h1>
+<p>Las estructuras de control también pueden utilizarse para automatizar dispositivos físicos.</p>
+<p>Por ejemplo, una secuencia conceptual de vuelo podría ser:</p>
+<pre><code class="language-python">despegar()
+
+for i in range(4):
+    avanzar()
+    girar_derecha(90)
+
+aterrizar()
+</code></pre>
+<p>Podemos introducir condiciones:</p>
+<pre><code class="language-python">if bateria &gt; 20:
+    despegar()
+    ejecutar_ruta()
+    aterrizar()
+else:
+    print(&quot;Batería insuficiente&quot;)
+</code></pre>
+<p>Y un control de seguridad:</p>
+<pre><code class="language-python">while bateria &gt; 20:
+
+    avanzar()
+
+    if obstaculo_detectado:
+        parar()
+        girar_derecha()
+</code></pre>
+<p>En unidades posteriores aplicaremos estos conceptos a la <strong>programación de drones con Python</strong>.</p>
+<hr />
+<h1 id="37-buenas-practicas">37. Buenas prácticas</h1>
+<h2 id="utilizar-nombres-descriptivos">Utilizar nombres descriptivos</h2>
+<p>Mejor:</p>
+<pre><code class="language-python">numero_alumnos = 20
+</code></pre>
+<p>que:</p>
+<pre><code class="language-python">x = 20
+</code></pre>
+<h2 id="evitar-condiciones-innecesariamente-complejas">Evitar condiciones innecesariamente complejas</h2>
+<p>Mejor:</p>
+<pre><code class="language-python">if edad &gt;= 18:
+    print(&quot;Mayor&quot;)
+</code></pre>
+<p>que crear expresiones difíciles de interpretar.</p>
+<h2 id="mantener-una-indentacion-consistente">Mantener una indentación consistente</h2>
+<pre><code class="language-python">if usuario_activo:
+    print(&quot;Usuario activo&quot;)
+    mostrar_menu()
+</code></pre>
+<h2 id="evitar-bucles-infinitos-accidentales">Evitar bucles infinitos accidentales</h2>
+<p>Comprobar siempre que un <code>while</code> pueda terminar.</p>
+<h2 id="dividir-problemas-grandes">Dividir problemas grandes</h2>
+<p>Si una solución empieza a crecer demasiado, posteriormente podremos utilizar funciones para dividirla en partes más pequeñas.</p>
+<hr />
+<h1 id="38-errores-frecuentes">38. Errores frecuentes</h1>
+<h3 id="confundir-con">Confundir <code>=</code> con <code>==</code></h3>
+<p>Incorrecto:</p>
+<pre><code class="language-python">if edad = 18:
+</code></pre>
+<p>Correcto:</p>
+<pre><code class="language-python">if edad == 18:
+</code></pre>
+<p><code>=</code> asigna un valor.</p>
+<p><code>==</code> compara valores.</p>
+<hr />
+<h3 id="olvidar-los-dos-puntos">Olvidar los dos puntos</h3>
+<p>Incorrecto:</p>
+<pre><code class="language-python">if edad &gt;= 18
+    print(&quot;Mayor&quot;)
+</code></pre>
+<p>Correcto:</p>
+<pre><code class="language-python">if edad &gt;= 18:
+    print(&quot;Mayor&quot;)
+</code></pre>
+<hr />
+<h3 id="incorrecta-indentacion">Incorrecta indentación</h3>
+<p>Incorrecto:</p>
+<pre><code class="language-python">if edad &gt;= 18:
+print(&quot;Mayor&quot;)
+</code></pre>
+<p>Correcto:</p>
+<pre><code class="language-python">if edad &gt;= 18:
+    print(&quot;Mayor&quot;)
+</code></pre>
+<hr />
+<h3 id="error-en-range">Error en <code>range()</code></h3>
+<pre><code class="language-python">for i in range(5):
+    print(i)
+</code></pre>
+<p>No imprime 5.</p>
+<p>Imprime:</p>
+<pre><code class="language-text">0
+1
+2
+3
+4
+</code></pre>
+<hr />
+<h1 id="39-actividades-propuestas">39. Actividades propuestas</h1>
+<h2 id="actividad-1-mayor-de-edad">Actividad 1. Mayor de edad</h2>
+<p>Solicita la edad de una persona e indica si es mayor o menor de edad.</p>
+<hr />
+<h2 id="actividad-2-numero-positivo-negativo-o-cero">Actividad 2. Número positivo, negativo o cero</h2>
+<p>Solicita un número e indica:</p>
+<ul>
+<li>Positivo.</li>
+<li>Negativo.</li>
+<li>Cero.</li>
+</ul>
+<hr />
+<h2 id="actividad-3-calculadora">Actividad 3. Calculadora</h2>
+<p>Solicita dos números y una operación:</p>
+<pre><code class="language-text">+
+-
+*
+/
+</code></pre>
+<p>Realiza la operación correspondiente.</p>
+<p>Controla también la división entre cero.</p>
+<hr />
+<h2 id="actividad-4-calificacion">Actividad 4. Calificación</h2>
+<p>Solicita una nota entre 0 y 10 e indica:</p>
+<ul>
+<li>Suspenso.</li>
+<li>Aprobado.</li>
+<li>Notable.</li>
+<li>Sobresaliente.</li>
+</ul>
+<hr />
+<h2 id="actividad-5-tabla-de-multiplicar">Actividad 5. Tabla de multiplicar</h2>
+<p>Solicita un número y muestra su tabla del 1 al 10.</p>
+<hr />
+<h2 id="actividad-6-contador">Actividad 6. Contador</h2>
+<p>Muestra los números del 1 al 100.</p>
+<p>Posteriormente modifica el programa para mostrar solamente los números pares.</p>
+<hr />
+<h2 id="actividad-7-suma-acumulada">Actividad 7. Suma acumulada</h2>
+<p>Solicita números al usuario hasta que introduzca <code>0</code>.</p>
+<p>Al finalizar muestra la suma total.</p>
+<p>Ejemplo:</p>
+<pre><code class="language-text">Número: 5
+Número: 8
+Número: 10
+Número: 0
+
+Suma: 23
+</code></pre>
+<hr />
+<h2 id="actividad-8-contrasena">Actividad 8. Contraseña</h2>
+<p>Permite al usuario introducir una contraseña.</p>
+<p>El usuario tendrá un máximo de tres intentos.</p>
+<p>Si introduce la contraseña correcta:</p>
+<pre><code class="language-text">Acceso permitido
+</code></pre>
+<p>Si agota los tres intentos:</p>
+<pre><code class="language-text">Usuario bloqueado
+</code></pre>
+<hr />
+<h2 id="actividad-9-menu">Actividad 9. Menú</h2>
+<p>Crea un menú con:</p>
+<pre><code class="language-text">1. Saludar
+2. Mostrar fecha
+3. Mostrar información
+0. Salir
+</code></pre>
+<p>El menú debe repetirse hasta seleccionar <code>0</code>.</p>
+<hr />
+<h2 id="actividad-10-numero-secreto">Actividad 10. Número secreto</h2>
+<p>El programa debe almacenar un número secreto.</p>
+<p>El usuario tendrá que adivinarlo.</p>
+<p>Después de cada intento el programa indicará:</p>
+<ul>
+<li>"El número es mayor".</li>
+<li>"El número es menor".</li>
+<li>"¡Correcto!"</li>
+</ul>
+<hr />
+<h1 id="40-reto-final-de-la-unidad">40. Reto final de la unidad</h1>
+<h2 id="sistema-de-gestion-de-acceso">Sistema de gestión de acceso</h2>
+<p>Desarrolla un programa que simule el control de acceso a una instalación.</p>
+<p>El programa deberá:</p>
+<ol>
+<li>Solicitar usuario y contraseña.</li>
+<li>Permitir un máximo de tres intentos.</li>
+<li>Mostrar un menú después del acceso.</li>
+<li>El menú tendrá:</li>
+</ol>
+<pre><code class="language-text">1. Registrar entrada
+2. Registrar salida
+3. Consultar estado
+4. Salir
+</code></pre>
+<ol>
+<li>El programa deberá mantenerse funcionando hasta seleccionar <code>4</code>.</li>
+<li>No se permitirá registrar una salida si no existe una entrada.</li>
+<li>No se permitirá registrar una segunda entrada si el usuario ya está dentro.</li>
+<li>El programa deberá mostrar mensajes apropiados en cada situación.</li>
+</ol>
+<h3 id="ejemplo">Ejemplo</h3>
+<pre><code class="language-text">=== CONTROL DE ACCESO ===
+
+Usuario: alumno
+Contraseña: 1234
+
+Acceso permitido.
+
+1. Registrar entrada
+2. Registrar salida
+3. Consultar estado
+4. Salir
+
+Opción: 1
+
+Entrada registrada.
+
+Opción: 3
+
+Estado: DENTRO
+
+Opción: 1
+
+Error: ya existe una entrada registrada.
+</code></pre>
+<hr />
+<h1 id="41-resumen">41. Resumen</h1>
+<p>En esta unidad hemos aprendido que las estructuras de control permiten modificar el flujo de ejecución de un programa.</p>
+<p>Las tres estructuras fundamentales son:</p>
+<h3 id="secuencia">Secuencia</h3>
+<pre><code class="language-python">instruccion_1()
+instruccion_2()
+instruccion_3()
+</code></pre>
+<h3 id="seleccion">Selección</h3>
+<pre><code class="language-python">if condicion:
+    instrucciones
+else:
+    instrucciones
+</code></pre>
+<h3 id="repeticion">Repetición</h3>
+<pre><code class="language-python">for elemento in elementos:
+    instrucciones
+</code></pre>
+<p>o:</p>
+<pre><code class="language-python">while condicion:
+    instrucciones
+</code></pre>
+<p>También hemos trabajado:</p>
+<ul>
+<li>Operadores de comparación.</li>
+<li>Operadores lógicos.</li>
+<li>Valores booleanos.</li>
+<li>Indentación.</li>
+<li>Diagramas de flujo.</li>
+<li>Condicionales anidados.</li>
+<li><code>range()</code>.</li>
+<li><code>break</code>.</li>
+<li><code>continue</code>.</li>
+<li>Bucles anidados.</li>
+<li>Resolución de problemas.</li>
+<li>Aplicaciones prácticas.</li>
+</ul>
+<p>Estos conocimientos serán la base para las siguientes unidades y, posteriormente, para desarrollar aplicaciones con <strong>Django</strong> y realizar proyectos de <strong>programación de drones con Python</strong>.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js"></script>
+        <script src="../../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

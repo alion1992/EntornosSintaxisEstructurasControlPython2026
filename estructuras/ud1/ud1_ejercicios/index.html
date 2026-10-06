@@ -1,0 +1,1144 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>UD1. Ejercicios: Estructuras de control en Python - My Docs</title>
+        <link href="../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../../css/brands.min.css" rel="stylesheet">
+        <link href="../../../css/solid.min.css" rel="stylesheet">
+        <link href="../../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../..">My Docs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../../.." class="nav-link">🐍 Desarrollo de Aplicaciones en Python</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Estructuras</a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Ud1</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../estru_control/" class="dropdown-item">UD1. Estructuras de control en Python</a>
+</li>
+            
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">UD1. Ejercicios: Estructuras de control en Python</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Ud1</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../ud1/" class="dropdown-item">UD1. Entornos de desarrollo en Python</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../estru_control/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../../../ud1/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#ud1-ejercicios-estructuras-de-control-en-python" class="nav-link">UD1. Ejercicios: Estructuras de control en Python</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#indice" class="nav-link">📑 Índice</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#1-recomendaciones" class="nav-link">1. Recomendaciones</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#2-ejercicios-de-secuencia" class="nav-link">2. Ejercicios de secuencia</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#ejercicio-1-datos-personales" class="nav-link">Ejercicio 1. Datos personales</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#ejercicio-2-area-y-perimetro" class="nav-link">Ejercicio 2. Área y perímetro</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#ejercicio-3-conversor-de-euros" class="nav-link">Ejercicio 3. Conversor de euros</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#ejercicio-4-conversor-de-temperatura" class="nav-link">Ejercicio 4. Conversor de temperatura</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#ejercicio-5-precio-final" class="nav-link">Ejercicio 5. Precio final</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#ejercicio-6-tiempo" class="nav-link">Ejercicio 6. Tiempo</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#3-ejercicios-de-seleccion" class="nav-link">3. Ejercicios de selección</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#ejercicio-7-mayor-de-edad" class="nav-link">Ejercicio 7. Mayor de edad</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#ejercicio-8-numero-positivo-o-negativo" class="nav-link">Ejercicio 8. Número positivo o negativo</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#ejercicio-9-numero-par-o-impar" class="nav-link">Ejercicio 9. Número par o impar</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#ejercicio-10-mayor-de-dos-numeros" class="nav-link">Ejercicio 10. Mayor de dos números</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#ejercicio-11-mayor-de-tres-numeros" class="nav-link">Ejercicio 11. Mayor de tres números</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#ejercicio-12-calificacion" class="nav-link">Ejercicio 12. Calificación</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#ejercicio-13-ano-bisiesto" class="nav-link">Ejercicio 13. Año bisiesto</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#ejercicio-14-calculadora" class="nav-link">Ejercicio 14. Calculadora</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#4-ejercicios-de-estructuras-condicionales" class="nav-link">4. Ejercicios de estructuras condicionales</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#ejercicio-15-descuento-en-una-tienda" class="nav-link">Ejercicio 15. Descuento en una tienda</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#ejercicio-16-acceso-a-una-aplicacion" class="nav-link">Ejercicio 16. Acceso a una aplicación</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#ejercicio-17-acceso-con-condiciones" class="nav-link">Ejercicio 17. Acceso con condiciones</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#ejercicio-18-clasificacion-por-edad" class="nav-link">Ejercicio 18. Clasificación por edad</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#ejercicio-19-horario-de-apertura" class="nav-link">Ejercicio 19. Horario de apertura</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#ejercicio-20-precio-de-entrada" class="nav-link">Ejercicio 20. Precio de entrada</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#5-ejercicios-de-bucles" class="nav-link">5. Ejercicios de bucles</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#ejercicio-21-numeros-del-1-al-100" class="nav-link">Ejercicio 21. Números del 1 al 100</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#ejercicio-22-numeros-pares" class="nav-link">Ejercicio 22. Números pares</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#ejercicio-23-numeros-impares" class="nav-link">Ejercicio 23. Números impares</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#ejercicio-24-cuenta-atras" class="nav-link">Ejercicio 24. Cuenta atrás</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#ejercicio-25-tabla-de-multiplicar" class="nav-link">Ejercicio 25. Tabla de multiplicar</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#ejercicio-26-suma-de-numeros" class="nav-link">Ejercicio 26. Suma de números</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#ejercicio-27-suma-de-pares" class="nav-link">Ejercicio 27. Suma de pares</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#ejercicio-28-contar-multiplos" class="nav-link">Ejercicio 28. Contar múltiplos</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#ejercicio-29-factorial" class="nav-link">Ejercicio 29. Factorial</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#ejercicio-30-potencias" class="nav-link">Ejercicio 30. Potencias</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#6-ejercicios-combinando-estructuras" class="nav-link">6. Ejercicios combinando estructuras</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#ejercicio-31-adivina-el-numero" class="nav-link">Ejercicio 31. Adivina el número</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#ejercicio-32-contrasena-con-tres-intentos" class="nav-link">Ejercicio 32. Contraseña con tres intentos</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#ejercicio-33-suma-hasta-cero" class="nav-link">Ejercicio 33. Suma hasta cero</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#ejercicio-34-contar-positivos-y-negativos" class="nav-link">Ejercicio 34. Contar positivos y negativos</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#ejercicio-35-maximo-y-minimo" class="nav-link">Ejercicio 35. Máximo y mínimo</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#ejercicio-36-menu-de-operaciones" class="nav-link">Ejercicio 36. Menú de operaciones</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#ejercicio-37-cajero-automatico" class="nav-link">Ejercicio 37. Cajero automático</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#ejercicio-38-registro-de-alumnos" class="nav-link">Ejercicio 38. Registro de alumnos</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#7-retos" class="nav-link">7. Retos</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#reto-39-sistema-de-parking" class="nav-link">Reto 39. Sistema de parking</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#reto-40-maquina-expendedora" class="nav-link">Reto 40. Máquina expendedora</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#reto-41-sistema-de-votacion" class="nav-link">Reto 41. Sistema de votación</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#reto-42-juego-de-preguntas" class="nav-link">Reto 42. Juego de preguntas</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#8-proyecto-final" class="nav-link">8. Proyecto final</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#proyecto-control-de-vuelo-simulado" class="nav-link">🚁 Proyecto: Control de vuelo simulado</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#requisitos" class="nav-link">Requisitos</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#condiciones" class="nav-link">Condiciones</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#ejemplo-de-ejecucion" class="nav-link">Ejemplo de ejecución</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#ampliacion" class="nav-link">⭐ Ampliación</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#relacion-con-los-ra" class="nav-link">📌 Relación con los RA</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#objetivo-final-de-la-ud" class="nav-link">🎯 Objetivo final de la UD</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="ud1-ejercicios-estructuras-de-control-en-python">UD1. Ejercicios: Estructuras de control en Python</h1>
+<blockquote>
+<p><strong>Módulo:</strong> 5099. Estructuras de control en Python<br />
+<strong>Unidad Didáctica:</strong> UD1. Estructuras de control en Python<br />
+<strong>RA trabajados:</strong> RA1, RA2 y RA3<br />
+<strong>Nivel:</strong> Curso de Especialización en Desarrollo de Aplicaciones en Python</p>
+</blockquote>
+<hr />
+<h2 id="indice">📑 Índice</h2>
+<ul>
+<li><a href="#1-recomendaciones">1. Recomendaciones</a></li>
+<li><a href="#2-ejercicios-de-secuencia">2. Ejercicios de secuencia</a></li>
+<li><a href="#3-ejercicios-de-selección">3. Ejercicios de selección</a></li>
+<li><a href="#4-ejercicios-de-estructuras-condicionales">4. Ejercicios de estructuras condicionales</a></li>
+<li><a href="#5-ejercicios-de-bucles">5. Ejercicios de bucles</a></li>
+<li><a href="#6-ejercicios-combinando-estructuras">6. Ejercicios combinando estructuras</a></li>
+<li><a href="#7-retos">7. Retos</a></li>
+<li><a href="#8-proyecto-final">8. Proyecto final</a></li>
+</ul>
+<hr />
+<h1 id="1-recomendaciones">1. Recomendaciones</h1>
+<p>Los ejercicios están organizados de menor a mayor dificultad.</p>
+<p>Se recomienda resolverlos utilizando únicamente los conocimientos trabajados en la UD1:</p>
+<ul>
+<li>Variables.</li>
+<li>Tipos de datos básicos.</li>
+<li>Entrada y salida de datos.</li>
+<li>Operadores aritméticos.</li>
+<li>Operadores de comparación.</li>
+<li>Operadores lógicos.</li>
+<li><code>if</code>, <code>elif</code> y <code>else</code>.</li>
+<li><code>for</code>.</li>
+<li><code>while</code>.</li>
+<li><code>range()</code>.</li>
+<li><code>break</code>.</li>
+<li><code>continue</code>.</li>
+<li>Estructuras anidadas.</li>
+</ul>
+<blockquote>
+<p><strong>Importante:</strong> en estos ejercicios todavía no es necesario utilizar funciones definidas por el alumnado.</p>
+</blockquote>
+<hr />
+<h1 id="2-ejercicios-de-secuencia">2. Ejercicios de secuencia</h1>
+<h2 id="ejercicio-1-datos-personales">Ejercicio 1. Datos personales</h2>
+<p>Crea un programa que solicite:</p>
+<ul>
+<li>Nombre.</li>
+<li>Apellidos.</li>
+<li>Edad.</li>
+<li>Ciudad.</li>
+</ul>
+<p>Después debe mostrar una frase similar a:</p>
+<pre><code class="language-text">Hola, me llamo Ana García, tengo 20 años y vivo en Puertollano.
+</code></pre>
+<hr />
+<h2 id="ejercicio-2-area-y-perimetro">Ejercicio 2. Área y perímetro</h2>
+<p>Solicita la base y la altura de un rectángulo.</p>
+<p>Calcula y muestra:</p>
+<ul>
+<li>Área.</li>
+<li>Perímetro.</li>
+</ul>
+<p>Ejemplo:</p>
+<pre><code class="language-text">Base: 10
+Altura: 5
+
+Área: 50
+Perímetro: 30
+</code></pre>
+<hr />
+<h2 id="ejercicio-3-conversor-de-euros">Ejercicio 3. Conversor de euros</h2>
+<p>Solicita una cantidad en euros y muestra su equivalente en dólares.</p>
+<p>Utiliza un tipo de cambio almacenado en una variable.</p>
+<pre><code class="language-text">Euros: 100
+Tipo de cambio: 1.08
+
+Resultado: 108 dólares
+</code></pre>
+<hr />
+<h2 id="ejercicio-4-conversor-de-temperatura">Ejercicio 4. Conversor de temperatura</h2>
+<p>Solicita una temperatura en grados Celsius y conviértela a Fahrenheit.</p>
+<p>Fórmula:</p>
+<pre><code class="language-text">F = C × 9 / 5 + 32
+</code></pre>
+<hr />
+<h2 id="ejercicio-5-precio-final">Ejercicio 5. Precio final</h2>
+<p>Solicita:</p>
+<ul>
+<li>Precio de un producto.</li>
+<li>Porcentaje de IVA.</li>
+</ul>
+<p>Calcula:</p>
+<ul>
+<li>Importe del IVA.</li>
+<li>Precio final.</li>
+</ul>
+<p>Ejemplo:</p>
+<pre><code class="language-text">Precio: 100
+IVA: 21
+
+IVA: 21 €
+Precio final: 121 €
+</code></pre>
+<hr />
+<h2 id="ejercicio-6-tiempo">Ejercicio 6. Tiempo</h2>
+<p>Solicita una cantidad de segundos y conviértela a:</p>
+<ul>
+<li>Horas.</li>
+<li>Minutos.</li>
+<li>Segundos.</li>
+</ul>
+<p>Ejemplo:</p>
+<pre><code class="language-text">Segundos: 3672
+
+1 hora
+1 minuto
+12 segundos
+</code></pre>
+<hr />
+<h1 id="3-ejercicios-de-seleccion">3. Ejercicios de selección</h1>
+<h2 id="ejercicio-7-mayor-de-edad">Ejercicio 7. Mayor de edad</h2>
+<p>Solicita la edad de una persona.</p>
+<p>Muestra:</p>
+<pre><code class="language-text">Eres mayor de edad
+</code></pre>
+<p>o:</p>
+<pre><code class="language-text">Eres menor de edad
+</code></pre>
+<hr />
+<h2 id="ejercicio-8-numero-positivo-o-negativo">Ejercicio 8. Número positivo o negativo</h2>
+<p>Solicita un número e indica si es:</p>
+<ul>
+<li>Positivo.</li>
+<li>Negativo.</li>
+<li>Cero.</li>
+</ul>
+<hr />
+<h2 id="ejercicio-9-numero-par-o-impar">Ejercicio 9. Número par o impar</h2>
+<p>Solicita un número entero e indica si es par o impar.</p>
+<p><strong>Pista:</strong> utiliza el operador <code>%</code>.</p>
+<hr />
+<h2 id="ejercicio-10-mayor-de-dos-numeros">Ejercicio 10. Mayor de dos números</h2>
+<p>Solicita dos números e indica:</p>
+<ul>
+<li>Cuál es mayor.</li>
+<li>Si son iguales.</li>
+</ul>
+<p>Ejemplo:</p>
+<pre><code class="language-text">Número 1: 15
+Número 2: 20
+
+El segundo número es mayor.
+</code></pre>
+<hr />
+<h2 id="ejercicio-11-mayor-de-tres-numeros">Ejercicio 11. Mayor de tres números</h2>
+<p>Solicita tres números y muestra cuál es el mayor.</p>
+<p>No utilices <code>max()</code>.</p>
+<hr />
+<h2 id="ejercicio-12-calificacion">Ejercicio 12. Calificación</h2>
+<p>Solicita una nota entre 0 y 10.</p>
+<p>Muestra:</p>
+<table>
+<thead>
+<tr>
+<th>Nota</th>
+<th>Resultado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&lt; 5</td>
+<td>Suspenso</td>
+</tr>
+<tr>
+<td>5 - 6.9</td>
+<td>Aprobado</td>
+</tr>
+<tr>
+<td>7 - 8.9</td>
+<td>Notable</td>
+</tr>
+<tr>
+<td>9 - 10</td>
+<td>Sobresaliente</td>
+</tr>
+</tbody>
+</table>
+<p>Controla también que la nota esté dentro del rango válido.</p>
+<hr />
+<h2 id="ejercicio-13-ano-bisiesto">Ejercicio 13. Año bisiesto</h2>
+<p>Solicita un año e indica si es bisiesto.</p>
+<p>Un año es bisiesto cuando:</p>
+<ul>
+<li>Es divisible entre 4.</li>
+<li>No es divisible entre 100, salvo que también sea divisible entre 400.</li>
+</ul>
+<p>Ejemplos:</p>
+<pre><code class="language-text">2024 → Bisiesto
+2025 → No bisiesto
+2000 → Bisiesto
+1900 → No bisiesto
+</code></pre>
+<hr />
+<h2 id="ejercicio-14-calculadora">Ejercicio 14. Calculadora</h2>
+<p>Solicita:</p>
+<ul>
+<li>Primer número.</li>
+<li>Segundo número.</li>
+<li>Operación.</li>
+</ul>
+<p>Las operaciones disponibles serán:</p>
+<pre><code class="language-text">+
+-
+*
+/
+</code></pre>
+<p>Muestra el resultado correspondiente.</p>
+<p>Controla la división entre cero.</p>
+<hr />
+<h1 id="4-ejercicios-de-estructuras-condicionales">4. Ejercicios de estructuras condicionales</h1>
+<h2 id="ejercicio-15-descuento-en-una-tienda">Ejercicio 15. Descuento en una tienda</h2>
+<p>Una tienda aplica los siguientes descuentos:</p>
+<ul>
+<li>Menos de 50 € → sin descuento.</li>
+<li>De 50 € a 99.99 € → 5%.</li>
+<li>De 100 € a 199.99 € → 10%.</li>
+<li>200 € o más → 15%.</li>
+</ul>
+<p>Solicita el precio y muestra:</p>
+<ul>
+<li>Descuento aplicado.</li>
+<li>Importe descontado.</li>
+<li>Precio final.</li>
+</ul>
+<hr />
+<h2 id="ejercicio-16-acceso-a-una-aplicacion">Ejercicio 16. Acceso a una aplicación</h2>
+<p>Solicita:</p>
+<pre><code class="language-text">Usuario
+Contraseña
+</code></pre>
+<p>Los datos correctos serán:</p>
+<pre><code class="language-text">Usuario: admin
+Contraseña: python123
+</code></pre>
+<p>Si ambos son correctos:</p>
+<pre><code class="language-text">Acceso permitido
+</code></pre>
+<p>En caso contrario:</p>
+<pre><code class="language-text">Usuario o contraseña incorrectos
+</code></pre>
+<hr />
+<h2 id="ejercicio-17-acceso-con-condiciones">Ejercicio 17. Acceso con condiciones</h2>
+<p>Para acceder a una instalación se deben cumplir las siguientes condiciones:</p>
+<ul>
+<li>Tener al menos 18 años.</li>
+<li>Tener entrada válida.</li>
+</ul>
+<p>Solicita ambos datos y determina si puede acceder.</p>
+<p>Ejemplo:</p>
+<pre><code class="language-text">Edad: 20
+Entrada válida: si
+
+Acceso permitido
+</code></pre>
+<hr />
+<h2 id="ejercicio-18-clasificacion-por-edad">Ejercicio 18. Clasificación por edad</h2>
+<p>Solicita la edad e indica:</p>
+<pre><code class="language-text">0-12     → Niño/a
+13-17    → Adolescente
+18-64    → Adulto/a
+65+      → Persona mayor
+</code></pre>
+<p>Controla valores negativos.</p>
+<hr />
+<h2 id="ejercicio-19-horario-de-apertura">Ejercicio 19. Horario de apertura</h2>
+<p>Solicita una hora entre 0 y 23.</p>
+<p>El establecimiento está abierto:</p>
+<pre><code class="language-text">09:00 - 14:00
+16:00 - 20:00
+</code></pre>
+<p>Indica si está abierto o cerrado.</p>
+<hr />
+<h2 id="ejercicio-20-precio-de-entrada">Ejercicio 20. Precio de entrada</h2>
+<p>Un museo tiene estas tarifas:</p>
+<pre><code class="language-text">Menores de 5 años → Gratis
+5-12 años         → 5 €
+13-17 años        → 8 €
+Adultos           → 12 €
+Mayores de 65     → 6 €
+</code></pre>
+<p>Solicita la edad y muestra el precio.</p>
+<hr />
+<h1 id="5-ejercicios-de-bucles">5. Ejercicios de bucles</h1>
+<h2 id="ejercicio-21-numeros-del-1-al-100">Ejercicio 21. Números del 1 al 100</h2>
+<p>Muestra por pantalla los números del 1 al 100 utilizando un <code>for</code>.</p>
+<hr />
+<h2 id="ejercicio-22-numeros-pares">Ejercicio 22. Números pares</h2>
+<p>Muestra todos los números pares entre 1 y 100.</p>
+<p>Utiliza un bucle.</p>
+<hr />
+<h2 id="ejercicio-23-numeros-impares">Ejercicio 23. Números impares</h2>
+<p>Muestra todos los números impares entre 1 y 100.</p>
+<hr />
+<h2 id="ejercicio-24-cuenta-atras">Ejercicio 24. Cuenta atrás</h2>
+<p>Solicita un número y realiza una cuenta atrás hasta llegar a cero.</p>
+<p>Ejemplo:</p>
+<pre><code class="language-text">Número: 5
+
+5
+4
+3
+2
+1
+0
+</code></pre>
+<hr />
+<h2 id="ejercicio-25-tabla-de-multiplicar">Ejercicio 25. Tabla de multiplicar</h2>
+<p>Solicita un número y muestra su tabla de multiplicar del 1 al 10.</p>
+<p>Ejemplo:</p>
+<pre><code class="language-text">Número: 7
+
+7 x 1 = 7
+7 x 2 = 14
+...
+7 x 10 = 70
+</code></pre>
+<hr />
+<h2 id="ejercicio-26-suma-de-numeros">Ejercicio 26. Suma de números</h2>
+<p>Calcula la suma de los números del 1 al 100.</p>
+<p>Resultado esperado:</p>
+<pre><code class="language-text">5050
+</code></pre>
+<hr />
+<h2 id="ejercicio-27-suma-de-pares">Ejercicio 27. Suma de pares</h2>
+<p>Calcula la suma de todos los números pares entre 1 y 100.</p>
+<hr />
+<h2 id="ejercicio-28-contar-multiplos">Ejercicio 28. Contar múltiplos</h2>
+<p>Solicita un número y muestra todos sus múltiplos entre 1 y 100.</p>
+<p>Ejemplo:</p>
+<pre><code class="language-text">Número: 7
+
+7
+14
+21
+28
+...
+98
+</code></pre>
+<hr />
+<h2 id="ejercicio-29-factorial">Ejercicio 29. Factorial</h2>
+<p>Solicita un número entero positivo y calcula su factorial.</p>
+<p>Ejemplo:</p>
+<pre><code class="language-text">5! = 120
+</code></pre>
+<p>No utilices ninguna función de librería.</p>
+<hr />
+<h2 id="ejercicio-30-potencias">Ejercicio 30. Potencias</h2>
+<p>Solicita una base y un exponente.</p>
+<p>Calcula la potencia utilizando un bucle.</p>
+<p>No utilices <code>**</code>.</p>
+<p>Ejemplo:</p>
+<pre><code class="language-text">Base: 2
+Exponente: 5
+
+Resultado: 32
+</code></pre>
+<hr />
+<h1 id="6-ejercicios-combinando-estructuras">6. Ejercicios combinando estructuras</h1>
+<h2 id="ejercicio-31-adivina-el-numero">Ejercicio 31. Adivina el número</h2>
+<p>El programa tendrá almacenado un número secreto.</p>
+<p>El usuario debe intentar adivinarlo.</p>
+<p>Después de cada intento se mostrará:</p>
+<pre><code class="language-text">El número secreto es mayor.
+</code></pre>
+<p>o:</p>
+<pre><code class="language-text">El número secreto es menor.
+</code></pre>
+<p>Cuando acierte:</p>
+<pre><code class="language-text">¡Correcto!
+</code></pre>
+<p>Cuenta también el número de intentos.</p>
+<hr />
+<h2 id="ejercicio-32-contrasena-con-tres-intentos">Ejercicio 32. Contraseña con tres intentos</h2>
+<p>Solicita usuario y contraseña.</p>
+<p>El usuario tendrá un máximo de tres intentos.</p>
+<p>Si los datos son correctos:</p>
+<pre><code class="language-text">Acceso permitido
+</code></pre>
+<p>Si falla tres veces:</p>
+<pre><code class="language-text">Cuenta bloqueada
+</code></pre>
+<p>Utiliza un <code>while</code>.</p>
+<hr />
+<h2 id="ejercicio-33-suma-hasta-cero">Ejercicio 33. Suma hasta cero</h2>
+<p>Solicita números al usuario hasta que introduzca <code>0</code>.</p>
+<p>Al finalizar muestra:</p>
+<ul>
+<li>Cantidad de números introducidos.</li>
+<li>Suma.</li>
+<li>Media.</li>
+</ul>
+<p>Ejemplo:</p>
+<pre><code class="language-text">Número: 10
+Número: 20
+Número: 30
+Número: 0
+
+Cantidad: 3
+Suma: 60
+Media: 20
+</code></pre>
+<hr />
+<h2 id="ejercicio-34-contar-positivos-y-negativos">Ejercicio 34. Contar positivos y negativos</h2>
+<p>Solicita números hasta introducir <code>0</code>.</p>
+<p>Al finalizar muestra:</p>
+<pre><code class="language-text">Positivos: X
+Negativos: Y
+</code></pre>
+<p>Los ceros no deben contabilizarse.</p>
+<hr />
+<h2 id="ejercicio-35-maximo-y-minimo">Ejercicio 35. Máximo y mínimo</h2>
+<p>Solicita números hasta que el usuario introduzca <code>0</code>.</p>
+<p>Al finalizar muestra:</p>
+<ul>
+<li>Número mayor.</li>
+<li>Número menor.</li>
+</ul>
+<p>No utilices <code>max()</code> ni <code>min()</code>.</p>
+<hr />
+<h2 id="ejercicio-36-menu-de-operaciones">Ejercicio 36. Menú de operaciones</h2>
+<p>Crea un menú que se repita hasta seleccionar la opción <code>0</code>.</p>
+<pre><code class="language-text">===== CALCULADORA =====
+
+1. Sumar
+2. Restar
+3. Multiplicar
+4. Dividir
+0. Salir
+</code></pre>
+<p>Cada opción debe solicitar los datos necesarios.</p>
+<hr />
+<h2 id="ejercicio-37-cajero-automatico">Ejercicio 37. Cajero automático</h2>
+<p>Crea un pequeño cajero automático.</p>
+<p>El saldo inicial será:</p>
+<pre><code class="language-python">saldo = 1000
+</code></pre>
+<p>El menú será:</p>
+<pre><code class="language-text">1. Consultar saldo
+2. Ingresar dinero
+3. Retirar dinero
+4. Salir
+</code></pre>
+<p>Condiciones:</p>
+<ul>
+<li>No se puede retirar más dinero del disponible.</li>
+<li>No se pueden ingresar cantidades negativas.</li>
+<li>El menú debe repetirse hasta seleccionar <code>4</code>.</li>
+</ul>
+<hr />
+<h2 id="ejercicio-38-registro-de-alumnos">Ejercicio 38. Registro de alumnos</h2>
+<p>Solicita el número de alumnos.</p>
+<p>Para cada alumno pide:</p>
+<ul>
+<li>Nombre.</li>
+<li>Nota.</li>
+</ul>
+<p>Al finalizar muestra:</p>
+<ul>
+<li>Número de aprobados.</li>
+<li>Número de suspensos.</li>
+<li>Nota media.</li>
+<li>Nota más alta.</li>
+<li>Nota más baja.</li>
+</ul>
+<hr />
+<h1 id="7-retos">7. Retos</h1>
+<h2 id="reto-39-sistema-de-parking">Reto 39. Sistema de parking</h2>
+<p>Desarrolla un programa para gestionar un pequeño parking.</p>
+<p>El programa tendrá:</p>
+<pre><code class="language-text">1. Registrar entrada
+2. Registrar salida
+3. Consultar plazas
+4. Salir
+</code></pre>
+<p>El parking dispone de 20 plazas.</p>
+<p>El programa debe:</p>
+<ul>
+<li>Aumentar las plazas ocupadas al registrar una entrada.</li>
+<li>Liberar una plaza al registrar una salida.</li>
+<li>Impedir entradas cuando el parking esté completo.</li>
+<li>Impedir salidas cuando no haya vehículos.</li>
+<li>Mostrar las plazas libres.</li>
+</ul>
+<hr />
+<h2 id="reto-40-maquina-expendedora">Reto 40. Máquina expendedora</h2>
+<p>Simula una máquina expendedora.</p>
+<p>Productos:</p>
+<pre><code class="language-text">1. Agua       1.00 €
+2. Refresco   1.50 €
+3. Café       1.20 €
+4. Snack      1.80 €
+</code></pre>
+<p>El programa debe:</p>
+<ol>
+<li>Mostrar el menú.</li>
+<li>Solicitar producto.</li>
+<li>Solicitar dinero.</li>
+<li>Comprobar si es suficiente.</li>
+<li>Calcular el cambio.</li>
+<li>Mostrar un mensaje de compra.</li>
+<li>Repetir el proceso hasta seleccionar salir.</li>
+</ol>
+<hr />
+<h2 id="reto-41-sistema-de-votacion">Reto 41. Sistema de votación</h2>
+<p>Crea un sistema de votación sencillo.</p>
+<p>Las opciones serán:</p>
+<pre><code class="language-text">1. Python
+2. Java
+3. JavaScript
+4. C++
+0. Finalizar
+</code></pre>
+<p>Los usuarios podrán votar hasta seleccionar <code>0</code>.</p>
+<p>Al finalizar muestra:</p>
+<ul>
+<li>Votos de cada opción.</li>
+<li>Total de votos.</li>
+<li>Opción ganadora.</li>
+</ul>
+<hr />
+<h2 id="reto-42-juego-de-preguntas">Reto 42. Juego de preguntas</h2>
+<p>Crea un pequeño concurso de preguntas.</p>
+<p>El programa deberá realizar al menos cinco preguntas.</p>
+<p>Por cada pregunta:</p>
+<ul>
+<li>Mostrar el enunciado.</li>
+<li>Mostrar varias opciones.</li>
+<li>Comprobar la respuesta.</li>
+<li>Incrementar la puntuación si es correcta.</li>
+</ul>
+<p>Al finalizar:</p>
+<pre><code class="language-text">Puntuación: 4/5
+</code></pre>
+<hr />
+<h1 id="8-proyecto-final">8. Proyecto final</h1>
+<h1 id="proyecto-control-de-vuelo-simulado">🚁 Proyecto: Control de vuelo simulado</h1>
+<p>En este proyecto vamos a aplicar las estructuras de control a un escenario relacionado con una de las aplicaciones que veremos posteriormente: la <strong>programación de drones con Python</strong>.</p>
+<p>No será necesario disponer todavía de un dron físico.</p>
+<p>El programa simulará el control básico de un dron.</p>
+<h2 id="requisitos">Requisitos</h2>
+<p>El programa deberá comenzar mostrando:</p>
+<pre><code class="language-text">=========================
+     DRON PYTHON
+=========================
+</code></pre>
+<p>Después mostrará un menú:</p>
+<pre><code class="language-text">1. Despegar
+2. Avanzar
+3. Retroceder
+4. Girar a la derecha
+5. Girar a la izquierda
+6. Consultar batería
+7. Aterrizar
+0. Salir
+</code></pre>
+<h2 id="condiciones">Condiciones</h2>
+<p>El dron comenzará con:</p>
+<pre><code class="language-python">bateria = 100
+</code></pre>
+<p>Y estará inicialmente en tierra.</p>
+<p>El programa deberá controlar:</p>
+<h3 id="despegue">Despegue</h3>
+<p>El dron solamente podrá despegar si:</p>
+<pre><code class="language-text">batería &gt;= 20%
+</code></pre>
+<h3 id="movimiento">Movimiento</h3>
+<p>Cada movimiento consumirá un porcentaje de batería.</p>
+<p>Por ejemplo:</p>
+<pre><code class="language-text">Avanzar → -5%
+Retroceder → -5%
+Girar → -2%
+</code></pre>
+<h3 id="bateria">Batería</h3>
+<p>Cuando la batería sea inferior al 20%:</p>
+<pre><code class="language-text">ADVERTENCIA: batería baja
+</code></pre>
+<p>Cuando llegue al 0%:</p>
+<pre><code class="language-text">Batería agotada.
+Aterrizaje de emergencia.
+</code></pre>
+<h3 id="aterrizaje">Aterrizaje</h3>
+<p>El dron deberá estar en vuelo para poder aterrizar.</p>
+<h3 id="menu">Menú</h3>
+<p>El menú debe repetirse mediante un <code>while</code>.</p>
+<h3 id="condiciones_1">Condiciones</h3>
+<p>Utiliza <code>if</code>, <code>elif</code> y <code>else</code> para controlar las diferentes opciones.</p>
+<h3 id="repeticiones">Repeticiones</h3>
+<p>Utiliza bucles cuando sean necesarios.</p>
+<hr />
+<h2 id="ejemplo-de-ejecucion">Ejemplo de ejecución</h2>
+<pre><code class="language-text">=========================
+     DRON PYTHON
+=========================
+
+Batería: 100%
+Estado: EN TIERRA
+
+1. Despegar
+2. Avanzar
+3. Retroceder
+4. Girar derecha
+5. Girar izquierda
+6. Consultar batería
+7. Aterrizar
+0. Salir
+
+Opción: 1
+
+Dron despegando...
+
+Opción: 2
+
+Avanzando...
+Batería: 95%
+
+Opción: 4
+
+Girando a la derecha...
+Batería: 93%
+
+Opción: 6
+
+Batería: 93%
+
+Opción: 7
+
+Aterrizando...
+
+Opción: 0
+
+Programa finalizado.
+</code></pre>
+<hr />
+<h2 id="ampliacion">⭐ Ampliación</h2>
+<p>Para alumnado que termine antes:</p>
+<ol>
+<li>Añade coordenadas <code>(x, y)</code> para representar la posición.</li>
+<li>Haz que avanzar modifique la coordenada.</li>
+<li>Permite girar 90 grados.</li>
+<li>Registra los movimientos realizados.</li>
+<li>Añade un modo de vuelo automático.</li>
+<li>Permite introducir una ruta.</li>
+<li>Comprueba que la batería sea suficiente antes de ejecutar una ruta.</li>
+<li>Añade un límite de distancia.</li>
+<li>Simula obstáculos.</li>
+<li>Añade un aterrizaje automático cuando la batería sea baja.</li>
+</ol>
+<hr />
+<h1 id="relacion-con-los-ra">📌 Relación con los RA</h1>
+<table>
+<thead>
+<tr>
+<th>Ejercicios</th>
+<th>RA principal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1-6</td>
+<td>RA1 – Secuencia</td>
+</tr>
+<tr>
+<td>7-20</td>
+<td>RA2 – Selección</td>
+</tr>
+<tr>
+<td>21-30</td>
+<td>RA3 – Iteración</td>
+</tr>
+<tr>
+<td>31-38</td>
+<td>RA1 + RA2 + RA3</td>
+</tr>
+<tr>
+<td>39-42</td>
+<td>RA1 + RA2 + RA3</td>
+</tr>
+<tr>
+<td>Proyecto final</td>
+<td>RA1 + RA2 + RA3</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1 id="objetivo-final-de-la-ud">🎯 Objetivo final de la UD</h1>
+<p>Al finalizar estos ejercicios, el alumnado deberá ser capaz de:</p>
+<ul>
+<li>Comprender el flujo de ejecución de un programa.</li>
+<li>Utilizar estructuras secuenciales.</li>
+<li>Tomar decisiones mediante condiciones.</li>
+<li>Combinar condiciones utilizando operadores lógicos.</li>
+<li>Utilizar <code>if</code>, <code>elif</code> y <code>else</code>.</li>
+<li>Crear bucles <code>for</code> y <code>while</code>.</li>
+<li>Utilizar <code>range()</code>.</li>
+<li>Controlar bucles mediante <code>break</code> y <code>continue</code>.</li>
+<li>Combinar estructuras de control.</li>
+<li>Resolver problemas mediante algoritmos.</li>
+<li>Representar soluciones mediante diagramas de flujo.</li>
+<li>Aplicar las estructuras de control a problemas reales.</li>
+<li>Preparar programas que posteriormente puedan aplicarse al desarrollo web y a la programación de drones con Python.</li>
+</ul></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js"></script>
+        <script src="../../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
