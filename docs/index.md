@@ -6,7 +6,9 @@ Apuntes del **Curso de Especialización en Desarrollo de Aplicaciones en Python*
 
 ### Unidades didácticas
 
-- [**UD1. Entornos de desarrollo en Python**](ud1/index.md)
+- [**UD1. Entornos de desarrollo en Python**](entornos/ud1.md)
+- [**UD2. Entornos de desarrollo en Python**](entornos/ud2.md)
+
 
 
 ## 📘 Módulo Profesional 5098: Entornos y sintaxis en Python
