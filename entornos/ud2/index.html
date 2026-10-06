@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>UD2. Fundamentos y nomenclatura en Python - My Docs</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">My Docs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../.." class="nav-link">🐍 Desarrollo de Aplicaciones en Python</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Entornos</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../ud1/" class="dropdown-item">UD1. Entornos de desarrollo en Python</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">UD2. Fundamentos y nomenclatura en Python</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Estructuras</a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Ud1</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../estructuras/ud1/estru_control/" class="dropdown-item">UD1. Estructuras de control en Python</a>
+</li>
+            
+<li>
+    <a href="../../estructuras/ud1/ud1_ejercicios/" class="dropdown-item">UD1. Ejercicios: Estructuras de control en Python</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../ud1/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../../estructuras/ud1/estru_control/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#ud2-fundamentos-y-nomenclatura-en-python" class="nav-link">UD2. Fundamentos y nomenclatura en Python</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#indice" class="nav-link">📑 Índice</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#1-introduccion" class="nav-link">1. Introducción</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#2-python-como-lenguaje-de-programacion" class="nav-link">2. Python como lenguaje de programación</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#3-estructura-basica-de-un-programa" class="nav-link">3. Estructura básica de un programa</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#4-nomenclatura-en-python" class="nav-link">4. Nomenclatura en Python</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#5-convenciones-habituales" class="nav-link">5. Convenciones habituales</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#51-variables-y-funciones-snake_case" class="nav-link">5.1. Variables y funciones: snake_case</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#52-clases-pascalcase" class="nav-link">5.2. Clases: PascalCase</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#53-constantes-upper_case" class="nav-link">5.3. Constantes: UPPER_CASE</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#6-palabras-reservadas" class="nav-link">6. Palabras reservadas</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#7-comentarios-y-documentacion" class="nav-link">7. Comentarios y documentación</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#docstrings" class="nav-link">Docstrings</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#8-errores-y-depuracion" class="nav-link">8. Errores y depuración</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#81-error-de-sintaxis" class="nav-link">8.1. Error de sintaxis</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#82-error-durante-la-ejecucion" class="nav-link">8.2. Error durante la ejecución</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#83-error-logico" class="nav-link">8.3. Error lógico</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#84-depuracion" class="nav-link">8.4. Depuración</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#9-buenas-practicas" class="nav-link">9. Buenas prácticas</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="ud2-fundamentos-y-nomenclatura-en-python">UD2. Fundamentos y nomenclatura en Python</h1>
+<blockquote>
+<p><strong>Módulo Profesional 5098: Entornos y sintaxis en Python</strong><br />
+<strong>Resultado de aprendizaje:</strong> RA2. Elementos de la programación en Python</p>
+</blockquote>
+<hr />
+<h2 id="indice">📑 Índice</h2>
+<ul>
+<li><a href="#1-introducción">1. Introducción</a></li>
+<li><a href="#2-python-como-lenguaje-de-programación">2. Python como lenguaje de programación</a></li>
+<li><a href="#3-estructura-básica-de-un-programa">3. Estructura básica de un programa</a></li>
+<li><a href="#4-nomenclatura-en-python">4. Nomenclatura en Python</a></li>
+<li><a href="#5-convenciones-habituales">5. Convenciones habituales</a></li>
+<li><a href="#6-palabras-reservadas">6. Palabras reservadas</a></li>
+<li><a href="#7-comentarios-y-documentación">7. Comentarios y documentación</a></li>
+<li><a href="#8-errores-y-depuración">8. Errores y depuración</a></li>
+<li><a href="#9-buenas-prácticas">9. Buenas prácticas</a></li>
+</ul>
+<hr />
+<h1 id="1-introduccion">1. Introducción</h1>
+<p>Un programa no solo debe funcionar: también debe ser <strong>legible, mantenible y fácil de modificar</strong>.</p>
+<p>En esta unidad aprenderemos las características básicas de Python y las principales convenciones utilizadas para escribir código claro y profesional.</p>
+<p>Prestaremos especial atención a la <strong>nomenclatura</strong>, ya que utilizar nombres adecuados será fundamental en todas las unidades posteriores.</p>
+<hr />
+<h1 id="2-python-como-lenguaje-de-programacion">2. Python como lenguaje de programación</h1>
+<p>Python es un lenguaje de programación:</p>
+<ul>
+<li>De alto nivel.</li>
+<li>Interpretado.</li>
+<li>De propósito general.</li>
+<li>Multiplataforma.</li>
+<li>Orientado a objetos.</li>
+<li>Con una sintaxis sencilla y legible.</li>
+<li>Con una gran cantidad de librerías y frameworks.</li>
+</ul>
+<p>Un programa Python puede ejecutarse directamente mediante el intérprete:</p>
+<pre><code class="language-python">print(&quot;Hola, mundo&quot;)
+</code></pre>
+<p>En CPython, el código fuente se transforma internamente en <strong>bytecode</strong> antes de ejecutarse en la máquina virtual de Python.</p>
+<hr />
+<h1 id="3-estructura-basica-de-un-programa">3. Estructura básica de un programa</h1>
+<p>Un programa sencillo puede contener:</p>
+<pre><code class="language-python"># Datos
+nombre_usuario = &quot;Ana&quot;
+edad_usuario = 25
+
+# Procesamiento
+es_mayor = edad_usuario &gt;= 18
+
+# Resultado
+print(nombre_usuario)
+print(es_mayor)
+</code></pre>
+<p>Podemos distinguir:</p>
+<ol>
+<li><strong>Datos de entrada.</strong></li>
+<li><strong>Procesamiento.</strong></li>
+<li><strong>Salida de información.</strong></li>
+</ol>
+<hr />
+<h1 id="4-nomenclatura-en-python">4. Nomenclatura en Python</h1>
+<p>La <strong>nomenclatura</strong> establece cómo debemos nombrar variables, funciones, clases y otros elementos del programa.</p>
+<p>Un buen nombre debe:</p>
+<ul>
+<li>Ser descriptivo.</li>
+<li>Ser fácil de entender.</li>
+<li>Evitar abreviaturas innecesarias.</li>
+<li>Mantener un criterio coherente.</li>
+<li>Reflejar el contenido que representa.</li>
+</ul>
+<h3 id="poco-recomendable">Poco recomendable</h3>
+<pre><code class="language-python">x = 25
+a = &quot;Juan&quot;
+p = 19.95
+</code></pre>
+<h3 id="recomendable">Recomendable</h3>
+<pre><code class="language-python">edad_usuario = 25
+nombre_usuario = &quot;Juan&quot;
+precio_producto = 19.95
+</code></pre>
+<hr />
+<h1 id="5-convenciones-habituales">5. Convenciones habituales</h1>
+<h2 id="51-variables-y-funciones-snake_case">5.1. Variables y funciones: <code>snake_case</code></h2>
+<p>En Python se utiliza habitualmente <strong>snake_case</strong>.</p>
+<pre><code class="language-python">nombre_usuario = &quot;Ana&quot;
+numero_alumnos = 25
+precio_total = 125.50
+</code></pre>
+<p>Para funciones:</p>
+<pre><code class="language-python">calcular_precio()
+mostrar_resultado()
+obtener_usuario()
+</code></pre>
+<h2 id="52-clases-pascalcase">5.2. Clases: <code>PascalCase</code></h2>
+<p>Los nombres de las clases utilizan normalmente <strong>PascalCase</strong>.</p>
+<pre><code class="language-python">class Usuario:
+    pass
+</code></pre>
+<p>Otros ejemplos:</p>
+<pre><code class="language-python">class CuentaBancaria:
+    pass
+
+class Producto:
+    pass
+</code></pre>
+<h2 id="53-constantes-upper_case">5.3. Constantes: <code>UPPER_CASE</code></h2>
+<p>Las constantes se suelen escribir en mayúsculas utilizando guiones bajos.</p>
+<pre><code class="language-python">MAX_INTENTOS = 3
+PI = 3.14159
+PRECIO_IVA = 0.21
+</code></pre>
+<p>Python no impide modificar una constante, pero esta nomenclatura indica que su valor no debería cambiar.</p>
+<hr />
+<h1 id="6-palabras-reservadas">6. Palabras reservadas</h1>
+<p>Python dispone de palabras que tienen un significado especial y que no podemos utilizar como nombres de variables.</p>
+<p>Algunos ejemplos:</p>
+<pre><code class="language-text">if
+else
+elif
+for
+while
+class
+def
+return
+import
+from
+try
+except
+True
+False
+None
+</code></pre>
+<p>Por ejemplo, esto no es correcto:</p>
+<pre><code class="language-python">class = &quot;Python&quot;
+</code></pre>
+<p><code>class</code> es una palabra reservada.</p>
+<p>Podemos consultar las palabras reservadas mediante Python:</p>
+<pre><code class="language-python">import keyword
+
+print(keyword.kwlist)
+</code></pre>
+<hr />
+<h1 id="7-comentarios-y-documentacion">7. Comentarios y documentación</h1>
+<p>Los comentarios permiten añadir información al código que no será ejecutada.</p>
+<pre><code class="language-python"># Calculamos el precio final
+precio_final = precio + iva
+</code></pre>
+<p>También podemos escribir:</p>
+<pre><code class="language-python">precio = 100  # Precio inicial
+</code></pre>
+<p>Los comentarios deben utilizarse para <strong>aclarar aspectos relevantes</strong>, no para explicar cada línea evidente.</p>
+<h2 id="docstrings">Docstrings</h2>
+<p>Los docstrings permiten documentar funciones, clases y módulos.</p>
+<pre><code class="language-python">def calcular_iva(precio):
+    &quot;&quot;&quot;Calcula el IVA de un precio.&quot;&quot;&quot;
+    return precio * 0.21
+</code></pre>
+<hr />
+<h1 id="8-errores-y-depuracion">8. Errores y depuración</h1>
+<p>Durante la programación podemos encontrarnos diferentes tipos de errores.</p>
+<h2 id="81-error-de-sintaxis">8.1. Error de sintaxis</h2>
+<p>El programa no cumple las reglas de Python.</p>
+<pre><code class="language-python">if edad &gt;= 18
+    print(&quot;Mayor&quot;)
+</code></pre>
+<p>Falta <code>:</code>.</p>
+<h2 id="82-error-durante-la-ejecucion">8.2. Error durante la ejecución</h2>
+<p>El código puede ser sintácticamente correcto, pero producir un error al ejecutarse.</p>
+<pre><code class="language-python">numero = int(&quot;hola&quot;)
+</code></pre>
+<p>Python no puede convertir <code>"hola"</code> en un entero.</p>
+<h2 id="83-error-logico">8.3. Error lógico</h2>
+<p>El programa se ejecuta, pero produce un resultado incorrecto.</p>
+<pre><code class="language-python">precio = 100
+descuento = 20
+
+precio_final = precio + descuento
+</code></pre>
+<p>El código funciona, pero el cálculo es incorrecto si el descuento debe restarse.</p>
+<h2 id="84-depuracion">8.4. Depuración</h2>
+<p>La <strong>depuración</strong> consiste en localizar y corregir errores del programa.</p>
+<p>Los IDE como PyCharm permiten:</p>
+<ul>
+<li>Ejecutar el programa paso a paso.</li>
+<li>Consultar variables.</li>
+<li>Establecer puntos de interrupción.</li>
+<li>Analizar el flujo de ejecución.</li>
+<li>Localizar errores.</li>
+</ul>
+<hr />
+<h1 id="9-buenas-practicas">9. Buenas prácticas</h1>
+<h3 id="legibilidad">Legibilidad</h3>
+<pre><code class="language-python">precio_total = precio_producto + gastos_envio
+</code></pre>
+<h3 id="coherencia">Coherencia</h3>
+<p>Evita mezclar estilos:</p>
+<pre><code class="language-python">nombre_usuario = &quot;Ana&quot;
+edadUsuario = 25
+</code></pre>
+<p>Mejor:</p>
+<pre><code class="language-python">nombre_usuario = &quot;Ana&quot;
+edad_usuario = 25
+</code></pre>
+<h3 id="sencillez">Sencillez</h3>
+<p>Evita soluciones innecesariamente complejas.</p>
+<h3 id="documentacion">Documentación</h3>
+<p>Utiliza comentarios y docstrings cuando aporten información útil.</p>
+<h3 id="mantenibilidad">Mantenibilidad</h3>
+<p>El código debe poder ser entendido y modificado fácilmente por otra persona.</p>
+<hr />
+<blockquote>
+<p><strong>Idea clave:</strong> un buen programa no solo debe funcionar; también debe ser fácil de leer, entender y mantener.</p>
+</blockquote></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
