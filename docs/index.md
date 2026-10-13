@@ -17,6 +17,7 @@ Apuntes del **Curso de Especialización en Desarrollo de Aplicaciones en Python*
 
 - [**UD1. Entornos de desarrollo en Python**](entornos/ud1.md)
 - [**UD2. Fundamentos y nomenclatura en Python**](entornos/ud2.md)
+- [**UD3. Git, entornos virtuales y gestión de dependencias**](entornos/ud3.md)
 
 
 ### Resultados de aprendizaje
