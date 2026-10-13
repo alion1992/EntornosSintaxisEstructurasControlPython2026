@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>UD3. Gestión de proyectos Python: Git, entornos virtuales y dependencias - CEDAP</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">CEDAP</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../.." class="nav-link">🐍 Desarrollo de Aplicaciones en Python</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Entornos</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../ud1/" class="dropdown-item">UD1. Entornos de desarrollo en Python</a>
+</li>
+                                    
+<li>
+    <a href="../ud2/" class="dropdown-item">UD2. Fundamentos y nomenclatura en Python</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">UD3. Gestión de proyectos Python: Git, entornos virtuales y dependencias</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Estructuras</a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Ud1</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../estructuras/ud1/estru_control/" class="dropdown-item">UD1. Estructuras de control en Python</a>
+</li>
+            
+<li>
+    <a href="../../estructuras/ud1/ud1_ejercicios/" class="dropdown-item">UD1. Ejercicios: Estructuras de control en Python</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../ud2/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../../estructuras/ud1/estru_control/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#ud3-gestion-de-proyectos-python-git-entornos-virtuales-y-dependencias" class="nav-link">UD3. Gestión de proyectos Python: Git, entornos virtuales y dependencias</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#1-introduccion" class="nav-link">1. Introducción</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#2-que-es-el-control-de-versiones" class="nav-link">2. ¿Qué es el control de versiones?</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#3-instalar-y-comprobar-git" class="nav-link">3. Instalar y comprobar Git</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#4-crear-o-clonar-un-repositorio" class="nav-link">4. Crear o clonar un repositorio</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#5-registrar-cambios-con-git" class="nav-link">5. Registrar cambios con Git</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#6-el-archivo-gitignore" class="nav-link">6. El archivo .gitignore</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#7-entornos-virtuales-en-python" class="nav-link">7. Entornos virtuales en Python</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#8-instalar-paquetes-con-pip" class="nav-link">8. Instalar paquetes con pip</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#9-el-archivo-requirementstxt" class="nav-link">9. El archivo requirements.txt</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#10-estructura-recomendada-del-proyecto" class="nav-link">10. Estructura recomendada del proyecto</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#11-flujo-completo-de-preparacion" class="nav-link">11. Flujo completo de preparación</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#12-actividad-practica" class="nav-link">12. Actividad práctica</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#13-ideas-clave" class="nav-link">13. Ideas clave</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="ud3-gestion-de-proyectos-python-git-entornos-virtuales-y-dependencias">UD3. Gestión de proyectos Python: Git, entornos virtuales y dependencias</h1>
+<h2 id="1-introduccion">1. Introducción</h2>
+<p>Cuando desarrollamos una aplicación, no basta con escribir código que
+funcione. También debemos organizar los archivos, controlar los cambios,
+mantener las dependencias del proyecto y facilitar que otras personas
+puedan instalarlo y ejecutarlo.</p>
+<p>En esta unidad aprenderemos a preparar un proyecto Python utilizando:</p>
+<ul>
+<li><strong>Git</strong>, para registrar los cambios realizados en el código.</li>
+<li><strong>GitHub</strong>, como servicio remoto para alojar repositorios y
+    colaborar.</li>
+<li><strong>Entornos virtuales</strong>, para aislar las dependencias de cada
+    proyecto.</li>
+<li><strong><code>pip</code></strong>, para instalar paquetes de Python.</li>
+<li><strong><code>requirements.txt</code></strong>, para registrar las dependencias necesarias.</li>
+<li><strong><code>.gitignore</code></strong>, para evitar que Git incluya archivos que no deben
+    versionarse.</li>
+</ul>
+<p>Esta primera parte se centra en preparar y mantener un repositorio con
+una configuración básica. La creación y gestión de ramas se estudiará en
+una segunda parte.</p>
+<h2 id="2-que-es-el-control-de-versiones">2. ¿Qué es el control de versiones?</h2>
+<p>El <strong>control de versiones</strong> permite registrar la evolución de los
+archivos de un proyecto a lo largo del tiempo. Gracias a él podemos
+consultar qué ha cambiado, cuándo se hizo un cambio y qué persona lo
+registró.</p>
+<p>Git es un sistema de control de versiones distribuido. Cada repositorio
+contiene información sobre el historial del proyecto, por lo que no
+depende de estar conectado continuamente a un servidor remoto para
+registrar cambios.</p>
+<h3 id="21-conceptos-basicos">2.1. Conceptos básicos</h3>
+<hr />
+<p>Concepto                            Descripción</p>
+<hr />
+<p>Repositorio                         Carpeta de trabajo junto con la
+                                      información que Git utiliza para
+                                      controlar sus versiones.</p>
+<p>Archivo modificado                  Archivo cuyo contenido ha cambiado
+                                      desde la última versión registrada.</p>
+<p><em>Staging area</em>                      Área donde se seleccionan los
+                                      cambios que formarán parte del
+                                      próximo <em>commit</em>.</p>
+<p><em>Commit</em>                            Registro de un conjunto de cambios
+                                      acompañado de un mensaje
+                                      descriptivo.</p>
+<p>Repositorio local                   Copia del repositorio almacenada en
+                                      nuestro equipo.</p>
+<p>Repositorio remoto                  Copia alojada en un servicio como
+                                      GitHub.</p>
+<hr />
+<h3 id="22-flujo-basico-de-trabajo">2.2. Flujo básico de trabajo</h3>
+<p>El proceso habitual consiste en modificar archivos, seleccionar los
+cambios que queremos registrar y crear un <em>commit</em>.</p>
+<pre><code class="language-text">Modificar archivos
+       ↓
+Revisar los cambios
+       ↓
+Añadir cambios al staging
+       ↓
+Crear un commit
+       ↓
+Enviar los cambios al repositorio remoto
+</code></pre>
+<p>Los comandos que utilizaremos con más frecuencia son:</p>
+<pre><code class="language-bash">git status
+git add archivo.py
+git commit -m &quot;Descripción del cambio&quot;
+git push
+</code></pre>
+<p><code>git push</code> envía los <em>commits</em> al repositorio remoto. Para utilizarlo,
+el repositorio debe tener configurado un remoto y debemos disponer de
+permisos de acceso.</p>
+<h2 id="3-instalar-y-comprobar-git">3. Instalar y comprobar Git</h2>
+<p>Git debe estar instalado en el equipo para poder utilizar sus comandos
+desde una terminal.</p>
+<p>Para comprobar si está disponible, ejecutamos:</p>
+<pre><code class="language-bash">git --version
+</code></pre>
+<p>Si el sistema muestra un número de versión, Git está instalado y
+accesible desde la terminal.</p>
+<p>En macOS, Git puede instalarse mediante las herramientas de línea de
+comandos de Xcode o mediante un gestor de paquetes. En Windows se puede
+instalar Git for Windows y en Linux suele estar disponible desde el
+gestor de paquetes de la distribución.</p>
+<h3 id="31-configurar-el-nombre-y-el-correo">3.1. Configurar el nombre y el correo</h3>
+<p>Git utiliza un nombre y una dirección de correo para identificar la
+autoría de los <em>commits</em>. Podemos configurarlos así:</p>
+<pre><code class="language-bash">git config --global user.name &quot;Nombre Apellidos&quot;
+git config --global user.email &quot;correo@ejemplo.com&quot;
+</code></pre>
+<p>La opción <code>--global</code> aplica la configuración a los repositorios del
+usuario. Si necesitamos una identidad diferente para un repositorio
+concreto, podemos configurar estos valores dentro de ese repositorio sin
+utilizar <code>--global</code>.</p>
+<p>Para consultar la configuración:</p>
+<pre><code class="language-bash">git config --global --list
+</code></pre>
+<blockquote>
+<p><strong>Importante:</strong> el nombre y el correo se guardan en los metadatos de
+los <em>commits</em>. Utiliza la identidad adecuada para tus repositorios.</p>
+</blockquote>
+<h2 id="4-crear-o-clonar-un-repositorio">4. Crear o clonar un repositorio</h2>
+<p>Hay dos situaciones habituales: comenzar un proyecto desde cero o
+descargar un repositorio que ya existe.</p>
+<h3 id="41-iniciar-un-repositorio-nuevo">4.1. Iniciar un repositorio nuevo</h3>
+<p>Nos situamos en la carpeta del proyecto y ejecutamos:</p>
+<pre><code class="language-bash">git init
+</code></pre>
+<p>Este comando inicializa un repositorio Git en la carpeta actual. Después
+podemos comprobar su estado:</p>
+<pre><code class="language-bash">git status
+</code></pre>
+<h3 id="42-clonar-un-repositorio-existente">4.2. Clonar un repositorio existente</h3>
+<p>Si el repositorio ya está alojado en GitHub, podemos obtener una copia
+local con:</p>
+<pre><code class="language-bash">git clone URL_DEL_REPOSITORIO
+</code></pre>
+<p>Por ejemplo, la URL tendrá una forma similar a esta:</p>
+<pre><code class="language-bash">git clone https://github.com/usuario/proyecto.git
+</code></pre>
+<p>Git creará una carpeta con el contenido del repositorio y su historial.
+La URL debe sustituirse por la dirección real del proyecto.</p>
+<h2 id="5-registrar-cambios-con-git">5. Registrar cambios con Git</h2>
+<p>Una vez que tenemos el repositorio, podemos modificar los archivos y
+registrar las versiones que consideremos relevantes.</p>
+<h3 id="51-consultar-el-estado">5.1. Consultar el estado</h3>
+<pre><code class="language-bash">git status
+</code></pre>
+<p>Muestra los archivos nuevos, modificados o preparados para el siguiente
+<em>commit</em>. Conviene ejecutarlo con frecuencia para saber qué cambios
+detecta Git.</p>
+<h3 id="52-seleccionar-los-archivos">5.2. Seleccionar los archivos</h3>
+<p>Para añadir un archivo concreto al área de preparación:</p>
+<pre><code class="language-bash">git add main.py
+</code></pre>
+<p>Para añadir todos los cambios de la carpeta actual y sus subcarpetas que
+Git no esté ignorando:</p>
+<pre><code class="language-bash">git add .
+</code></pre>
+<p>Antes de utilizar <code>git add .</code>, es recomendable revisar el estado y
+comprobar que no se están incluyendo archivos innecesarios.</p>
+<h3 id="53-crear-un-commit">5.3. Crear un commit</h3>
+<pre><code class="language-bash">git commit -m &quot;Añade el programa inicial&quot;
+</code></pre>
+<p>El mensaje debe resumir de forma clara el cambio realizado. Es
+preferible registrar cambios relacionados y utilizar mensajes
+descriptivos, en lugar de acumular todas las modificaciones en un único
+<em>commit</em> demasiado grande.</p>
+<h3 id="54-consultar-el-historial">5.4. Consultar el historial</h3>
+<pre><code class="language-bash">git log --oneline
+</code></pre>
+<p>Muestra el historial de <em>commits</em> de forma resumida.</p>
+<h3 id="55-enviar-y-recibir-cambios">5.5. Enviar y recibir cambios</h3>
+<p>Para enviar al remoto los <em>commits</em> locales:</p>
+<pre><code class="language-bash">git push
+</code></pre>
+<p>Para descargar e integrar los cambios del remoto en la rama actual:</p>
+<pre><code class="language-bash">git pull
+</code></pre>
+<p>Estos comandos requieren que el repositorio remoto esté configurado y
+que tengamos los permisos necesarios. Si trabajamos con un repositorio
+compartido, debemos prestar atención a los cambios de otras personas
+para evitar conflictos.</p>
+<h2 id="6-el-archivo-gitignore">6. El archivo <code>.gitignore</code></h2>
+<p>No todos los archivos de una carpeta deben guardarse en Git. Por
+ejemplo, normalmente no queremos versionar el entorno virtual, archivos
+temporales, cachés o configuraciones locales del IDE.</p>
+<p>El archivo <strong><code>.gitignore</code></strong> indica a Git qué archivos y carpetas debe
+ignorar cuando todavía no están siendo controlados por el repositorio.</p>
+<p>Para un proyecto Python básico podemos crear un archivo llamado
+<code>.gitignore</code> en la raíz:</p>
+<pre><code class="language-gitignore"># Entornos virtuales
+.venv/
+venv/
+
+# Archivos temporales de Python
+__pycache__/
+*.py[cod]
+
+# Configuración local de editores e IDE
+.idea/
+.vscode/
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
+
+# Entornos y salidas generadas
+.env
+site/
+</code></pre>
+<p>La carpeta <code>site/</code> se incluye aquí porque MkDocs la utiliza para generar
+la web estática. Si el proyecto no utiliza MkDocs, esa regla se puede
+quitar.</p>
+<blockquote>
+<p><strong>Importante:</strong> <code>.gitignore</code> no deja de versionar archivos que Git ya
+está siguiendo. Si un archivo ya está registrado en el repositorio,
+añadirlo después a <code>.gitignore</code> no basta para dejar de controlarlo.</p>
+</blockquote>
+<p>Tampoco se deben subir contraseñas, tokens ni otras credenciales al
+repositorio. Ignorar un archivo ayuda a evitar que se añada
+accidentalmente, pero no sustituye una gestión segura de los secretos.</p>
+<h2 id="7-entornos-virtuales-en-python">7. Entornos virtuales en Python</h2>
+<p>Un <strong>entorno virtual</strong> es un directorio que contiene una instalación
+aislada de los paquetes de Python que necesita un proyecto. Permite que
+dos proyectos utilicen versiones diferentes de una misma biblioteca sin
+interferir entre sí.</p>
+<p>Por ejemplo, una aplicación puede necesitar una versión de Django y otra
+aplicación una versión diferente. Si ambas dependen de la instalación
+global, pueden surgir incompatibilidades. Los entornos virtuales
+permiten separar estas dependencias.</p>
+<h3 id="71-crear-un-entorno-virtual">7.1. Crear un entorno virtual</h3>
+<p>Desde la raíz del proyecto ejecutamos:</p>
+<pre><code class="language-bash">python3 -m venv .venv
+</code></pre>
+<p>En Windows, según la instalación disponible, el comando puede ser:</p>
+<pre><code class="language-powershell">py -m venv .venv
+</code></pre>
+<p>La carpeta <code>.venv</code> contendrá el entorno virtual. Se suele utilizar ese
+nombre para identificarlo fácilmente y mantenerlo dentro del directorio
+del proyecto.</p>
+<h3 id="72-activar-el-entorno-virtual">7.2. Activar el entorno virtual</h3>
+<p><strong>macOS y Linux:</strong></p>
+<pre><code class="language-bash">source .venv/bin/activate
+</code></pre>
+<p><strong>Windows (PowerShell):</strong></p>
+<pre><code class="language-powershell">.\.venv\Scripts\Activate.ps1
+</code></pre>
+<p><strong>Windows (CMD):</strong></p>
+<pre><code class="language-bat">.venv\Scripts\activate.bat
+</code></pre>
+<p>Cuando el entorno está activo, la terminal suele mostrar <code>(.venv)</code> al
+principio de la línea. A partir de ese momento, los comandos <code>python</code> y
+<code>pip</code> utilizarán normalmente el entorno virtual activo.</p>
+<p>Para comprobar qué intérprete se está utilizando, podemos ejecutar:</p>
+<pre><code class="language-bash">python --version
+</code></pre>
+<p>En macOS y Linux también podemos consultar la ruta del ejecutable:</p>
+<pre><code class="language-bash">which python
+</code></pre>
+<p>En Windows:</p>
+<pre><code class="language-powershell">where.exe python
+</code></pre>
+<h3 id="73-desactivar-el-entorno">7.3. Desactivar el entorno</h3>
+<p>Cuando terminemos de trabajar, podemos desactivarlo con:</p>
+<pre><code class="language-bash">deactivate
+</code></pre>
+<p>Desactivarlo no elimina el entorno virtual ni los paquetes instalados en
+él.</p>
+<h3 id="74-por-que-no-se-sube-venv-a-github">7.4. ¿Por qué no se sube <code>.venv</code> a GitHub?</h3>
+<p>La carpeta <code>.venv</code> contiene archivos específicos del equipo y puede
+ocupar bastante espacio. Además, se puede volver a crear a partir de la
+versión de Python y de las dependencias del proyecto.</p>
+<p>Por eso, lo habitual es añadir <code>.venv/</code> al <code>.gitignore</code> y no subirla al
+repositorio. Lo que compartimos es la información necesaria para
+reconstruir el entorno, no la carpeta completa.</p>
+<h2 id="8-instalar-paquetes-con-pip">8. Instalar paquetes con <code>pip</code></h2>
+<p><code>pip</code> es la herramienta habitual para instalar y administrar paquetes de
+Python desde repositorios de paquetes como PyPI.</p>
+<p>Con el entorno virtual activado, podemos instalar una biblioteca:</p>
+<pre><code class="language-bash">python -m pip install requests
+</code></pre>
+<p>Utilizar <code>python -m pip</code> ayuda a ejecutar <code>pip</code> asociado al intérprete
+de Python que estamos utilizando.</p>
+<p>Para comprobar los paquetes instalados:</p>
+<pre><code class="language-bash">python -m pip list
+</code></pre>
+<p>Para consultar información sobre un paquete concreto:</p>
+<pre><code class="language-bash">python -m pip show requests
+</code></pre>
+<p>Para actualizar <code>pip</code> dentro del entorno:</p>
+<pre><code class="language-bash">python -m pip install --upgrade pip
+</code></pre>
+<p>Instala las dependencias dentro del entorno virtual del proyecto para
+evitar modificar innecesariamente la instalación global de Python.</p>
+<h2 id="9-el-archivo-requirementstxt">9. El archivo <code>requirements.txt</code></h2>
+<p>El archivo <strong><code>requirements.txt</code></strong> permite indicar las dependencias que
+necesita un proyecto. Así, otra persona puede instalar los paquetes
+necesarios sin tener que descubrirlos uno por uno.</p>
+<h3 id="91-generar-el-archivo">9.1. Generar el archivo</h3>
+<p>Con el entorno virtual activado y las dependencias del proyecto
+instaladas, ejecutamos:</p>
+<pre><code class="language-bash">python -m pip freeze &gt; requirements.txt
+</code></pre>
+<p>Esto guarda en <code>requirements.txt</code> la lista de paquetes instalados y sus
+versiones. Es útil para reproducir el entorno, aunque en proyectos
+grandes conviene revisar el resultado para asegurarse de que recoge las
+dependencias apropiadas.</p>
+<p>Un archivo podría contener, por ejemplo:</p>
+<pre><code class="language-text">requests==2.32.3
+</code></pre>
+<p>El número de versión es ilustrativo: la versión real dependerá de lo que
+se haya instalado en el entorno.</p>
+<h3 id="92-instalar-las-dependencias-desde-el-archivo">9.2. Instalar las dependencias desde el archivo</h3>
+<p>Cuando otra persona clona el proyecto, puede crear y activar su propio
+entorno virtual e instalar las dependencias con:</p>
+<pre><code class="language-bash">python -m pip install -r requirements.txt
+</code></pre>
+<p>El parámetro <code>-r</code> indica que <code>pip</code> debe leer los requisitos del archivo
+especificado.</p>
+<h3 id="93-flujo-de-trabajo-recomendado">9.3. Flujo de trabajo recomendado</h3>
+<p>Cuando añadimos una nueva dependencia al proyecto:</p>
+<ol>
+<li>Activamos el entorno virtual.</li>
+<li>Instalamos el paquete con <code>python -m pip install nombre_paquete</code>.</li>
+<li>Probamos que la aplicación funciona.</li>
+<li>Actualizamos <code>requirements.txt</code>.</li>
+<li>Registramos en Git los archivos del proyecto y <code>requirements.txt</code>.</li>
+</ol>
+<p>No se debe incluir la carpeta <code>.venv</code> en el repositorio, pero sí
+conviene versionar <code>requirements.txt</code> cuando forma parte de la forma
+acordada de instalar el proyecto.</p>
+<h2 id="10-estructura-recomendada-del-proyecto">10. Estructura recomendada del proyecto</h2>
+<p>Un proyecto sencillo puede organizarse así:</p>
+<pre><code class="language-text">mi_proyecto/
+├── .venv/                 # Entorno virtual: no se sube a Git
+├── .git/                  # Información interna de Git
+├── .gitignore             # Archivos que Git debe ignorar
+├── main.py                # Código principal
+└── requirements.txt       # Dependencias del proyecto
+</code></pre>
+<p>La carpeta <code>.git/</code> se crea al inicializar o clonar el repositorio. No
+debemos editar manualmente su contenido.</p>
+<p>A medida que la aplicación crezca, podremos organizar el código en
+paquetes y módulos. La estructura concreta dependerá de las necesidades
+del proyecto.</p>
+<h2 id="11-flujo-completo-de-preparacion">11. Flujo completo de preparación</h2>
+<p>Estos son los pasos habituales para preparar un proyecto Python que ya
+tenemos en una carpeta local:</p>
+<pre><code class="language-bash"># 1. Crear el entorno virtual
+python3 -m venv .venv
+
+# 2. Activarlo en macOS o Linux
+source .venv/bin/activate
+
+# 3. Actualizar pip
+python -m pip install --upgrade pip
+
+# 4. Instalar las dependencias necesarias
+python -m pip install requests
+
+# 5. Registrar las dependencias
+python -m pip freeze &gt; requirements.txt
+
+# 6. Revisar los archivos detectados por Git
+git status
+
+# 7. Preparar los cambios
+git add .gitignore requirements.txt main.py
+
+# 8. Crear un commit
+git commit -m &quot;Prepara el entorno inicial del proyecto&quot;
+</code></pre>
+<p>Si el proyecto aún no es un repositorio, antes de registrar los cambios
+habrá que ejecutar <code>git init</code>. Si ya se ha clonado desde GitHub, no es
+necesario inicializarlo de nuevo.</p>
+<p>Los comandos del ejemplo presuponen que existe <code>main.py</code>, que el archivo
+<code>.gitignore</code> ya se ha creado y que Git está configurado. Si los nombres
+de los archivos son diferentes, adapta el comando <code>git add</code>.</p>
+<h2 id="12-actividad-practica">12. Actividad práctica</h2>
+<p>Crea un pequeño proyecto Python llamado <code>gestion_tareas</code> y prepara su
+control de versiones y entorno de desarrollo.</p>
+<h3 id="tareas">Tareas</h3>
+<ol>
+<li>Crea una carpeta para el proyecto e inicializa un repositorio Git, o
+    clona un repositorio vacío preparado para la actividad.</li>
+<li>Crea un archivo <code>main.py</code> que muestre un mensaje por pantalla.</li>
+<li>Crea un entorno virtual llamado <code>.venv</code> y actívalo.</li>
+<li>Instala el paquete <code>requests</code> dentro del entorno virtual.</li>
+<li>Genera el archivo <code>requirements.txt</code>.</li>
+<li>Crea un <code>.gitignore</code> que excluya <code>.venv/</code>, <code>__pycache__/</code> y
+    <code>.idea/</code>.</li>
+<li>Comprueba con <code>git status</code> que el entorno virtual no aparece como un
+    conjunto de archivos pendientes de añadir.</li>
+<li>Añade los archivos necesarios y crea un <em>commit</em> con un mensaje
+    descriptivo.</li>
+<li>Si trabajas con un repositorio remoto, envía los cambios con
+    <code>git push</code>.</li>
+<li>Explica qué archivos has versionado, cuáles has excluido y por qué.</li>
+</ol>
+<h3 id="entrega">Entrega</h3>
+<p>Entrega la URL del repositorio y una breve explicación de los pasos
+realizados. No incluyas la carpeta <code>.venv</code> ni credenciales personales en
+la entrega.</p>
+<h2 id="13-ideas-clave">13. Ideas clave</h2>
+<ul>
+<li>Git registra la evolución del proyecto mediante <em>commits</em>.</li>
+<li>GitHub permite alojar repositorios remotos y compartir el código.</li>
+<li><code>.gitignore</code> evita incorporar archivos innecesarios que todavía no
+    están bajo seguimiento.</li>
+<li>Un entorno virtual separa las dependencias de cada proyecto.</li>
+<li><code>pip</code> permite instalar paquetes de Python.</li>
+<li><code>requirements.txt</code> documenta las dependencias para que el entorno
+    pueda reconstruirse.</li>
+<li>La carpeta <code>.venv</code> normalmente no se sube al repositorio; el archivo
+    <code>requirements.txt</code>, sí.</li>
+</ul>
+<blockquote>
+<p><strong>En la segunda parte</strong> se abordará el trabajo con ramas, su creación,
+el cambio entre ramas, la integración de cambios y el flujo de
+colaboración.</p>
+</blockquote></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
