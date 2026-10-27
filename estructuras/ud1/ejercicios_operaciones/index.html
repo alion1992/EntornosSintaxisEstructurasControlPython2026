@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="../../../img/favicon.ico">
-        <title>Ejercicios operaciones - CEDAP</title>
+        <title>Ejercicios de Python: entrada de datos y operaciones - CEDAP</title>
         <link href="../../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../../css/fontawesome.min.css" rel="stylesheet">
         <link href="../../../css/brands.min.css" rel="stylesheet">
@@ -63,7 +63,7 @@
     <ul class="dropdown-menu">
             
 <li>
-    <a href="./" class="dropdown-item active" aria-current="page">Ejercicios operaciones</a>
+    <a href="./" class="dropdown-item active" aria-current="page">Ejercicios de Python: entrada de datos y operaciones</a>
 </li>
             
 <li>
@@ -112,12 +112,110 @@
     
     <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
         <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#ejercicios-de-python-entrada-de-datos-y-operaciones" class="nav-link">Ejercicios de Python: entrada de datos y operaciones</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#ejercicio-1-presupuesto-de-reparacion-de-un-coche" class="nav-link">Ejercicio 1. Presupuesto de reparación de un coche</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#ejercicio-2-compra-en-el-supermercado" class="nav-link">Ejercicio 2. Compra en el supermercado</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
         </ul>
     </div>
 </div></div>
                     <div class="col-md-9" role="main">
 
-</div>
+<h1 id="ejercicios-de-python-entrada-de-datos-y-operaciones">Ejercicios de Python: entrada de datos y operaciones</h1>
+<h2 id="ejercicio-1-presupuesto-de-reparacion-de-un-coche">Ejercicio 1. Presupuesto de reparación de un coche</h2>
+<p>Desarrolla un programa en Python que solicite al usuario los siguientes
+datos:</p>
+<ul>
+<li>Nombre.</li>
+<li>Apellido.</li>
+<li>Precio del aceite de coche.</li>
+<li>Precio de los inyectores.</li>
+<li>Precio de las bujías.</li>
+<li>Precio del filtro del habitáculo.</li>
+</ul>
+<p>Cuando el usuario haya introducido todos los datos, el programa debe
+mostrar por pantalla:</p>
+<ol>
+<li>El nombre y el apellido del usuario.</li>
+<li>El precio total de todos los productos, sin IVA.</li>
+<li>El precio total con el IVA del 21 % incluido.</li>
+</ol>
+<p><strong>Importante:</strong> Los precios deben poder introducirse con decimales.</p>
+<h3 id="ejemplo-orientativo">Ejemplo orientativo</h3>
+<pre><code class="language-text">Introduce tu nombre: Ana
+Introduce tu apellido: López
+Precio del aceite de coche: 45.50
+Precio de los inyectores: 120
+Precio de las bujías: 32.90
+Precio del filtro del habitáculo: 18.60
+
+Cliente: Ana López
+Precio total sin IVA: 217.00 €
+Precio total con IVA (21 %): 262.57 €
+</code></pre>
+<p><em>Los valores del ejemplo son orientativos. Tu programa debe calcular los
+resultados a partir de los datos introducidos por el usuario.</em></p>
+<hr />
+<h2 id="ejercicio-2-compra-en-el-supermercado">Ejercicio 2. Compra en el supermercado</h2>
+<p>Imagina que tienes <strong>200 euros</strong> en tu cuenta corriente y vas a hacer la
+compra en el supermercado.</p>
+<p>Desarrolla un programa en Python que:</p>
+<ol>
+<li>Inicialice el saldo de la cuenta corriente en <strong>200 euros</strong>.</li>
+<li>Pregunte el precio de los siguientes cuatro productos:<ul>
+<li>Una docena de huevos.</li>
+<li>Una caja de helados.</li>
+<li>Una barra de pan.</li>
+<li>Un racimo de uvas.</li>
+</ul>
+</li>
+<li>Reste del saldo inicial el precio de cada producto.</li>
+<li>Cuando el usuario haya introducido el precio del último producto,
+    muestre el <strong>saldo final</strong> que queda en la cuenta corriente.</li>
+</ol>
+<p><strong>Importante:</strong> Los precios pueden contener decimales. Para este
+ejercicio, puedes suponer que hay saldo suficiente para pagar todos los
+productos.</p>
+<h3 id="ejemplo-orientativo_1">Ejemplo orientativo</h3>
+<pre><code class="language-text">Saldo inicial: 200.00 €
+Precio de una docena de huevos: 3.20
+Precio de una caja de helados: 5.50
+Precio de una barra de pan: 1.10
+Precio de un racimo de uvas: 4.80
+
+Saldo final en la cuenta corriente: 185.40 €
+</code></pre>
+<p><em>Los valores del ejemplo son orientativos. El programa debe calcular el
+saldo final utilizando los precios introducidos por el usuario.</em></p>
+<p>??? tip "🚀 Ampliación del ejercicio 2: IVA por producto"</p>
+<pre><code>Cuando termines el ejercicio básico, añade una mejora al programa.
+
+Aplica los siguientes tipos de IVA:
+
+| Producto | IVA |
+|---|---:|
+| Una docena de huevos | 10 % |
+| Una caja de helados | 21 % |
+| Una barra de pan | 10 % |
+| Un racimo de uvas | 21 % |
+
+**Nuevos requisitos:**
+
+1. Añade un menú que permita elegir si se quiere calcular
+   la compra con IVA.
+2. Calcula el precio de cada producto con su IVA incluido.
+3. Muestra el importe total de la compra.
+4. Calcula el saldo final después de pagar la compra.
+</code></pre></div>
             </div>
         </div>
 
