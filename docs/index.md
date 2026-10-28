@@ -112,12 +112,16 @@ Apuntes del **Curso de Especialización en Desarrollo de Aplicaciones en Python*
 - [UD3. Desarrollo de aplicaciones web con Django](ud3.md)
 - [UD4. Programación y control de drones con Python](ud4.md)
 
-
-![alt text](image.png)
-
 ## Ejercicios
 
 - [UD1. Estructuras de control en Python](estructuras/ud1/ud1_ejercicios.md)
+- [Ejercicios clase](estructuras/ud1/ejercicios_operaciones.md)
+
+
+
+
+![alt text](image.png)
+
 
 
 ### Resultados de aprendizaje
