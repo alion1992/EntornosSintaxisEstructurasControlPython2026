@@ -125,6 +125,23 @@
             </li>
               </ul>
             </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#ejercicio-3-entradas-para-un-parque-de-atracciones" class="nav-link">Ejercicio 3. Entradas para un parque de atracciones</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#enunciado" class="nav-link">Enunciado</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#ejemplo-orientativo-1" class="nav-link">Ejemplo orientativo 1</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#ejemplo-orientativo-2" class="nav-link">Ejemplo orientativo 2</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
         </ul>
     </div>
 </div></div>
@@ -233,6 +250,75 @@ saldo final utilizando los precios introducidos por el usuario.</em></p>
 <li>Muestra el importe total de la compra.</li>
 <li>Calcula el saldo final después de pagar.</li>
 </ol>
+</details>
+<h1 id="ejercicio-3-entradas-para-un-parque-de-atracciones">Ejercicio 3. Entradas para un parque de atracciones</h1>
+<h2 id="enunciado">Enunciado</h2>
+<p>Un parque de atracciones quiere crear un programa para calcular cuánto
+debe pagar una persona por su entrada.</p>
+<p>El programa debe pedir los siguientes datos:</p>
+<ul>
+<li>Nombre del visitante.</li>
+<li>Edad del visitante.</li>
+<li>Si quiere añadir un menú de comida. El usuario responderá <code>s</code> si
+    quiere menú o <code>n</code> si no lo quiere.</li>
+</ul>
+<p>El precio de la entrada depende de la edad:</p>
+<ul>
+<li>Menores de 4 años: entrada gratuita.</li>
+<li>Desde los 4 hasta los 12 años, ambos incluidos: descuento del 30 %
+    sobre el precio normal.</li>
+<li>Mayores de 12 años y menores de 65: pagan el precio normal.</li>
+<li>Personas de 65 años o más: descuento del 20 % sobre el precio
+    normal.</li>
+</ul>
+<p>El precio normal de la entrada es de <strong>30 €</strong>.</p>
+<p>Si el visitante quiere menú, se añadirán <strong>8 €</strong> al importe final. El
+precio del menú no tiene descuento.</p>
+<h3 id="requisitos-del-programa">Requisitos del programa</h3>
+<ol>
+<li>Solicita el nombre y la edad del visitante.</li>
+<li>Calcula el precio de la entrada según la edad.</li>
+<li>Pregunta si quiere añadir un menú.</li>
+<li>Si responde <code>s</code>, añade 8 € al precio calculado.</li>
+<li>Si responde <code>n</code>, no añade ningún importe.</li>
+<li>Muestra el nombre del visitante, el precio de la entrada, el coste
+    del menú y el importe total que debe pagar.</li>
+</ol>
+<p><strong>Condiciones:</strong> resuelve las decisiones utilizando únicamente <code>if</code> y
+<code>else</code>. No utilices <code>elif</code>. Puedes utilizar condicionales anidados, es
+decir, escribir un <code>if</code> dentro de un <code>else</code>.</p>
+<p>Para este ejercicio, puedes suponer que el usuario introduce una edad
+válida y responde <code>s</code> o <code>n</code> cuando se le pregunta por el menú.</p>
+<hr />
+<h2 id="ejemplo-orientativo-1">Ejemplo orientativo 1</h2>
+<pre><code class="language-text">Introduce tu nombre: Lucía
+Introduce tu edad: 10
+¿Quieres añadir un menú por 8 euros? (s/n): s
+
+Visitante: Lucía
+Precio de la entrada: 21.00 €
+Precio del menú: 8.00 €
+Total a pagar: 29.00 €
+</code></pre>
+<h2 id="ejemplo-orientativo-2">Ejemplo orientativo 2</h2>
+<pre><code class="language-text">Introduce tu nombre: Manuel
+Introduce tu edad: 70
+¿Quieres añadir un menú por 8 euros? (s/n): n
+
+Visitante: Manuel
+Precio de la entrada: 24.00 €
+Precio del menú: 0.00 €
+Total a pagar: 24.00 €
+</code></pre>
+<hr />
+<details class="tip">
+<summary>🚀 Ampliación opcional</summary>
+<p>Añade una pregunta para saber si el visitante quiere comprar una foto de recuerdo por <strong>5 €</strong>.</p>
+<ul>
+<li>Si responde <code>s</code>, añade 5 € al total.</li>
+<li>Si responde <code>n</code>, no añadas nada.</li>
+</ul>
+<p>Actualiza el resumen final para mostrar el precio de la foto y el nuevo total.</p>
 </details></div>
             </div>
         </div>
