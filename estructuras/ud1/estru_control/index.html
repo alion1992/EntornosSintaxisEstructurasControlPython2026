@@ -63,6 +63,10 @@
     <ul class="dropdown-menu">
             
 <li>
+    <a href="../ejercicios_condi_compuestos/" class="dropdown-item">Ejercicios: Operadores lógicos en Python</a>
+</li>
+            
+<li>
     <a href="../ejercicios_operaciones/" class="dropdown-item">Ejercicios de Python: entrada de datos y operaciones</a>
 </li>
             
@@ -259,8 +263,28 @@
               </ul>
             </li>
             
-            <li class="nav-item" data-bs-level="1"><a href="#16-condicionales-compactos" class="nav-link">16. Condicionales compactos</a>
+            <li class="nav-item" data-bs-level="1"><a href="#16-operadores-logicos-and-or-y-not" class="nav-link">16. Operadores lógicos: AND, OR y NOT</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#161-operador-and-y" class="nav-link">16.1. Operador AND (Y)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#162-operador-or-o" class="nav-link">16.2. Operador OR (O)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#163-operador-not-no" class="nav-link">16.3. Operador NOT (NO)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#164-combinar-varios-operadores-logicos" class="nav-link">16.4. Combinar varios operadores lógicos</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#165-resumen-de-los-operadores-logicos" class="nav-link">16.5. Resumen de los operadores lógicos</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
             
@@ -989,21 +1013,225 @@ else:
 </code></pre>
 <p>Debemos prestar especial atención a la indentación.</p>
 <hr />
-<h1 id="16-condicionales-compactos">16. Condicionales compactos</h1>
-<p>Python permite escribir determinadas condiciones de forma compacta.</p>
-<pre><code class="language-python">edad = 20
+<h1 id="16-operadores-logicos-and-or-y-not">16. Operadores lógicos: AND, OR y NOT</h1>
+<p>Hasta ahora hemos utilizado condiciones para tomar decisiones con <code>if</code>, <code>elif</code> y <code>else</code>.</p>
+<p>Sin embargo, en Python podemos necesitar comprobar varias condiciones al mismo tiempo. Para ello utilizamos los <strong>operadores lógicos</strong>.</p>
+<p>Python dispone de tres operadores lógicos principales:</p>
+<table>
+<thead>
+<tr>
+<th>Operador</th>
+<th>Significado</th>
+<th>Funcionamiento</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>and</code></td>
+<td>Y</td>
+<td>Todas las condiciones deben cumplirse.</td>
+</tr>
+<tr>
+<td><code>or</code></td>
+<td>O</td>
+<td>Al menos una condición debe cumplirse.</td>
+</tr>
+<tr>
+<td><code>not</code></td>
+<td>NO</td>
+<td>Invierte el resultado de una condición.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="161-operador-and-y">16.1. Operador AND (Y)</h2>
+<p>El operador <code>and</code> permite combinar varias condiciones. Para que el resultado sea verdadero, <strong>todas las condiciones deben cumplirse</strong>.</p>
+<p><strong>Ejemplo:</strong> una persona puede obtener un descuento especial si tiene entre 18 y 25 años, ambos incluidos.</p>
+<pre><code class="language-python">edad = 22
 
-mensaje = &quot;Mayor&quot; if edad &gt;= 18 else &quot;Menor&quot;
-
-print(mensaje)
-</code></pre>
-<p>Es equivalente a:</p>
-<pre><code class="language-python">if edad &gt;= 18:
-    mensaje = &quot;Mayor&quot;
+if edad &gt;= 18 and edad &lt;= 25:
+    print(&quot;Tienes derecho al descuento&quot;)
 else:
-    mensaje = &quot;Menor&quot;
+    print(&quot;No tienes derecho al descuento&quot;)
 </code></pre>
-<p>La versión compacta es útil cuando la decisión es sencilla.</p>
+<p>En este ejemplo se comprueban dos condiciones:</p>
+<ul>
+<li><code>edad &gt;= 18</code>: comprueba que tenga al menos 18 años.</li>
+<li><code>edad &lt;= 25</code>: comprueba que tenga como máximo 25 años.</li>
+</ul>
+<p>Las dos condiciones deben ser verdaderas para ejecutar el bloque del <code>if</code>.</p>
+<p><strong>Tabla de verdad de AND:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Condición A</th>
+<th>Condición B</th>
+<th>Resultado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Verdadero</td>
+<td>Verdadero</td>
+<td>Verdadero</td>
+</tr>
+<tr>
+<td>Verdadero</td>
+<td>Falso</td>
+<td>Falso</td>
+</tr>
+<tr>
+<td>Falso</td>
+<td>Verdadero</td>
+<td>Falso</td>
+</tr>
+<tr>
+<td>Falso</td>
+<td>Falso</td>
+<td>Falso</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Recuerda:</strong> con <code>and</code>, si una de las condiciones es falsa, el resultado completo será falso.</p>
+<h2 id="162-operador-or-o">16.2. Operador OR (O)</h2>
+<p>El operador <code>or</code> permite combinar varias condiciones. En este caso, <strong>basta con que al menos una de ellas sea verdadera</strong>.</p>
+<p><strong>Ejemplo:</strong> un visitante puede entrar gratuitamente al parque si tiene menos de 4 años o si dispone de un pase VIP.</p>
+<pre><code class="language-python">edad = 30
+pase_vip = &quot;s&quot;
+
+if edad &lt; 4 or pase_vip == &quot;s&quot;:
+    print(&quot;Entrada gratuita&quot;)
+else:
+    print(&quot;Debes pagar la entrada&quot;)
+</code></pre>
+<p>Se comprueban dos condiciones:</p>
+<ul>
+<li><code>edad &lt; 4</code>: comprueba si el visitante tiene menos de 4 años.</li>
+<li><code>pase_vip == "s"</code>: comprueba si dispone de un pase VIP.</li>
+</ul>
+<p>Si cualquiera de las dos condiciones se cumple, podrá entrar gratuitamente.</p>
+<p><strong>Tabla de verdad de OR:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Condición A</th>
+<th>Condición B</th>
+<th>Resultado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Verdadero</td>
+<td>Verdadero</td>
+<td>Verdadero</td>
+</tr>
+<tr>
+<td>Verdadero</td>
+<td>Falso</td>
+<td>Verdadero</td>
+</tr>
+<tr>
+<td>Falso</td>
+<td>Verdadero</td>
+<td>Verdadero</td>
+</tr>
+<tr>
+<td>Falso</td>
+<td>Falso</td>
+<td>Falso</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Recuerda:</strong> con <code>or</code>, solamente será falso cuando todas las condiciones sean falsas.</p>
+<h2 id="163-operador-not-no">16.3. Operador NOT (NO)</h2>
+<p>El operador <code>not</code> permite negar una condición, es decir, invertir su resultado.</p>
+<p><strong>Ejemplo:</strong> comprobar si un visitante no quiere menú.</p>
+<pre><code class="language-python">menu = &quot;n&quot;
+
+if not menu == &quot;s&quot;:
+    print(&quot;No has seleccionado menú&quot;)
+else:
+    print(&quot;Has seleccionado menú&quot;)
+</code></pre>
+<p>También podemos escribirlo utilizando el operador <code>!=</code>:</p>
+<pre><code class="language-python">if menu != &quot;s&quot;:
+    print(&quot;No has seleccionado menú&quot;)
+</code></pre>
+<p>El operador <code>not</code> transforma:</p>
+<ul>
+<li>Verdadero en falso.</li>
+<li>Falso en verdadero.</li>
+</ul>
+<p><strong>Tabla de verdad de NOT:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Condición</th>
+<th>Resultado de NOT</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Verdadero</td>
+<td>Falso</td>
+</tr>
+<tr>
+<td>Falso</td>
+<td>Verdadero</td>
+</tr>
+</tbody>
+</table>
+<h2 id="164-combinar-varios-operadores-logicos">16.4. Combinar varios operadores lógicos</h2>
+<p>Podemos combinar <code>and</code> y <code>or</code> dentro de una misma condición para realizar comprobaciones más complejas.</p>
+<p><strong>Ejemplo:</strong> el parque permite acceder a una zona especial a los visitantes que tengan entre 18 y 25 años o que dispongan de un pase VIP.</p>
+<pre><code class="language-python">edad = 30
+pase_vip = &quot;s&quot;
+
+if (edad &gt;= 18 and edad &lt;= 25) or pase_vip == &quot;s&quot;:
+    print(&quot;Puedes acceder a la zona especial&quot;)
+else:
+    print(&quot;No puedes acceder a la zona especial&quot;)
+</code></pre>
+<p>En este caso:</p>
+<ol>
+<li>Primero comprobamos si la edad está entre 18 y 25 años.</li>
+<li>Después comprobamos si tiene un pase VIP.</li>
+<li>Si se cumple cualquiera de las dos opciones, podrá acceder.</li>
+</ol>
+<h3 id="para-que-sirven-los-parentesis">¿Para qué sirven los paréntesis?</h3>
+<p>Los paréntesis permiten agrupar condiciones y establecer qué comprobaciones queremos realizar conjuntamente.</p>
+<p>Por ejemplo:</p>
+<pre><code class="language-python">if (edad &gt;= 18 and edad &lt;= 25) or pase_vip == &quot;s&quot;:
+</code></pre>
+<p>Primero se evalúa el grupo de condiciones de la edad y después se combina su resultado con la condición del pase VIP.</p>
+<p><strong>Importante:</strong> En Python, <code>and</code> tiene prioridad sobre <code>or</code>. Aunque los paréntesis no siempre son obligatorios, es recomendable utilizarlos para mejorar la claridad del código.</p>
+<h2 id="165-resumen-de-los-operadores-logicos">16.5. Resumen de los operadores lógicos</h2>
+<table>
+<thead>
+<tr>
+<th>Operador</th>
+<th>Significado</th>
+<th>Ejemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>and</code></td>
+<td>Se deben cumplir todas las condiciones.</td>
+<td><code>edad &gt;= 18 and edad &lt;= 25</code></td>
+</tr>
+<tr>
+<td><code>or</code></td>
+<td>Se debe cumplir al menos una condición.</td>
+<td><code>edad &lt; 4 or pase_vip == "s"</code></td>
+</tr>
+<tr>
+<td><code>not</code></td>
+<td>Invierte el resultado de una condición.</td>
+<td><code>not menu == "s"</code></td>
+</tr>
+</tbody>
+</table>
+<p>Estos operadores permiten construir condiciones más completas y tomar decisiones en nuestros programas de una forma más flexible.</p>
 <hr />
 <h1 id="17-valores-booleanos">17. Valores booleanos</h1>
 <p>Las condiciones trabajan con valores booleanos:</p>
