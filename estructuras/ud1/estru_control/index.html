@@ -288,13 +288,61 @@
               </ul>
             </li>
             
-            <li class="nav-item" data-bs-level="1"><a href="#17-valores-booleanos" class="nav-link">17. Valores booleanos</a>
+            <li class="nav-item" data-bs-level="1"><a href="#17-metodos-de-cadenas-de-texto" class="nav-link">17. Métodos de cadenas de texto</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#171-convertir-mayusculas-y-minusculas" class="nav-link">17.1. Convertir mayúsculas y minúsculas</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            
-            <li class="nav-item" data-bs-level="1"><a href="#18-comparacion-de-cadenas" class="nav-link">18. Comparación de cadenas</a>
+            <li class="nav-item" data-bs-level="2"><a href="#172-eliminar-espacios" class="nav-link">17.2. Eliminar espacios</a>
               <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#173-buscar-y-sustituir-texto" class="nav-link">17.3. Buscar y sustituir texto</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#174-comprobar-el-contenido-de-una-cadena" class="nav-link">17.4. Comprobar el contenido de una cadena</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#175-dividir-y-unir-cadenas" class="nav-link">17.5. Dividir y unir cadenas</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#176-importante-los-metodos-no-modifican-la-cadena-original" class="nav-link">17.6. Importante: los métodos no modifican la cadena original</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#18-comparacion-de-cadenas-de-texto" class="nav-link">18. Comparación de cadenas de texto</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#181-operadores-de-comparacion" class="nav-link">18.1. Operadores de comparación</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#182-diferencia-entre-mayusculas-y-minusculas" class="nav-link">18.2. Diferencia entre mayúsculas y minúsculas</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#183-eliminar-espacios-antes-de-comparar" class="nav-link">18.3. Eliminar espacios antes de comparar</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#184-comprobar-si-una-cadena-contiene-otra-cadena" class="nav-link">18.4. Comprobar si una cadena contiene otra cadena</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#185-comprobar-como-empieza-o-termina-una-cadena" class="nav-link">18.5. Comprobar cómo empieza o termina una cadena</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#186-ejemplo-practico-validar-usuario-y-contrasena" class="nav-link">18.6. Ejemplo práctico: validar usuario y contraseña</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
             
@@ -1233,42 +1281,369 @@ else:
 </table>
 <p>Estos operadores permiten construir condiciones más completas y tomar decisiones en nuestros programas de una forma más flexible.</p>
 <hr />
-<h1 id="17-valores-booleanos">17. Valores booleanos</h1>
-<p>Las condiciones trabajan con valores booleanos:</p>
-<pre><code class="language-python">True
-False
-</code></pre>
+<h1 id="17-metodos-de-cadenas-de-texto">17. Métodos de cadenas de texto</h1>
+<p>Python dispone de numerosos métodos que permiten trabajar y manipular cadenas de texto (<code>str</code>). Estos métodos facilitan tareas como convertir textos a mayúsculas, eliminar espacios, buscar palabras o comprobar el contenido de una cadena.</p>
+<h2 id="171-convertir-mayusculas-y-minusculas">17.1. Convertir mayúsculas y minúsculas</h2>
+<table>
+<thead>
+<tr>
+<th>Método</th>
+<th>Funcionamiento</th>
+<th>Ejemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.lower()</code></td>
+<td>Convierte todo a minúsculas.</td>
+<td><code>"HOLA".lower()</code> → <code>"hola"</code></td>
+</tr>
+<tr>
+<td><code>.upper()</code></td>
+<td>Convierte todo a mayúsculas.</td>
+<td><code>"hola".upper()</code> → <code>"HOLA"</code></td>
+</tr>
+<tr>
+<td><code>.capitalize()</code></td>
+<td>Primera letra en mayúscula.</td>
+<td><code>"pedro".capitalize()</code> → <code>"Pedro"</code></td>
+</tr>
+<tr>
+<td><code>.title()</code></td>
+<td>Primera letra de cada palabra en mayúscula.</td>
+<td><code>"juan perez".title()</code> → <code>"Juan Perez"</code></td>
+</tr>
+<tr>
+<td><code>.swapcase()</code></td>
+<td>Invierte mayúsculas y minúsculas.</td>
+<td><code>"Hola".swapcase()</code> → <code>"hOLA"</code></td>
+</tr>
+</tbody>
+</table>
 <p>Ejemplo:</p>
-<pre><code class="language-python">activo = True
+<pre><code class="language-python">nombre = input(&quot;Introduce tu nombre: &quot;)
 
-if activo:
-    print(&quot;Usuario activo&quot;)
+nombre = nombre.strip().title()
+
+print(f&quot;Hola, {nombre}&quot;)
 </code></pre>
-<p>También podemos guardar directamente el resultado de una comparación:</p>
-<pre><code class="language-python">edad = 25
+<h2 id="172-eliminar-espacios">17.2. Eliminar espacios</h2>
+<table>
+<thead>
+<tr>
+<th>Método</th>
+<th>Funcionamiento</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.strip()</code></td>
+<td>Elimina espacios al principio y al final.</td>
+</tr>
+<tr>
+<td><code>.lstrip()</code></td>
+<td>Elimina espacios de la izquierda.</td>
+</tr>
+<tr>
+<td><code>.rstrip()</code></td>
+<td>Elimina espacios de la derecha.</td>
+</tr>
+</tbody>
+</table>
+<p>Ejemplo:</p>
+<pre><code class="language-python">texto = &quot;   Hola Python   &quot;
 
-es_mayor = edad &gt;= 18
+print(texto.strip())
+print(texto.lstrip())
+print(texto.rstrip())
+</code></pre>
+<p><strong>Importante:</strong> estos métodos no eliminan los espacios que existen entre palabras.</p>
+<h2 id="173-buscar-y-sustituir-texto">17.3. Buscar y sustituir texto</h2>
+<table>
+<thead>
+<tr>
+<th>Método</th>
+<th>Funcionamiento</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.find("texto")</code></td>
+<td>Busca un texto y devuelve su posición. Si no existe, devuelve -1.</td>
+</tr>
+<tr>
+<td><code>.count("texto")</code></td>
+<td>Cuenta cuántas veces aparece un texto.</td>
+</tr>
+<tr>
+<td><code>.replace("a", "b")</code></td>
+<td>Sustituye una parte del texto por otra.</td>
+</tr>
+</tbody>
+</table>
+<p>Ejemplo:</p>
+<pre><code class="language-python">frase = &quot;Me gusta programar en Python&quot;
 
-print(es_mayor)
+print(frase.find(&quot;Python&quot;))
+print(frase.count(&quot;a&quot;))
+print(frase.replace(&quot;Python&quot;, &quot;Java&quot;))
+</code></pre>
+<h2 id="174-comprobar-el-contenido-de-una-cadena">17.4. Comprobar el contenido de una cadena</h2>
+<p>Estos métodos devuelven un valor booleano (<code>True</code> o <code>False</code>) y son especialmente útiles para validar datos.</p>
+<table>
+<thead>
+<tr>
+<th>Método</th>
+<th>Funcionamiento</th>
+<th>Ejemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.isdigit()</code></td>
+<td>Comprueba si contiene únicamente dígitos.</td>
+<td><code>"123".isdigit()</code></td>
+</tr>
+<tr>
+<td><code>.isalpha()</code></td>
+<td>Comprueba si contiene únicamente letras.</td>
+<td><code>"Hola".isalpha()</code></td>
+</tr>
+<tr>
+<td><code>.isalnum()</code></td>
+<td>Comprueba si contiene letras o números.</td>
+<td><code>"Hola123".isalnum()</code></td>
+</tr>
+<tr>
+<td><code>.isspace()</code></td>
+<td>Comprueba si contiene únicamente espacios.</td>
+<td><code>"   ".isspace()</code></td>
+</tr>
+<tr>
+<td><code>.islower()</code></td>
+<td>Comprueba si las letras están en minúsculas.</td>
+<td><code>"hola".islower()</code></td>
+</tr>
+<tr>
+<td><code>.isupper()</code></td>
+<td>Comprueba si las letras están en mayúsculas.</td>
+<td><code>"HOLA".isupper()</code></td>
+</tr>
+</tbody>
+</table>
+<p>Ejemplo:</p>
+<pre><code class="language-python">edad = input(&quot;Introduce tu edad: &quot;)
+
+if edad.isdigit():
+    print(f&quot;Tu edad es {edad}&quot;)
+else:
+    print(&quot;Debes introducir un número entero positivo&quot;)
+</code></pre>
+<h2 id="175-dividir-y-unir-cadenas">17.5. Dividir y unir cadenas</h2>
+<p>También podemos dividir una cadena en varias partes o unir diferentes cadenas.</p>
+<table>
+<thead>
+<tr>
+<th>Método</th>
+<th>Funcionamiento</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.split()</code></td>
+<td>Divide una cadena y devuelve una lista.</td>
+</tr>
+<tr>
+<td><code>.join()</code></td>
+<td>Une los elementos de una lista en una cadena.</td>
+</tr>
+</tbody>
+</table>
+<p>Ejemplo con <code>split()</code>:</p>
+<pre><code class="language-python">nombres = &quot;Ana,Juan,Pedro&quot;
+
+lista_nombres = nombres.split(&quot;,&quot;)
+
+print(lista_nombres)
 </code></pre>
 <p>Resultado:</p>
-<pre><code class="language-text">True
+<pre><code class="language-text">['Ana', 'Juan', 'Pedro']
+</code></pre>
+<p>Ejemplo con <code>join()</code>:</p>
+<pre><code class="language-python">nombres = [&quot;Ana&quot;, &quot;Juan&quot;, &quot;Pedro&quot;]
+
+texto = &quot;, &quot;.join(nombres)
+
+print(texto)
+</code></pre>
+<p>Resultado:</p>
+<pre><code class="language-text">Ana, Juan, Pedro
+</code></pre>
+<h2 id="176-importante-los-metodos-no-modifican-la-cadena-original">17.6. Importante: los métodos no modifican la cadena original</h2>
+<p>Los métodos de las cadenas devuelven una nueva cadena. No modifican directamente el contenido de la variable original.</p>
+<pre><code class="language-python">nombre = &quot;  PEDRO  &quot;
+
+nombre.strip().lower()
+
+print(nombre)
+</code></pre>
+<p>El resultado seguirá siendo <code>"  PEDRO  "</code>.</p>
+<p>Para guardar el resultado debemos asignarlo nuevamente:</p>
+<pre><code class="language-python">nombre = nombre.strip().lower()
+
+print(nombre)
+</code></pre>
+<p>Resultado:</p>
+<pre><code class="language-text">pedro
 </code></pre>
 <hr />
-<h1 id="18-comparacion-de-cadenas">18. Comparación de cadenas</h1>
-<p>Las cadenas también pueden utilizarse en condiciones.</p>
-<pre><code class="language-python">usuario = input(&quot;Usuario: &quot;)
+<h1 id="18-comparacion-de-cadenas-de-texto">18. Comparación de cadenas de texto</h1>
+<p>En Python podemos comparar cadenas de texto para comprobar si dos palabras o frases son iguales, diferentes o si una cadena cumple determinadas condiciones.</p>
+<p>Las comparaciones de cadenas se utilizan habitualmente para validar respuestas introducidas por teclado, comprobar usuarios o controlar opciones de un programa.</p>
+<h2 id="181-operadores-de-comparacion">18.1. Operadores de comparación</h2>
+<p>Podemos utilizar los mismos operadores de comparación que utilizamos con números.</p>
+<table>
+<thead>
+<tr>
+<th>Operador</th>
+<th>Significado</th>
+<th>Ejemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>==</code></td>
+<td>Igual que</td>
+<td><code>"hola" == "hola"</code> → <code>True</code></td>
+</tr>
+<tr>
+<td><code>!=</code></td>
+<td>Distinto de</td>
+<td><code>"hola" != "adios"</code> → <code>True</code></td>
+</tr>
+<tr>
+<td><code>&gt;</code></td>
+<td>Mayor que</td>
+<td><code>"b" &gt; "a"</code> → <code>True</code></td>
+</tr>
+<tr>
+<td><code>&lt;</code></td>
+<td>Menor que</td>
+<td><code>"a" &lt; "b"</code> → <code>True</code></td>
+</tr>
+<tr>
+<td><code>&gt;=</code></td>
+<td>Mayor o igual</td>
+<td><code>"c" &gt;= "b"</code> → <code>True</code></td>
+</tr>
+<tr>
+<td><code>&lt;=</code></td>
+<td>Menor o igual</td>
+<td><code>"a" &lt;= "b"</code> → <code>True</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Importante:</strong> Python compara las cadenas carácter a carácter utilizando el orden Unicode. Por ejemplo, distingue entre mayúsculas y minúsculas.</p>
+<h2 id="182-diferencia-entre-mayusculas-y-minusculas">18.2. Diferencia entre mayúsculas y minúsculas</h2>
+<p>Python distingue entre mayúsculas y minúsculas (<em>case-sensitive</em>).</p>
+<p>Por tanto, estas cadenas no son iguales:</p>
+<pre><code class="language-python">usuario = &quot;Admin&quot;
 
 if usuario == &quot;admin&quot;:
     print(&quot;Acceso de administrador&quot;)
+else:
+    print(&quot;Usuario normal&quot;)
 </code></pre>
-<p>Podemos utilizar métodos:</p>
-<pre><code class="language-python">respuesta = input(&quot;¿Continuar? &quot;)
+<p>El resultado será <code>Usuario normal</code>, porque <code>"Admin"</code> y <code>"admin"</code> son cadenas diferentes.</p>
+<p>Para evitar este problema podemos utilizar <code>.lower()</code> o <code>.upper()</code>.</p>
+<pre><code class="language-python">usuario = input(&quot;Introduce tu usuario: &quot;)
 
-if respuesta.lower() == &quot;si&quot;:
-    print(&quot;Continuamos&quot;)
+if usuario.lower() == &quot;admin&quot;:
+    print(&quot;Acceso de administrador&quot;)
+else:
+    print(&quot;Usuario normal&quot;)
 </code></pre>
-<hr />
+<h2 id="183-eliminar-espacios-antes-de-comparar">18.3. Eliminar espacios antes de comparar</h2>
+<p>Cuando solicitamos información mediante <code>input()</code>, el usuario puede introducir espacios al principio o al final del texto.</p>
+<p>Podemos utilizar <code>.strip()</code> para eliminarlos.</p>
+<pre><code class="language-python">respuesta = input(&quot;¿Quieres continuar? (s/n): &quot;)
+
+if respuesta.strip().lower() == &quot;s&quot;:
+    print(&quot;Continuamos&quot;)
+else:
+    print(&quot;Finalizamos&quot;)
+</code></pre>
+<p>De esta manera, todas estas respuestas se interpretarán correctamente:</p>
+<ul>
+<li><code>"s"</code></li>
+<li><code>"S"</code></li>
+<li><code>" s"</code></li>
+<li><code>"s "</code></li>
+<li><code>" S "</code></li>
+</ul>
+<h2 id="184-comprobar-si-una-cadena-contiene-otra-cadena">18.4. Comprobar si una cadena contiene otra cadena</h2>
+<p>Podemos utilizar el operador <code>in</code> para comprobar si una palabra o carácter aparece dentro de otra cadena.</p>
+<pre><code class="language-python">correo = input(&quot;Introduce tu correo electrónico: &quot;)
+
+if &quot;@&quot; in correo:
+    print(&quot;El correo contiene una arroba&quot;)
+else:
+    print(&quot;El correo no contiene una arroba&quot;)
+</code></pre>
+<p>También podemos utilizar <code>not in</code> para comprobar que una cadena no contiene determinado texto.</p>
+<pre><code class="language-python">nombre = input(&quot;Introduce tu nombre: &quot;)
+
+if &quot; &quot; not in nombre:
+    print(&quot;El nombre no contiene espacios&quot;)
+else:
+    print(&quot;Has introducido más de una palabra&quot;)
+</code></pre>
+<p>Estas comprobaciones son básicas y no garantizan que un correo electrónico o un nombre sean válidos.</p>
+<h2 id="185-comprobar-como-empieza-o-termina-una-cadena">18.5. Comprobar cómo empieza o termina una cadena</h2>
+<p>Python dispone de dos métodos especialmente útiles:</p>
+<ul>
+<li><code>.startswith()</code>: comprueba si una cadena comienza por un texto determinado.</li>
+<li><code>.endswith()</code>: comprueba si una cadena termina por un texto determinado.</li>
+</ul>
+<p>Ejemplo:</p>
+<pre><code class="language-python">archivo = input(&quot;Introduce el nombre del archivo: &quot;)
+
+if archivo.endswith(&quot;.pdf&quot;):
+    print(&quot;Es un documento PDF&quot;)
+else:
+    print(&quot;No es un documento PDF&quot;)
+</code></pre>
+<p>Otro ejemplo:</p>
+<pre><code class="language-python">telefono = input(&quot;Introduce tu teléfono: &quot;)
+
+if telefono.startswith(&quot;6&quot;):
+    print(&quot;El teléfono comienza por 6&quot;)
+else:
+    print(&quot;El teléfono no comienza por 6&quot;)
+</code></pre>
+<h2 id="186-ejemplo-practico-validar-usuario-y-contrasena">18.6. Ejemplo práctico: validar usuario y contraseña</h2>
+<p>Vamos a desarrollar un pequeño programa que solicita un usuario y una contraseña.</p>
+<p>El acceso solamente estará permitido si se cumplen las dos condiciones:</p>
+<ul>
+<li>El usuario es <code>admin</code>.</li>
+<li>La contraseña es <code>python123</code>.</li>
+</ul>
+<pre><code class="language-python">usuario = input(&quot;Usuario: &quot;).strip().lower()
+password = input(&quot;Contraseña: &quot;)
+
+if usuario == &quot;admin&quot; and password == &quot;python123&quot;:
+    print(&quot;Acceso permitido&quot;)
+else:
+    print(&quot;Usuario o contraseña incorrectos&quot;)
+</code></pre>
+<p>En este ejemplo utilizamos:</p>
+<ul>
+<li><code>.strip()</code> para eliminar espacios sobrantes.</li>
+<li><code>.lower()</code> para normalizar el nombre de usuario.</li>
+<li><code>==</code> para comparar las cadenas.</li>
+<li><code>and</code> para exigir que se cumplan las dos condiciones.</li>
+</ul>
+<p><strong>Importante:</strong> en este ejemplo la contraseña sí distingue entre mayúsculas y minúsculas.</p>
 <h1 id="19-comprobar-si-un-dato-esta-vacio">19. Comprobar si un dato está vacío</h1>
 <p>Las cadenas vacías se consideran falsas en un contexto booleano.</p>
 <pre><code class="language-python">nombre = input(&quot;Nombre: &quot;)
