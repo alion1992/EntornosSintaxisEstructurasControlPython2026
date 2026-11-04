@@ -116,6 +116,7 @@ Apuntes del **Curso de Especialización en Desarrollo de Aplicaciones en Python*
 
 - [UD1. Estructuras de control en Python](estructuras/ud1/ud1_ejercicios.md)
 - [Ejercicios clase](estructuras/ud1/ejercicios_operaciones.md)
+- [Ejercicios condicionales Compuestos](estructuras/ud1/ejercicios_condi_compuestos.md)
 
 
 

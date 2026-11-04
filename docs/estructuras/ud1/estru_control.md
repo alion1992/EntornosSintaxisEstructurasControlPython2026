@@ -581,86 +581,471 @@ Debemos prestar especial atención a la indentación.
 
 ---
 
-# 16. Condicionales compactos
+# 16. Operadores lógicos: AND, OR y NOT
 
-Python permite escribir determinadas condiciones de forma compacta.
+Hasta ahora hemos utilizado condiciones para tomar decisiones con `if`, `elif` y `else`.
+
+Sin embargo, en Python podemos necesitar comprobar varias condiciones al mismo tiempo. Para ello utilizamos los **operadores lógicos**.
+
+Python dispone de tres operadores lógicos principales:
+
+| Operador | Significado | Funcionamiento |
+|---|---|---|
+| `and` | Y | Todas las condiciones deben cumplirse. |
+| `or` | O | Al menos una condición debe cumplirse. |
+| `not` | NO | Invierte el resultado de una condición. |
+
+## 16.1. Operador AND (Y)
+
+El operador `and` permite combinar varias condiciones. Para que el resultado sea verdadero, **todas las condiciones deben cumplirse**.
+
+**Ejemplo:** una persona puede obtener un descuento especial si tiene entre 18 y 25 años, ambos incluidos.
 
 ```python
-edad = 20
+edad = 22
 
-mensaje = "Mayor" if edad >= 18 else "Menor"
-
-print(mensaje)
-```
-
-Es equivalente a:
-
-```python
-if edad >= 18:
-    mensaje = "Mayor"
+if edad >= 18 and edad <= 25:
+    print("Tienes derecho al descuento")
 else:
-    mensaje = "Menor"
+    print("No tienes derecho al descuento")
 ```
 
-La versión compacta es útil cuando la decisión es sencilla.
+En este ejemplo se comprueban dos condiciones:
+
+- `edad >= 18`: comprueba que tenga al menos 18 años.
+- `edad <= 25`: comprueba que tenga como máximo 25 años.
+
+Las dos condiciones deben ser verdaderas para ejecutar el bloque del `if`.
+
+**Tabla de verdad de AND:**
+
+| Condición A | Condición B | Resultado |
+|---|---|---|
+| Verdadero | Verdadero | Verdadero |
+| Verdadero | Falso | Falso |
+| Falso | Verdadero | Falso |
+| Falso | Falso | Falso |
+
+**Recuerda:** con `and`, si una de las condiciones es falsa, el resultado completo será falso.
+
+## 16.2. Operador OR (O)
+
+El operador `or` permite combinar varias condiciones. En este caso, **basta con que al menos una de ellas sea verdadera**.
+
+**Ejemplo:** un visitante puede entrar gratuitamente al parque si tiene menos de 4 años o si dispone de un pase VIP.
+
+```python
+edad = 30
+pase_vip = "s"
+
+if edad < 4 or pase_vip == "s":
+    print("Entrada gratuita")
+else:
+    print("Debes pagar la entrada")
+```
+
+Se comprueban dos condiciones:
+
+- `edad < 4`: comprueba si el visitante tiene menos de 4 años.
+- `pase_vip == "s"`: comprueba si dispone de un pase VIP.
+
+Si cualquiera de las dos condiciones se cumple, podrá entrar gratuitamente.
+
+**Tabla de verdad de OR:**
+
+| Condición A | Condición B | Resultado |
+|---|---|---|
+| Verdadero | Verdadero | Verdadero |
+| Verdadero | Falso | Verdadero |
+| Falso | Verdadero | Verdadero |
+| Falso | Falso | Falso |
+
+**Recuerda:** con `or`, solamente será falso cuando todas las condiciones sean falsas.
+
+## 16.3. Operador NOT (NO)
+
+El operador `not` permite negar una condición, es decir, invertir su resultado.
+
+**Ejemplo:** comprobar si un visitante no quiere menú.
+
+```python
+menu = "n"
+
+if not menu == "s":
+    print("No has seleccionado menú")
+else:
+    print("Has seleccionado menú")
+```
+
+También podemos escribirlo utilizando el operador `!=`:
+
+```python
+if menu != "s":
+    print("No has seleccionado menú")
+```
+
+El operador `not` transforma:
+
+- Verdadero en falso.
+- Falso en verdadero.
+
+**Tabla de verdad de NOT:**
+
+| Condición | Resultado de NOT |
+|---|---|
+| Verdadero | Falso |
+| Falso | Verdadero |
+
+## 16.4. Combinar varios operadores lógicos
+
+Podemos combinar `and` y `or` dentro de una misma condición para realizar comprobaciones más complejas.
+
+**Ejemplo:** el parque permite acceder a una zona especial a los visitantes que tengan entre 18 y 25 años o que dispongan de un pase VIP.
+
+```python
+edad = 30
+pase_vip = "s"
+
+if (edad >= 18 and edad <= 25) or pase_vip == "s":
+    print("Puedes acceder a la zona especial")
+else:
+    print("No puedes acceder a la zona especial")
+```
+
+En este caso:
+
+1. Primero comprobamos si la edad está entre 18 y 25 años.
+2. Después comprobamos si tiene un pase VIP.
+3. Si se cumple cualquiera de las dos opciones, podrá acceder.
+
+### ¿Para qué sirven los paréntesis?
+
+Los paréntesis permiten agrupar condiciones y establecer qué comprobaciones queremos realizar conjuntamente.
+
+Por ejemplo:
+
+```python
+if (edad >= 18 and edad <= 25) or pase_vip == "s":
+```
+
+Primero se evalúa el grupo de condiciones de la edad y después se combina su resultado con la condición del pase VIP.
+
+**Importante:** En Python, `and` tiene prioridad sobre `or`. Aunque los paréntesis no siempre son obligatorios, es recomendable utilizarlos para mejorar la claridad del código.
+
 
 ---
 
-# 17. Valores booleanos
+# 17. Métodos de cadenas de texto
 
-Las condiciones trabajan con valores booleanos:
+Python dispone de numerosos métodos que permiten trabajar y manipular cadenas de texto (`str`). Estos métodos facilitan tareas como convertir textos a mayúsculas, eliminar espacios, buscar palabras o comprobar el contenido de una cadena.
 
-```python
-True
-False
-```
+## 17.1. Convertir mayúsculas y minúsculas
+
+| Método | Funcionamiento | Ejemplo |
+|---|---|---|
+| `.lower()` | Convierte todo a minúsculas. | `"HOLA".lower()` → `"hola"` |
+| `.upper()` | Convierte todo a mayúsculas. | `"hola".upper()` → `"HOLA"` |
+| `.capitalize()` | Primera letra en mayúscula. | `"pedro".capitalize()` → `"Pedro"` |
+| `.title()` | Primera letra de cada palabra en mayúscula. | `"juan perez".title()` → `"Juan Perez"` |
+| `.swapcase()` | Invierte mayúsculas y minúsculas. | `"Hola".swapcase()` → `"hOLA"` |
 
 Ejemplo:
 
 ```python
-activo = True
+nombre = input("Introduce tu nombre: ")
 
-if activo:
-    print("Usuario activo")
+nombre = nombre.strip().title()
+
+print(f"Hola, {nombre}")
 ```
 
-También podemos guardar directamente el resultado de una comparación:
+## 17.2. Eliminar espacios
+
+| Método | Funcionamiento |
+|---|---|
+| `.strip()` | Elimina espacios al principio y al final. |
+| `.lstrip()` | Elimina espacios de la izquierda. |
+| `.rstrip()` | Elimina espacios de la derecha. |
+
+Ejemplo:
 
 ```python
-edad = 25
+texto = "   Hola Python   "
 
-es_mayor = edad >= 18
+print(texto.strip())
+print(texto.lstrip())
+print(texto.rstrip())
+```
 
-print(es_mayor)
+**Importante:** estos métodos no eliminan los espacios que existen entre palabras.
+
+## 17.3. Buscar y sustituir texto
+
+| Método | Funcionamiento |
+|---|---|
+| `.find("texto")` | Busca un texto y devuelve su posición. Si no existe, devuelve -1. |
+| `.count("texto")` | Cuenta cuántas veces aparece un texto. |
+| `.replace("a", "b")` | Sustituye una parte del texto por otra. |
+
+Ejemplo:
+
+```python
+frase = "Me gusta programar en Python"
+
+print(frase.find("Python"))
+print(frase.count("a"))
+print(frase.replace("Python", "Java"))
+```
+
+## 17.4. Comprobar el contenido de una cadena
+
+Estos métodos devuelven un valor booleano (`True` o `False`) y son especialmente útiles para validar datos.
+
+| Método | Funcionamiento | Ejemplo |
+|---|---|---|
+| `.isdigit()` | Comprueba si contiene únicamente dígitos. | `"123".isdigit()` |
+| `.isalpha()` | Comprueba si contiene únicamente letras. | `"Hola".isalpha()` |
+| `.isalnum()` | Comprueba si contiene letras o números. | `"Hola123".isalnum()` |
+| `.isspace()` | Comprueba si contiene únicamente espacios. | `"   ".isspace()` |
+| `.islower()` | Comprueba si las letras están en minúsculas. | `"hola".islower()` |
+| `.isupper()` | Comprueba si las letras están en mayúsculas. | `"HOLA".isupper()` |
+
+Ejemplo:
+
+```python
+edad = input("Introduce tu edad: ")
+
+if edad.isdigit():
+    print(f"Tu edad es {edad}")
+else:
+    print("Debes introducir un número entero positivo")
+```
+
+## 17.5. Dividir y unir cadenas
+
+También podemos dividir una cadena en varias partes o unir diferentes cadenas.
+
+| Método | Funcionamiento |
+|---|---|
+| `.split()` | Divide una cadena y devuelve una lista. |
+| `.join()` | Une los elementos de una lista en una cadena. |
+
+Ejemplo con `split()`:
+
+```python
+nombres = "Ana,Juan,Pedro"
+
+lista_nombres = nombres.split(",")
+
+print(lista_nombres)
 ```
 
 Resultado:
 
 ```text
-True
+['Ana', 'Juan', 'Pedro']
+```
+
+Ejemplo con `join()`:
+
+```python
+nombres = ["Ana", "Juan", "Pedro"]
+
+texto = ", ".join(nombres)
+
+print(texto)
+```
+
+Resultado:
+
+```text
+Ana, Juan, Pedro
+```
+
+## 17.6. Importante: los métodos no modifican la cadena original
+
+Los métodos de las cadenas devuelven una nueva cadena. No modifican directamente el contenido de la variable original.
+
+```python
+nombre = "  PEDRO  "
+
+nombre.strip().lower()
+
+print(nombre)
+```
+
+El resultado seguirá siendo `"  PEDRO  "`.
+
+Para guardar el resultado debemos asignarlo nuevamente:
+
+```python
+nombre = nombre.strip().lower()
+
+print(nombre)
+```
+
+Resultado:
+
+```text
+pedro
 ```
 
 ---
 
-# 18. Comparación de cadenas
+# 18. Comparación de cadenas de texto
 
-Las cadenas también pueden utilizarse en condiciones.
+En Python podemos comparar cadenas de texto para comprobar si dos palabras o frases son iguales, diferentes o si una cadena cumple determinadas condiciones.
+
+Las comparaciones de cadenas se utilizan habitualmente para validar respuestas introducidas por teclado, comprobar usuarios o controlar opciones de un programa.
+
+## 18.1. Operadores de comparación
+
+Podemos utilizar los mismos operadores de comparación que utilizamos con números.
+
+| Operador | Significado | Ejemplo |
+|---|---|---|
+| `==` | Igual que | `"hola" == "hola"` → `True` |
+| `!=` | Distinto de | `"hola" != "adios"` → `True` |
+| `>` | Mayor que | `"b" > "a"` → `True` |
+| `<` | Menor que | `"a" < "b"` → `True` |
+| `>=` | Mayor o igual | `"c" >= "b"` → `True` |
+| `<=` | Menor o igual | `"a" <= "b"` → `True` |
+
+**Importante:** Python compara las cadenas carácter a carácter utilizando el orden Unicode. Por ejemplo, distingue entre mayúsculas y minúsculas.
+
+## 18.2. Diferencia entre mayúsculas y minúsculas
+
+Python distingue entre mayúsculas y minúsculas (*case-sensitive*).
+
+Por tanto, estas cadenas no son iguales:
 
 ```python
-usuario = input("Usuario: ")
+usuario = "Admin"
 
 if usuario == "admin":
     print("Acceso de administrador")
+else:
+    print("Usuario normal")
 ```
 
-Podemos utilizar métodos:
+El resultado será `Usuario normal`, porque `"Admin"` y `"admin"` son cadenas diferentes.
+
+Para evitar este problema podemos utilizar `.lower()` o `.upper()`.
 
 ```python
-respuesta = input("¿Continuar? ")
+usuario = input("Introduce tu usuario: ")
 
-if respuesta.lower() == "si":
-    print("Continuamos")
+if usuario.lower() == "admin":
+    print("Acceso de administrador")
+else:
+    print("Usuario normal")
 ```
+
+## 18.3. Eliminar espacios antes de comparar
+
+Cuando solicitamos información mediante `input()`, el usuario puede introducir espacios al principio o al final del texto.
+
+Podemos utilizar `.strip()` para eliminarlos.
+
+```python
+respuesta = input("¿Quieres continuar? (s/n): ")
+
+if respuesta.strip().lower() == "s":
+    print("Continuamos")
+else:
+    print("Finalizamos")
+```
+
+De esta manera, todas estas respuestas se interpretarán correctamente:
+
+- `"s"`
+- `"S"`
+- `" s"`
+- `"s "`
+- `" S "`
+
+## 18.4. Comprobar si una cadena contiene otra cadena
+
+Podemos utilizar el operador `in` para comprobar si una palabra o carácter aparece dentro de otra cadena.
+
+```python
+correo = input("Introduce tu correo electrónico: ")
+
+if "@" in correo:
+    print("El correo contiene una arroba")
+else:
+    print("El correo no contiene una arroba")
+```
+
+También podemos utilizar `not in` para comprobar que una cadena no contiene determinado texto.
+
+```python
+nombre = input("Introduce tu nombre: ")
+
+if " " not in nombre:
+    print("El nombre no contiene espacios")
+else:
+    print("Has introducido más de una palabra")
+```
+
+Estas comprobaciones son básicas y no garantizan que un correo electrónico o un nombre sean válidos.
+
+## 18.5. Comprobar cómo empieza o termina una cadena
+
+Python dispone de dos métodos especialmente útiles:
+
+- `.startswith()`: comprueba si una cadena comienza por un texto determinado.
+- `.endswith()`: comprueba si una cadena termina por un texto determinado.
+
+Ejemplo:
+
+```python
+archivo = input("Introduce el nombre del archivo: ")
+
+if archivo.endswith(".pdf"):
+    print("Es un documento PDF")
+else:
+    print("No es un documento PDF")
+```
+
+Otro ejemplo:
+
+```python
+telefono = input("Introduce tu teléfono: ")
+
+if telefono.startswith("6"):
+    print("El teléfono comienza por 6")
+else:
+    print("El teléfono no comienza por 6")
+```
+
+## 18.6. Ejemplo práctico: validar usuario y contraseña
+
+Vamos a desarrollar un pequeño programa que solicita un usuario y una contraseña.
+
+El acceso solamente estará permitido si se cumplen las dos condiciones:
+
+- El usuario es `admin`.
+- La contraseña es `python123`.
+
+```python
+usuario = input("Usuario: ").strip().lower()
+password = input("Contraseña: ")
+
+if usuario == "admin" and password == "python123":
+    print("Acceso permitido")
+else:
+    print("Usuario o contraseña incorrectos")
+```
+
+En este ejemplo utilizamos:
+
+- `.strip()` para eliminar espacios sobrantes.
+- `.lower()` para normalizar el nombre de usuario.
+- `==` para comparar las cadenas.
+- `and` para exigir que se cumplan las dos condiciones.
+
+**Importante:** en este ejemplo la contraseña sí distingue entre mayúsculas y minúsculas.
 
 ---
 
