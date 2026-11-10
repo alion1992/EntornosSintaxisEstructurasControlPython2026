@@ -114,7 +114,7 @@ Si no cumple los requisitos de la beca de excelencia, podrá obtener la beca gen
   1. Su renta familiar es inferior a 20.000 €.
   2. Pertenece a una familia numerosa.
 
-- Sin beca
+3. Sin beca
 
 Si no cumple ninguna de las condiciones anteriores, no obtiene ninguna beca.
 
