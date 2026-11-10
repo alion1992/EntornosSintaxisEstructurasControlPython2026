@@ -1,0 +1,1406 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>UD1. Estructuras de datos y gestión de información en Python - CEDAP</title>
+        <link href="../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../../css/brands.min.css" rel="stylesheet">
+        <link href="../../../css/solid.min.css" rel="stylesheet">
+        <link href="../../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../..">CEDAP</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../../.." class="nav-link">🐍 Desarrollo de Aplicaciones en Python</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Entornos</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../entornos/ud1/" class="dropdown-item">UD1. Entornos de desarrollo en Python</a>
+</li>
+                                    
+<li>
+    <a href="../../../entornos/ud2/" class="dropdown-item">UD2. Fundamentos y nomenclatura en Python</a>
+</li>
+                                    
+<li>
+    <a href="../../../entornos/ud3/" class="dropdown-item">UD3. Gestión de proyectos Python: Git, entornos virtuales y dependencias</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Estructuras</a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Ud1</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../ud1/ejercicios_condi_compuestos/" class="dropdown-item">Ejercicios: Operadores lógicos en Python</a>
+</li>
+            
+<li>
+    <a href="../../ud1/ejercicios_operaciones/" class="dropdown-item">Ejercicios de Python: entrada de datos y operaciones</a>
+</li>
+            
+<li>
+    <a href="../../ud1/estru_control/" class="dropdown-item">UD1. Estructuras de control en Python</a>
+</li>
+            
+<li>
+    <a href="../../ud1/ud1_ejercicios/" class="dropdown-item">UD1. Ejercicios: Estructuras de control en Python</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Ud2</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">UD1. Estructuras de datos y gestión de información en Python</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../../ud1/ud1_ejercicios/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" class="nav-link disabled">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#ud1-estructuras-de-datos-y-gestion-de-informacion-en-python" class="nav-link">UD1. Estructuras de datos y gestión de información en Python</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#introduccion" class="nav-link">Introducción</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#objetivos-de-aprendizaje" class="nav-link">Objetivos de aprendizaje</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#1-listas" class="nav-link">1. Listas</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#11-que-es-una-lista" class="nav-link">1.1. ¿Qué es una lista?</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#12-acceder-a-los-elementos" class="nav-link">1.2. Acceder a los elementos</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#13-modificar-elementos" class="nav-link">1.3. Modificar elementos</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#14-anadir-elementos" class="nav-link">1.4. Añadir elementos</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#15-eliminar-elementos" class="nav-link">1.5. Eliminar elementos</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#16-recorrer-una-lista" class="nav-link">1.6. Recorrer una lista</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#17-longitud-y-comprobaciones" class="nav-link">1.7. Longitud y comprobaciones</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#18-ordenar-listas" class="nav-link">1.8. Ordenar listas</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#19-copiar-listas" class="nav-link">1.9. Copiar listas</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#110-funciones-y-metodos-habituales" class="nav-link">1.10. Funciones y métodos habituales</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#111-listas-bidimensionales-o-matrices" class="nav-link">1.11. Listas bidimensionales o matrices</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#2-control-de-errores-y-excepciones" class="nav-link">2. Control de errores y excepciones</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#21-que-es-una-excepcion" class="nav-link">2.1. ¿Qué es una excepción?</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#22-try-y-except" class="nav-link">2.2. try y except</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#23-controlar-varias-excepciones" class="nav-link">2.3. Controlar varias excepciones</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#24-la-excepcion-padre-exception" class="nav-link">2.4. La excepción padre Exception</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#25-else-y-finally" class="nav-link">2.5. else y finally</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#26-excepciones-habituales" class="nav-link">2.6. Excepciones habituales</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#3-ficheros-en-python" class="nav-link">3. Ficheros en Python</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#31-por-que-necesitamos-ficheros" class="nav-link">3.1. ¿Por qué necesitamos ficheros?</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#32-abrir-un-fichero" class="nav-link">3.2. Abrir un fichero</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#33-modos-de-apertura" class="nav-link">3.3. Modos de apertura</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#34-escribir-en-un-fichero" class="nav-link">3.4. Escribir en un fichero</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#35-anadir-informacion" class="nav-link">3.5. Añadir información</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#36-leer-un-fichero" class="nav-link">3.6. Leer un fichero</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#37-utilizar-with" class="nav-link">3.7. Utilizar with</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#38-recorrer-un-fichero-linea-a-linea" class="nav-link">3.8. Recorrer un fichero línea a línea</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#39-comprobar-si-existe-un-fichero" class="nav-link">3.9. Comprobar si existe un fichero</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#310-trabajar-con-ficheros-csv" class="nav-link">3.10. Trabajar con ficheros CSV</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#4-diccionarios" class="nav-link">4. Diccionarios</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#41-que-es-un-diccionario" class="nav-link">4.1. ¿Qué es un diccionario?</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#42-acceder-a-los-valores" class="nav-link">4.2. Acceder a los valores</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#43-anadir-y-modificar-informacion" class="nav-link">4.3. Añadir y modificar información</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#44-eliminar-informacion" class="nav-link">4.4. Eliminar información</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#45-recorrer-un-diccionario" class="nav-link">4.5. Recorrer un diccionario</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#46-diccionarios-con-varios-registros" class="nav-link">4.6. Diccionarios con varios registros</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#47-metodos-habituales-de-los-diccionarios" class="nav-link">4.7. Métodos habituales de los diccionarios</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#5-tuplas-y-conjuntos" class="nav-link">5. Tuplas y conjuntos</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#51-tuplas" class="nav-link">5.1. Tuplas</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#52-conjuntos-set" class="nav-link">5.2. Conjuntos (set)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#6-proyecto-practico-gestion-de-un-club-deportivo" class="nav-link">6. Proyecto práctico: gestión de un club deportivo</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#descripcion" class="nav-link">Descripción</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#menu-de-la-aplicacion" class="nav-link">Menú de la aplicación</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#informacion-de-cada-deportista" class="nav-link">Información de cada deportista</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#estructura-de-datos" class="nav-link">Estructura de datos</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#almacenamiento" class="nav-link">Almacenamiento</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#funcionalidades" class="nav-link">Funcionalidades</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#condiciones-tecnicas" class="nav-link">Condiciones técnicas</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#ampliaciones-voluntarias" class="nav-link">Ampliaciones voluntarias</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#7-resumen-de-la-unidad" class="nav-link">7. Resumen de la unidad</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="ud1-estructuras-de-datos-y-gestion-de-informacion-en-python">UD1. Estructuras de datos y gestión de información en Python</h1>
+<h2 id="introduccion">Introducción</h2>
+<p>En la unidad anterior hemos aprendido a construir programas utilizando
+estructuras secuenciales, condicionales y repetitivas. Ya sabemos
+controlar el flujo de ejecución de un programa y resolver problemas
+mediante instrucciones.</p>
+<p>En esta unidad daremos un paso más: aprenderemos a <strong>almacenar,
+organizar, consultar y modificar información</strong>.</p>
+<p>Para ello utilizaremos ejemplos relacionados con el deporte: plantillas
+de equipos, resultados de competiciones, marcas de atletas, registros de
+entrenamiento y clasificaciones.</p>
+<p>El recorrido de la unidad será progresivo:</p>
+<ol>
+<li>Primero aprenderemos a trabajar con listas y matrices.</li>
+<li>Después veremos cómo controlar errores y cómo guardar información en
+    ficheros.</li>
+<li>A continuación estudiaremos los diccionarios.</li>
+<li>Finalmente conoceremos las tuplas y los conjuntos.</li>
+</ol>
+<h2 id="objetivos-de-aprendizaje">Objetivos de aprendizaje</h2>
+<p>Al finalizar esta unidad serás capaz de:</p>
+<ul>
+<li>Crear, recorrer y modificar listas.</li>
+<li>Utilizar listas para almacenar información deportiva.</li>
+<li>Representar datos mediante listas bidimensionales o matrices.</li>
+<li>Gestionar errores y excepciones durante la ejecución.</li>
+<li>Leer y escribir información en ficheros de texto y CSV.</li>
+<li>Guardar y recuperar información para que permanezca entre
+    ejecuciones.</li>
+<li>Organizar registros mediante diccionarios.</li>
+<li>Diferenciar listas, diccionarios, tuplas y conjuntos.</li>
+<li>Desarrollar una aplicación sencilla que gestione información
+    deportiva.</li>
+</ul>
+<hr />
+<h1 id="1-listas">1. Listas</h1>
+<h2 id="11-que-es-una-lista">1.1. ¿Qué es una lista?</h2>
+<p>Una lista es una estructura de datos que permite almacenar varios
+elementos dentro de una única variable.</p>
+<p>Hasta ahora hemos utilizado variables individuales:</p>
+<pre><code class="language-python">deportista = &quot;Carlos&quot;
+edad = 24
+</code></pre>
+<p>Pero, ¿qué ocurre si queremos almacenar los nombres de todos los
+integrantes de un equipo? Podríamos crear una variable para cada
+deportista, pero sería poco práctico.</p>
+<p>Para estos casos utilizamos una lista:</p>
+<pre><code class="language-python">deportistas = [&quot;Carlos&quot;, &quot;Lucía&quot;, &quot;Marcos&quot;, &quot;Sara&quot;]
+
+print(deportistas)
+</code></pre>
+<p>Las listas se definen utilizando corchetes <code>[]</code> y separando sus
+elementos mediante comas.</p>
+<h3 id="caracteristicas-de-las-listas">Características de las listas</h3>
+<ul>
+<li><strong>Ordenadas:</strong> mantienen el orden de sus elementos.</li>
+<li><strong>Modificables:</strong> podemos añadir, cambiar y eliminar elementos.</li>
+<li><strong>Permiten duplicados:</strong> un mismo valor puede aparecer varias veces.</li>
+<li><strong>Admiten distintos tipos de datos:</strong> una lista puede mezclar
+    cadenas, números, valores booleanos e incluso otras listas.</li>
+</ul>
+<p>Por ejemplo:</p>
+<pre><code class="language-python">datos_deportista = [&quot;Carlos&quot;, 24, 1.82, True]
+
+print(datos_deportista)
+</code></pre>
+<p>Aunque Python permite mezclar tipos, normalmente conviene que una lista
+represente una colección de elementos con una finalidad común. Más
+adelante veremos que los diccionarios son especialmente útiles para
+agrupar los diferentes datos de un mismo deportista.</p>
+<h2 id="12-acceder-a-los-elementos">1.2. Acceder a los elementos</h2>
+<p>Cada elemento de una lista tiene una posición denominada índice. En
+Python, los índices comienzan en cero.</p>
+<pre><code class="language-python">deportistas = [&quot;Carlos&quot;, &quot;Lucía&quot;, &quot;Marcos&quot;, &quot;Sara&quot;]
+
+print(deportistas[0])  # Carlos
+print(deportistas[1])  # Lucía
+print(deportistas[3])  # Sara
+</code></pre>
+<p>También podemos utilizar índices negativos para acceder desde el final:</p>
+<pre><code class="language-python">print(deportistas[-1])  # Sara
+print(deportistas[-2])  # Marcos
+</code></pre>
+<p>Si intentamos acceder a una posición que no existe, Python generará un
+error <code>IndexError</code>.</p>
+<h2 id="13-modificar-elementos">1.3. Modificar elementos</h2>
+<p>Las listas son mutables, por lo que podemos cambiar sus elementos
+después de crearlas.</p>
+<pre><code class="language-python">deportistas = [&quot;Carlos&quot;, &quot;Lucía&quot;, &quot;Marcos&quot;]
+
+deportistas[1] = &quot;Elena&quot;
+
+print(deportistas)
+</code></pre>
+<p>Resultado:</p>
+<pre><code class="language-text">['Carlos', 'Elena', 'Marcos']
+</code></pre>
+<h2 id="14-anadir-elementos">1.4. Añadir elementos</h2>
+<p>Podemos añadir elementos utilizando diferentes métodos.</p>
+<p><strong>append():</strong> añade un elemento al final de la lista.</p>
+<pre><code class="language-python">deportistas = [&quot;Carlos&quot;, &quot;Lucía&quot;]
+
+deportistas.append(&quot;Marcos&quot;)
+
+print(deportistas)
+</code></pre>
+<p><strong>insert():</strong> inserta un elemento en una posición concreta.</p>
+<pre><code class="language-python">deportistas.insert(1, &quot;Elena&quot;)
+</code></pre>
+<p><strong>extend():</strong> añade los elementos de otra colección.</p>
+<pre><code class="language-python">deportistas.extend([&quot;Mario&quot;, &quot;Paula&quot;])
+</code></pre>
+<h2 id="15-eliminar-elementos">1.5. Eliminar elementos</h2>
+<p>Existen diferentes formas de eliminar elementos.</p>
+<p><strong>remove():</strong> elimina la primera aparición del valor indicado.</p>
+<pre><code class="language-python">deportistas.remove(&quot;Lucía&quot;)
+</code></pre>
+<p><strong>pop():</strong> elimina y devuelve el elemento de una posición. Si no
+indicamos posición, elimina el último.</p>
+<pre><code class="language-python">deportista_eliminado = deportistas.pop()
+
+print(&quot;Deportista eliminado:&quot;, deportista_eliminado)
+</code></pre>
+<p><strong>del:</strong> elimina un elemento o un rango de posiciones.</p>
+<pre><code class="language-python">del deportistas[0]
+</code></pre>
+<p><strong>clear():</strong> elimina todos los elementos.</p>
+<pre><code class="language-python">deportistas.clear()
+</code></pre>
+<h2 id="16-recorrer-una-lista">1.6. Recorrer una lista</h2>
+<p>Podemos utilizar un bucle <code>for</code> para recorrer todos sus elementos:</p>
+<pre><code class="language-python">deportistas = [&quot;Carlos&quot;, &quot;Lucía&quot;, &quot;Marcos&quot;, &quot;Sara&quot;]
+
+for deportista in deportistas:
+    print(deportista)
+</code></pre>
+<p>Si necesitamos conocer también la posición, podemos utilizar
+<code>enumerate()</code>:</p>
+<pre><code class="language-python">for posicion, deportista in enumerate(deportistas):
+    print(posicion, deportista)
+</code></pre>
+<p>También podemos recorrer una lista mediante un bucle <code>while</code>:</p>
+<pre><code class="language-python">i = 0
+
+while i &lt; len(deportistas):
+    print(deportistas[i])
+    i += 1
+</code></pre>
+<h2 id="17-longitud-y-comprobaciones">1.7. Longitud y comprobaciones</h2>
+<p>La función <code>len()</code> devuelve el número de elementos de una lista:</p>
+<pre><code class="language-python">marcas = [12.4, 11.9, 12.1, 11.8]
+
+print(&quot;Número de marcas:&quot;, len(marcas))
+</code></pre>
+<p>Podemos comprobar si un elemento está dentro de una lista mediante <code>in</code>:</p>
+<pre><code class="language-python">if &quot;Carlos&quot; in deportistas:
+    print(&quot;El deportista está en la plantilla&quot;)
+</code></pre>
+<h2 id="18-ordenar-listas">1.8. Ordenar listas</h2>
+<p>El método <code>sort()</code> ordena la propia lista:</p>
+<pre><code class="language-python">marcas = [12.4, 11.9, 12.1, 11.8]
+
+marcas.sort()
+
+print(marcas)
+</code></pre>
+<p>Para ordenar de mayor a menor:</p>
+<pre><code class="language-python">marcas.sort(reverse=True)
+</code></pre>
+<p>La función <code>sorted()</code> devuelve una nueva lista ordenada, sin modificar
+la original:</p>
+<pre><code class="language-python">marcas = [12.4, 11.9, 12.1, 11.8]
+
+marcas_ordenadas = sorted(marcas)
+
+print(marcas_ordenadas)
+</code></pre>
+<h2 id="19-copiar-listas">1.9. Copiar listas</h2>
+<p>Hay que tener cuidado al copiar listas.</p>
+<pre><code class="language-python">titulares = [&quot;Carlos&quot;, &quot;Lucía&quot;, &quot;Marcos&quot;]
+
+convocatoria = titulares
+
+convocatoria.append(&quot;Sara&quot;)
+
+print(titulares)
+</code></pre>
+<p>En este caso, ambas variables hacen referencia a la misma lista. Para
+crear una copia independiente podemos utilizar:</p>
+<pre><code class="language-python">convocatoria = titulares.copy()
+</code></pre>
+<p>También podemos utilizar <code>list(titulares)</code>.</p>
+<h2 id="110-funciones-y-metodos-habituales">1.10. Funciones y métodos habituales</h2>
+<p>Una función se invoca indicando su nombre y los argumentos necesarios.
+Un método se invoca sobre un objeto utilizando un punto.</p>
+<p>Algunas funciones incorporadas de Python:</p>
+<hr />
+<p>Función                             Utilidad</p>
+<hr />
+<p><code>len()</code>                             Devuelve el número de elementos.</p>
+<p><code>type()</code>                            Indica el tipo de un objeto.</p>
+<p><code>max()</code>                             Devuelve el valor máximo.</p>
+<p><code>min()</code>                             Devuelve el valor mínimo.</p>
+<p><code>sum()</code>                             Suma los elementos de una colección
+                                      numérica.</p>
+<p><code>sorted()</code>                          Devuelve una nueva lista ordenada.</p>
+<p><code>enumerate()</code>                       Permite obtener índice y valor al
+                                      recorrer una colección.</p>
+<p><code>round()</code>                           Redondea un número.</p>
+<hr />
+<p>Ejemplo:</p>
+<pre><code class="language-python">marcas = [12.4, 11.9, 12.1, 11.8]
+
+print(&quot;Número de marcas:&quot;, len(marcas))
+print(&quot;Mejor marca:&quot;, min(marcas))
+print(&quot;Peor marca:&quot;, max(marcas))
+print(&quot;Suma de marcas:&quot;, sum(marcas))
+</code></pre>
+<p>En este ejemplo, si las marcas representan tiempos de una carrera, un
+tiempo menor es mejor.</p>
+<p>Algunos métodos habituales de las listas:</p>
+<p>Método        Utilidad</p>
+<hr />
+<p><code>append()</code>    Añade un elemento al final.
+  <code>insert()</code>    Inserta un elemento en una posición.
+  <code>extend()</code>    Añade varios elementos.
+  <code>remove()</code>    Elimina la primera aparición de un valor.
+  <code>pop()</code>       Elimina y devuelve un elemento.
+  <code>clear()</code>     Vacía la lista.
+  <code>index()</code>     Devuelve la posición de un elemento.
+  <code>count()</code>     Cuenta las apariciones de un elemento.
+  <code>sort()</code>      Ordena la lista original.
+  <code>reverse()</code>   Invierte el orden de la lista.
+  <code>copy()</code>      Crea una copia superficial.</p>
+<h2 id="111-listas-bidimensionales-o-matrices">1.11. Listas bidimensionales o matrices</h2>
+<p>Una matriz es una estructura que organiza la información en filas y
+columnas.</p>
+<p>En Python podemos representar una matriz mediante una lista que contiene
+otras listas. También se conoce como lista bidimensional.</p>
+<p>Por ejemplo, podemos representar los puntos conseguidos por un equipo en
+cuatro jornadas:</p>
+<pre><code class="language-python">puntos = [
+    [3, 1, 3, 0],
+    [1, 1, 3, 3],
+    [0, 3, 1, 3]
+]
+</code></pre>
+<p>Cada fila puede representar un equipo y cada columna una jornada.</p>
+<p>Equipo       Jornada 1   Jornada 2   Jornada 3   Jornada 4</p>
+<hr />
+<p>Equipo A             3           1           3           0
+  Equipo B             1           1           3           3
+  Equipo C             0           3           1           3</p>
+<h3 id="acceder-a-los-elementos">Acceder a los elementos</h3>
+<p>Para acceder a un elemento necesitamos indicar dos índices:</p>
+<ul>
+<li>El primero representa la fila.</li>
+<li>El segundo representa la columna.</li>
+</ul>
+<pre><code class="language-python">print(puntos[0][0])  # 3
+print(puntos[1][2])  # 3
+print(puntos[2][1])  # 3
+</code></pre>
+<h3 id="recorrer-una-matriz">Recorrer una matriz</h3>
+<p>Necesitamos dos bucles: uno para recorrer las filas y otro para recorrer
+los elementos de cada fila.</p>
+<pre><code class="language-python">for fila in puntos:
+    for puntuacion in fila:
+        print(puntuacion, end=&quot; &quot;)
+    print()
+</code></pre>
+<h3 id="conocer-las-dimensiones">Conocer las dimensiones</h3>
+<p>Podemos utilizar <code>len()</code> para conocer el número de filas y columnas:</p>
+<pre><code class="language-python">filas = len(puntos)
+columnas = len(puntos[0])
+
+print(&quot;Filas:&quot;, filas)
+print(&quot;Columnas:&quot;, columnas)
+</code></pre>
+<p>Esta forma presupone que la matriz tiene al menos una fila y que todas
+las filas tienen el mismo número de elementos.</p>
+<h3 id="modificar-elementos">Modificar elementos</h3>
+<pre><code class="language-python">puntos[0][1] = 3
+</code></pre>
+<h3 id="recorrer-una-matriz-mediante-indices">Recorrer una matriz mediante índices</h3>
+<pre><code class="language-python">for i in range(len(puntos)):
+    for j in range(len(puntos[i])):
+        print(f&quot;Fila {i}, columna {j}: {puntos[i][j]}&quot;)
+</code></pre>
+<h3 id="crear-una-matriz">Crear una matriz</h3>
+<p>Podemos crear una matriz vacía e incorporar filas:</p>
+<pre><code class="language-python">matriz = []
+
+for i in range(3):
+    fila = []
+    for j in range(4):
+        fila.append(0)
+    matriz.append(fila)
+
+print(matriz)
+</code></pre>
+<p>También podemos utilizar una comprensión de listas:</p>
+<pre><code class="language-python">matriz = [[0 for j in range(4)] for i in range(3)]
+</code></pre>
+<p>Es importante evitar crear matrices de esta forma:</p>
+<pre><code class="language-python"># No recomendado
+matriz = [[0] * 4] * 3
+</code></pre>
+<p>En este último caso, las filas hacen referencia a la misma lista interna
+y modificar una posición puede afectar a varias filas.</p>
+<h3 id="ejercicios-listas-y-matrices">Ejercicios: listas y matrices</h3>
+<ol>
+<li>Crea una lista con los nombres de diez deportistas y muestra cada
+    nombre por pantalla.</li>
+<li>Crea una lista de diez marcas deportivas. Muestra la mejor marca, la
+    peor y la media.</li>
+<li>Solicita al usuario cinco resultados de una competición y
+    almacénalos en una lista.</li>
+<li>Crea una lista de deportistas. Permite añadir nuevos integrantes y
+    eliminar uno introducido por teclado.</li>
+<li>Dada una lista de marcas, muestra únicamente las que sean inferiores
+    a un tiempo indicado.</li>
+<li>Ordena una lista de puntuaciones de mayor a menor.</li>
+<li>Crea una lista de deportistas y permite buscar si un nombre está
+    incluido.</li>
+<li>Crea una matriz que almacene los puntos obtenidos por tres equipos
+    en cuatro jornadas.</li>
+<li>Calcula el total de puntos de cada equipo.</li>
+<li>Crea una matriz que represente los resultados de una competición
+    entre varios participantes.</li>
+</ol>
+<hr />
+<h1 id="2-control-de-errores-y-excepciones">2. Control de errores y excepciones</h1>
+<h2 id="21-que-es-una-excepcion">2.1. ¿Qué es una excepción?</h2>
+<p>Una excepción es un error que se produce durante la ejecución de un
+programa y que puede interrumpir su funcionamiento si no se gestiona.</p>
+<p>Por ejemplo:</p>
+<pre><code class="language-python">edad = int(input(&quot;Introduce la edad del deportista: &quot;))
+</code></pre>
+<p>Si el usuario introduce un texto en lugar de un número, Python generará
+una excepción <code>ValueError</code>.</p>
+<p>Para evitar que el programa termine inesperadamente, podemos controlar
+las excepciones.</p>
+<h2 id="22-try-y-except">2.2. try y except</h2>
+<p>Podemos controlar los errores mediante <code>try</code> y <code>except</code>:</p>
+<pre><code class="language-python">try:
+    edad = int(input(&quot;Introduce la edad del deportista: &quot;))
+    print(&quot;Edad:&quot;, edad)
+
+except ValueError:
+    print(&quot;Debes introducir una edad válida&quot;)
+</code></pre>
+<p>El código que puede generar una excepción se introduce dentro de <code>try</code>.
+Si se produce el error indicado, se ejecuta el bloque <code>except</code>.</p>
+<h2 id="23-controlar-varias-excepciones">2.3. Controlar varias excepciones</h2>
+<p>Podemos utilizar diferentes bloques <code>except</code>:</p>
+<pre><code class="language-python">try:
+    dorsal = int(input(&quot;Introduce el dorsal: &quot;))
+    resultado = 100 / dorsal
+    print(resultado)
+
+except ValueError:
+    print(&quot;El dorsal debe ser un número entero&quot;)
+
+except ZeroDivisionError:
+    print(&quot;El dorsal no puede ser cero&quot;)
+</code></pre>
+<p>También podemos agrupar excepciones cuando queremos darles el mismo
+tratamiento:</p>
+<pre><code class="language-python">except (ValueError, ZeroDivisionError):
+    print(&quot;Se ha producido un error en la operación&quot;)
+</code></pre>
+<h2 id="24-la-excepcion-padre-exception">2.4. La excepción padre Exception</h2>
+<p><code>Exception</code> es la clase base de la mayoría de las excepciones habituales
+que se producen durante la ejecución.</p>
+<p>Podemos utilizarla para capturar otros errores no contemplados
+anteriormente:</p>
+<pre><code class="language-python">try:
+    dorsal = int(input(&quot;Introduce el dorsal: &quot;))
+    resultado = 100 / dorsal
+    print(resultado)
+
+except ValueError:
+    print(&quot;El dorsal debe ser un número&quot;)
+
+except ZeroDivisionError:
+    print(&quot;No se puede dividir entre cero&quot;)
+
+except Exception as error:
+    print(&quot;Se ha producido un error:&quot;, error)
+</code></pre>
+<p><strong>Importante:</strong> los bloques más específicos deben aparecer antes que los
+más generales. Si colocamos <code>except Exception</code> al principio, capturará
+también las excepciones que podrían haber sido tratadas por los bloques
+posteriores.</p>
+<h2 id="25-else-y-finally">2.5. else y finally</h2>
+<p>El bloque <code>else</code> se ejecuta cuando el bloque <code>try</code> termina sin producir
+ninguna excepción.</p>
+<p>El bloque <code>finally</code> se ejecuta tanto si se produce una excepción como si
+no.</p>
+<pre><code class="language-python">try:
+    edad = int(input(&quot;Introduce la edad del deportista: &quot;))
+
+except ValueError:
+    print(&quot;Debes introducir un número entero&quot;)
+
+else:
+    print(&quot;Edad registrada:&quot;, edad)
+
+finally:
+    print(&quot;Operación finalizada&quot;)
+</code></pre>
+<h2 id="26-excepciones-habituales">2.6. Excepciones habituales</h2>
+<hr />
+<p>Excepción                           Cuándo puede producirse</p>
+<hr />
+<p><code>ValueError</code>                        Cuando un valor tiene un formato
+                                      incorrecto para una operación.</p>
+<p><code>TypeError</code>                         Cuando se utiliza un tipo de dato
+                                      incompatible.</p>
+<p><code>IndexError</code>                        Cuando se accede a una posición
+                                      inexistente de una lista.</p>
+<p><code>KeyError</code>                          Cuando se consulta una clave
+                                      inexistente de un diccionario.</p>
+<p><code>ZeroDivisionError</code>                 Cuando se divide entre cero.</p>
+<p><code>FileNotFoundError</code>                 Cuando no se encuentra un fichero.</p>
+<p><code>PermissionError</code>                   Cuando no se tienen permisos para
+                                      acceder a un recurso.</p>
+<p><code>Exception</code>                         Clase base para capturar
+                                      excepciones generales.</p>
+<hr />
+<h3 id="ejercicios-control-de-errores">Ejercicios: control de errores</h3>
+<ol>
+<li>Solicita la edad de un deportista y controla el error si se
+    introduce texto.</li>
+<li>Solicita dos marcas y calcula su diferencia, controlando los valores
+    incorrectos.</li>
+<li>Solicita una posición de una lista de deportistas y controla si el
+    índice no existe.</li>
+<li>Crea un programa que solicite una puntuación y no permita continuar
+    hasta que se introduzca un número válido.</li>
+<li>Desarrolla un programa que gestione tres excepciones diferentes y
+    utilice <code>Exception</code> como último bloque de control.</li>
+</ol>
+<hr />
+<h1 id="3-ficheros-en-python">3. Ficheros en Python</h1>
+<h2 id="31-por-que-necesitamos-ficheros">3.1. ¿Por qué necesitamos ficheros?</h2>
+<p>Hasta ahora hemos almacenado la información en variables y estructuras
+de datos. El problema es que esos datos desaparecen cuando finaliza el
+programa.</p>
+<p>Los ficheros permiten almacenar información de forma permanente para
+recuperarla posteriormente.</p>
+<p>Por ejemplo, una aplicación de gestión de un club deportivo necesita
+guardar los datos de sus deportistas para que sigan disponibles cuando
+volvamos a ejecutar el programa.</p>
+<h2 id="32-abrir-un-fichero">3.2. Abrir un fichero</h2>
+<p>Python proporciona la función <code>open()</code> para trabajar con ficheros:</p>
+<pre><code class="language-python">fichero = open(&quot;deportistas.txt&quot;, &quot;r&quot;, encoding=&quot;utf-8&quot;)
+</code></pre>
+<p>Sus principales argumentos son:</p>
+<ul>
+<li>Nombre o ruta del fichero.</li>
+<li>Modo de apertura.</li>
+<li>Codificación, cuando trabajamos con texto.</li>
+</ul>
+<h2 id="33-modos-de-apertura">3.3. Modos de apertura</h2>
+<p>Modo   Descripción</p>
+<hr />
+<p><code>r</code>    Lectura. El fichero debe existir.
+  <code>w</code>    Escritura. Crea el fichero o sobrescribe su contenido.
+  <code>a</code>    Añadir información al final del fichero.
+  <code>x</code>    Crea un fichero nuevo. Falla si ya existe.
+  <code>b</code>    Modo binario. Se combina con otros modos.
+  <code>t</code>    Modo texto, predeterminado.
+  <code>+</code>    Permite lectura y escritura. Se combina con otros modos.</p>
+<p><strong>Importante:</strong> el modo <code>w</code> elimina el contenido anterior del fichero si
+ya existe.</p>
+<h2 id="34-escribir-en-un-fichero">3.4. Escribir en un fichero</h2>
+<p>Podemos utilizar <code>write()</code> para escribir texto:</p>
+<pre><code class="language-python">fichero = open(&quot;deportistas.txt&quot;, &quot;w&quot;, encoding=&quot;utf-8&quot;)
+
+fichero.write(&quot;Carlos - Atletismo\n&quot;)
+fichero.write(&quot;Lucía - Natación\n&quot;)
+fichero.write(&quot;Marcos - Ciclismo\n&quot;)
+
+fichero.close()
+</code></pre>
+<p>El carácter <code>\n</code> introduce un salto de línea.</p>
+<h2 id="35-anadir-informacion">3.5. Añadir información</h2>
+<p>Si queremos conservar el contenido anterior y añadir información al
+final, utilizamos el modo <code>a</code>:</p>
+<pre><code class="language-python">fichero = open(&quot;deportistas.txt&quot;, &quot;a&quot;, encoding=&quot;utf-8&quot;)
+
+fichero.write(&quot;Sara - Baloncesto\n&quot;)
+
+fichero.close()
+</code></pre>
+<h2 id="36-leer-un-fichero">3.6. Leer un fichero</h2>
+<p>Podemos leer todo el contenido con <code>read()</code>:</p>
+<pre><code class="language-python">fichero = open(&quot;deportistas.txt&quot;, &quot;r&quot;, encoding=&quot;utf-8&quot;)
+
+contenido = fichero.read()
+
+print(contenido)
+
+fichero.close()
+</code></pre>
+<p>También podemos leer una línea con <code>readline()</code>:</p>
+<pre><code class="language-python">fichero = open(&quot;deportistas.txt&quot;, &quot;r&quot;, encoding=&quot;utf-8&quot;)
+
+linea = fichero.readline()
+
+print(linea)
+
+fichero.close()
+</code></pre>
+<p>O todas las líneas mediante <code>readlines()</code>:</p>
+<pre><code class="language-python">fichero = open(&quot;deportistas.txt&quot;, &quot;r&quot;, encoding=&quot;utf-8&quot;)
+
+lineas = fichero.readlines()
+
+print(lineas)
+
+fichero.close()
+</code></pre>
+<h2 id="37-utilizar-with">3.7. Utilizar with</h2>
+<p>La forma recomendada de trabajar con ficheros es utilizar <code>with</code>.</p>
+<p>Esta estructura se encarga de cerrar el fichero automáticamente cuando
+termina el bloque, incluso si se produce una excepción.</p>
+<pre><code class="language-python">with open(&quot;deportistas.txt&quot;, &quot;r&quot;, encoding=&quot;utf-8&quot;) as fichero:
+    contenido = fichero.read()
+    print(contenido)
+</code></pre>
+<p>Para escribir:</p>
+<pre><code class="language-python">with open(&quot;deportistas.txt&quot;, &quot;w&quot;, encoding=&quot;utf-8&quot;) as fichero:
+    fichero.write(&quot;Carlos - Atletismo\n&quot;)
+    fichero.write(&quot;Lucía - Natación\n&quot;)
+</code></pre>
+<h2 id="38-recorrer-un-fichero-linea-a-linea">3.8. Recorrer un fichero línea a línea</h2>
+<p>Podemos recorrer directamente el objeto fichero:</p>
+<pre><code class="language-python">with open(&quot;deportistas.txt&quot;, &quot;r&quot;, encoding=&quot;utf-8&quot;) as fichero:
+    for linea in fichero:
+        print(linea.strip())
+</code></pre>
+<p><code>strip()</code> elimina los caracteres de espacio y salto de línea que
+aparecen en los extremos.</p>
+<h2 id="39-comprobar-si-existe-un-fichero">3.9. Comprobar si existe un fichero</h2>
+<p>Podemos utilizar el módulo <code>os</code>:</p>
+<pre><code class="language-python">import os
+
+if os.path.exists(&quot;deportistas.txt&quot;):
+    print(&quot;El fichero existe&quot;)
+else:
+    print(&quot;El fichero no existe&quot;)
+</code></pre>
+<p>También podemos trabajar con rutas mediante <code>pathlib</code>:</p>
+<pre><code class="language-python">from pathlib import Path
+
+ruta = Path(&quot;deportistas.txt&quot;)
+
+if ruta.exists():
+    print(&quot;El fichero existe&quot;)
+</code></pre>
+<h2 id="310-trabajar-con-ficheros-csv">3.10. Trabajar con ficheros CSV</h2>
+<p>Un fichero CSV permite almacenar datos organizados en columnas,
+separadas normalmente por comas o punto y coma.</p>
+<p>Ejemplo de contenido de <code>deportistas.csv</code>:</p>
+<pre><code class="language-text">nombre;deporte;edad;club
+Carlos;Atletismo;24;Club Norte
+Lucía;Natación;22;Club Acuático
+Marcos;Ciclismo;27;Pedal Team
+</code></pre>
+<p>Python proporciona el módulo <code>csv</code> para trabajar con este formato.</p>
+<h3 id="leer-un-csv">Leer un CSV</h3>
+<pre><code class="language-python">import csv
+
+with open(&quot;deportistas.csv&quot;, &quot;r&quot;, encoding=&quot;utf-8&quot;, newline=&quot;&quot;) as fichero:
+    lector = csv.reader(fichero, delimiter=&quot;;&quot;)
+
+    for fila in lector:
+        print(fila)
+</code></pre>
+<h3 id="escribir-un-csv">Escribir un CSV</h3>
+<pre><code class="language-python">import csv
+
+deportistas = [
+    [&quot;Carlos&quot;, &quot;Atletismo&quot;, 24, &quot;Club Norte&quot;],
+    [&quot;Lucía&quot;, &quot;Natación&quot;, 22, &quot;Club Acuático&quot;],
+    [&quot;Marcos&quot;, &quot;Ciclismo&quot;, 27, &quot;Pedal Team&quot;]
+]
+
+with open(&quot;deportistas.csv&quot;, &quot;w&quot;, encoding=&quot;utf-8&quot;, newline=&quot;&quot;) as fichero:
+    escritor = csv.writer(fichero, delimiter=&quot;;&quot;)
+
+    escritor.writerow([&quot;nombre&quot;, &quot;deporte&quot;, &quot;edad&quot;, &quot;club&quot;])
+    escritor.writerows(deportistas)
+</code></pre>
+<h3 id="ejercicios-ficheros">Ejercicios: ficheros</h3>
+<ol>
+<li>Crea un fichero de texto y escribe los nombres de cinco deportistas.</li>
+<li>Lee el fichero anterior y muestra su contenido.</li>
+<li>Solicita nombres de deportistas al usuario y almacénalos en un
+    fichero.</li>
+<li>Desarrolla un programa que permita añadir nuevos deportistas sin
+    borrar los anteriores.</li>
+<li>Crea un fichero CSV con información de cinco deportistas.</li>
+<li>Lee el CSV y muestra únicamente los deportistas que practican
+    atletismo.</li>
+<li>Desarrolla una aplicación que permita registrar participantes de una
+    competición en un fichero CSV.</li>
+</ol>
+<hr />
+<h1 id="4-diccionarios">4. Diccionarios</h1>
+<h2 id="41-que-es-un-diccionario">4.1. ¿Qué es un diccionario?</h2>
+<p>Un diccionario permite almacenar información organizada mediante parejas
+de <strong>clave y valor</strong>.</p>
+<p>A diferencia de las listas, donde accedemos a los elementos mediante
+índices, en los diccionarios accedemos mediante claves.</p>
+<pre><code class="language-python">deportista = {
+    &quot;nombre&quot;: &quot;Carlos&quot;,
+    &quot;edad&quot;: 24,
+    &quot;deporte&quot;: &quot;Atletismo&quot;,
+    &quot;dorsal&quot;: 15
+}
+</code></pre>
+<p>En este ejemplo:</p>
+<ul>
+<li><code>"nombre"</code> es una clave.</li>
+<li><code>"Carlos"</code> es su valor.</li>
+<li><code>"edad"</code> es otra clave.</li>
+<li><code>24</code> es su valor.</li>
+</ul>
+<p>Las claves deben ser únicas y deben ser de tipos inmutables, como
+cadenas, números o tuplas.</p>
+<h2 id="42-acceder-a-los-valores">4.2. Acceder a los valores</h2>
+<p>Podemos acceder a un valor indicando su clave:</p>
+<pre><code class="language-python">print(deportista[&quot;nombre&quot;])
+print(deportista[&quot;deporte&quot;])
+</code></pre>
+<p>Si intentamos acceder a una clave que no existe, obtendremos un
+<code>KeyError</code>.</p>
+<p>Podemos utilizar <code>get()</code> para consultar una clave de forma segura:</p>
+<pre><code class="language-python">print(deportista.get(&quot;club&quot;))
+print(deportista.get(&quot;club&quot;, &quot;Sin club&quot;))
+</code></pre>
+<h2 id="43-anadir-y-modificar-informacion">4.3. Añadir y modificar información</h2>
+<p>Para añadir una nueva pareja o modificar una existente utilizamos la
+clave:</p>
+<pre><code class="language-python">deportista[&quot;club&quot;] = &quot;Club Norte&quot;
+deportista[&quot;edad&quot;] = 25
+</code></pre>
+<h2 id="44-eliminar-informacion">4.4. Eliminar información</h2>
+<p>Podemos utilizar <code>del</code>:</p>
+<pre><code class="language-python">del deportista[&quot;dorsal&quot;]
+</code></pre>
+<p>También podemos utilizar <code>pop()</code>:</p>
+<pre><code class="language-python">deporte = deportista.pop(&quot;deporte&quot;)
+</code></pre>
+<h2 id="45-recorrer-un-diccionario">4.5. Recorrer un diccionario</h2>
+<p>Podemos recorrer únicamente las claves:</p>
+<pre><code class="language-python">for clave in deportista:
+    print(clave)
+</code></pre>
+<p>Recorrer los valores:</p>
+<pre><code class="language-python">for valor in deportista.values():
+    print(valor)
+</code></pre>
+<p>O recorrer claves y valores simultáneamente:</p>
+<pre><code class="language-python">for clave, valor in deportista.items():
+    print(clave, &quot;:&quot;, valor)
+</code></pre>
+<h2 id="46-diccionarios-con-varios-registros">4.6. Diccionarios con varios registros</h2>
+<p>Una aplicación real puede necesitar almacenar información de muchos
+deportistas.</p>
+<p>Podemos utilizar una lista de diccionarios:</p>
+<pre><code class="language-python">deportistas = [
+    {&quot;nombre&quot;: &quot;Carlos&quot;, &quot;deporte&quot;: &quot;Atletismo&quot;, &quot;marca&quot;: 10.8},
+    {&quot;nombre&quot;: &quot;Lucía&quot;, &quot;deporte&quot;: &quot;Natación&quot;, &quot;marca&quot;: 58.4},
+    {&quot;nombre&quot;: &quot;Marcos&quot;, &quot;deporte&quot;: &quot;Ciclismo&quot;, &quot;marca&quot;: 42.5}
+]
+
+for deportista in deportistas:
+    print(deportista[&quot;nombre&quot;], deportista[&quot;deporte&quot;])
+</code></pre>
+<p>También podemos utilizar un diccionario cuyos valores sean otros
+diccionarios:</p>
+<pre><code class="language-python">clubes = {
+    &quot;C001&quot;: {
+        &quot;nombre&quot;: &quot;Club Norte&quot;,
+        &quot;deporte&quot;: &quot;Atletismo&quot;,
+        &quot;localidad&quot;: &quot;Puertollano&quot;
+    },
+    &quot;C002&quot;: {
+        &quot;nombre&quot;: &quot;Club Acuático&quot;,
+        &quot;deporte&quot;: &quot;Natación&quot;,
+        &quot;localidad&quot;: &quot;Ciudad Real&quot;
+    }
+}
+
+print(clubes[&quot;C001&quot;][&quot;nombre&quot;])
+</code></pre>
+<h2 id="47-metodos-habituales-de-los-diccionarios">4.7. Métodos habituales de los diccionarios</h2>
+<p>Método       Utilidad</p>
+<hr />
+<p><code>keys()</code>     Devuelve las claves.
+  <code>values()</code>   Devuelve los valores.
+  <code>items()</code>    Devuelve las parejas clave-valor.
+  <code>get()</code>      Consulta una clave de forma segura.
+  <code>pop()</code>      Elimina una clave y devuelve su valor.
+  <code>update()</code>   Actualiza el diccionario.
+  <code>clear()</code>    Elimina todos los elementos.</p>
+<h3 id="ejercicios-diccionarios">Ejercicios: diccionarios</h3>
+<ol>
+<li>Crea un diccionario que almacene los datos de un deportista: nombre,
+    edad, deporte, dorsal y club.</li>
+<li>Permite modificar el club de un deportista.</li>
+<li>Recorre un diccionario y muestra todas sus claves y valores.</li>
+<li>Crea una lista con cinco diccionarios que representen deportistas.
+    Cada uno tendrá nombre, deporte y marca.</li>
+<li>Desarrolla un buscador de deportistas utilizando el dorsal como
+    identificador.</li>
+<li>Crea un diccionario que almacene diferentes clubes y sus respectivas
+    plantillas.</li>
+</ol>
+<hr />
+<h1 id="5-tuplas-y-conjuntos">5. Tuplas y conjuntos</h1>
+<h2 id="51-tuplas">5.1. Tuplas</h2>
+<h3 id="que-es-una-tupla">¿Qué es una tupla?</h3>
+<p>Una tupla es una estructura de datos que permite almacenar varios
+elementos, igual que una lista. La diferencia principal es que una tupla
+es <strong>inmutable</strong>: una vez creada, no podemos modificar, añadir ni
+eliminar directamente sus elementos.</p>
+<p>Las tuplas se suelen definir utilizando paréntesis:</p>
+<pre><code class="language-python">coordenadas = (40.4168, -3.7038)
+resultados = (10.8, 11.2, 10.9)
+</code></pre>
+<h3 id="acceder-a-sus-elementos">Acceder a sus elementos</h3>
+<p>Al igual que las listas, las tuplas utilizan índices que comienzan en
+cero:</p>
+<pre><code class="language-python">resultados = (10.8, 11.2, 10.9)
+
+print(resultados[0])
+print(resultados[-1])
+</code></pre>
+<h3 id="recorrer-una-tupla">Recorrer una tupla</h3>
+<p>Podemos utilizar un bucle <code>for</code>:</p>
+<pre><code class="language-python">marcas = (10.8, 11.2, 10.9)
+
+for marca in marcas:
+    print(marca)
+</code></pre>
+<h3 id="operaciones-habituales">Operaciones habituales</h3>
+<p>Podemos utilizar <code>len()</code>, <code>in</code>, <code>count()</code> e <code>index()</code>:</p>
+<pre><code class="language-python">resultados = (10.8, 11.2, 10.8, 10.9)
+
+print(len(resultados))
+print(10.8 in resultados)
+print(resultados.count(10.8))
+print(resultados.index(11.2))
+</code></pre>
+<p>Una tupla de un solo elemento necesita una coma:</p>
+<pre><code class="language-python">dorsal = (15,)
+</code></pre>
+<h3 id="cuando-utilizar-una-tupla">¿Cuándo utilizar una tupla?</h3>
+<p>Utilizaremos una tupla cuando queramos representar un conjunto de datos
+que no debería modificarse.</p>
+<p>Por ejemplo, unas coordenadas, una fecha de celebración o unos
+resultados que queremos conservar como referencia.</p>
+<h3 id="diferencias-entre-listas-y-tuplas">Diferencias entre listas y tuplas</h3>
+<p>Característica       Lista   Tupla</p>
+<hr />
+<p>Sintaxis             <code>[]</code>    <code>()</code>
+  Ordenada             Sí      Sí
+  Modificable          Sí      No
+  Permite duplicados   Sí      Sí
+  Acceso por índice    Sí      Sí</p>
+<h2 id="52-conjuntos-set">5.2. Conjuntos (set)</h2>
+<h3 id="que-es-un-conjunto">¿Qué es un conjunto?</h3>
+<p>Un conjunto es una estructura de datos que almacena elementos <strong>sin
+duplicados</strong> y que no utiliza índices para acceder a ellos.</p>
+<p>Se define utilizando llaves <code>{}</code> o mediante <code>set()</code>:</p>
+<pre><code class="language-python">deportes = {&quot;Atletismo&quot;, &quot;Natación&quot;, &quot;Ciclismo&quot;}
+</code></pre>
+<p>Si introducimos elementos repetidos, Python los almacena una sola vez:</p>
+<pre><code class="language-python">deportes = {
+    &quot;Atletismo&quot;,
+    &quot;Natación&quot;,
+    &quot;Atletismo&quot;,
+    &quot;Ciclismo&quot;
+}
+
+print(deportes)
+</code></pre>
+<p>Un conjunto vacío se crea con <code>set()</code>, ya que <code>{}</code> representa un
+diccionario vacío.</p>
+<h3 id="anadir-y-eliminar-elementos">Añadir y eliminar elementos</h3>
+<pre><code class="language-python">deportes = {&quot;Atletismo&quot;, &quot;Natación&quot;}
+
+deportes.add(&quot;Ciclismo&quot;)
+deportes.remove(&quot;Natación&quot;)
+</code></pre>
+<p><code>remove()</code> genera un error si el elemento no existe. Podemos utilizar
+<code>discard()</code> para evitar ese error:</p>
+<pre><code class="language-python">deportes.discard(&quot;Baloncesto&quot;)
+</code></pre>
+<h3 id="operaciones-entre-conjuntos">Operaciones entre conjuntos</h3>
+<p>Los conjuntos permiten realizar operaciones matemáticas.</p>
+<pre><code class="language-python">deportes_club_a = {&quot;Atletismo&quot;, &quot;Natación&quot;, &quot;Ciclismo&quot;}
+deportes_club_b = {&quot;Natación&quot;, &quot;Baloncesto&quot;, &quot;Ciclismo&quot;}
+</code></pre>
+<p><strong>Unión:</strong> elementos que aparecen en cualquiera de los dos conjuntos.</p>
+<pre><code class="language-python">print(deportes_club_a | deportes_club_b)
+</code></pre>
+<p><strong>Intersección:</strong> elementos comunes.</p>
+<pre><code class="language-python">print(deportes_club_a &amp; deportes_club_b)
+</code></pre>
+<p><strong>Diferencia:</strong> elementos que están en el primer conjunto, pero no en el
+segundo.</p>
+<pre><code class="language-python">print(deportes_club_a - deportes_club_b)
+</code></pre>
+<p><strong>Diferencia simétrica:</strong> elementos que están en uno de los conjuntos,
+pero no en ambos.</p>
+<pre><code class="language-python">print(deportes_club_a ^ deportes_club_b)
+</code></pre>
+<h3 id="cuando-utilizar-conjuntos">¿Cuándo utilizar conjuntos?</h3>
+<p>Son especialmente útiles cuando necesitamos eliminar duplicados o
+comprobar si un elemento pertenece a una colección.</p>
+<pre><code class="language-python">deportes_practicados = [
+    &quot;Atletismo&quot;,
+    &quot;Natación&quot;,
+    &quot;Atletismo&quot;,
+    &quot;Ciclismo&quot;,
+    &quot;Natación&quot;
+]
+
+deportes_unicos = set(deportes_practicados)
+
+print(deportes_unicos)
+</code></pre>
+<h3 id="ejercicios-tuplas-y-conjuntos">Ejercicios: tuplas y conjuntos</h3>
+<ol>
+<li>Crea una tupla con los resultados de cinco pruebas deportivas y
+    muestra cada resultado.</li>
+<li>Explica qué diferencia existe entre una lista y una tupla e indica
+    un caso en el que utilizarías cada una.</li>
+<li>Crea un conjunto con los deportes practicados por los integrantes de
+    un club. Introduce valores repetidos y comprueba qué ocurre.</li>
+<li>Crea dos conjuntos con los deportes ofertados por dos clubes y
+    muestra los deportes que comparten.</li>
+<li>A partir de una lista de deportes, elimina los valores duplicados
+    utilizando un conjunto.</li>
+<li>Crea un programa que permita registrar deportes practicados sin
+    almacenar duplicados.</li>
+</ol>
+<hr />
+<h1 id="6-proyecto-practico-gestion-de-un-club-deportivo">6. Proyecto práctico: gestión de un club deportivo</h1>
+<h2 id="descripcion">Descripción</h2>
+<p>Vamos a desarrollar una aplicación de consola para gestionar los
+deportistas de un club.</p>
+<p>La aplicación permitirá registrar deportistas, consultar la plantilla,
+buscar participantes, modificar sus datos y eliminarlos.</p>
+<p>Los datos deberán almacenarse en un fichero CSV para que permanezcan
+disponibles cuando cerremos y volvamos a ejecutar el programa.</p>
+<h2 id="menu-de-la-aplicacion">Menú de la aplicación</h2>
+<pre><code class="language-text">================================
+      GESTIÓN CLUB DEPORTIVO
+================================
+1. Registrar deportista
+2. Mostrar plantilla
+3. Buscar deportista
+4. Modificar datos
+5. Eliminar deportista
+6. Mostrar estadísticas
+0. Salir
+================================
+</code></pre>
+<h2 id="informacion-de-cada-deportista">Información de cada deportista</h2>
+<p>Cada deportista tendrá los siguientes datos:</p>
+<ul>
+<li>DNI o identificador.</li>
+<li>Nombre.</li>
+<li>Edad.</li>
+<li>Deporte.</li>
+<li>Club o equipo.</li>
+<li>Número de dorsal.</li>
+</ul>
+<h2 id="estructura-de-datos">Estructura de datos</h2>
+<p>Los deportistas se almacenarán en una lista de diccionarios:</p>
+<pre><code class="language-python">deportistas = [
+    {
+        &quot;dni&quot;: &quot;11111111A&quot;,
+        &quot;nombre&quot;: &quot;Carlos&quot;,
+        &quot;edad&quot;: 24,
+        &quot;deporte&quot;: &quot;Atletismo&quot;,
+        &quot;club&quot;: &quot;Club Norte&quot;,
+        &quot;dorsal&quot;: 15
+    },
+    {
+        &quot;dni&quot;: &quot;22222222B&quot;,
+        &quot;nombre&quot;: &quot;Lucía&quot;,
+        &quot;edad&quot;: 22,
+        &quot;deporte&quot;: &quot;Natación&quot;,
+        &quot;club&quot;: &quot;Club Acuático&quot;,
+        &quot;dorsal&quot;: 8
+    }
+]
+</code></pre>
+<h2 id="almacenamiento">Almacenamiento</h2>
+<p>Los deportistas deberán guardarse en un fichero CSV llamado
+<code>deportistas.csv</code>.</p>
+<p>La aplicación deberá:</p>
+<ul>
+<li>Cargar los deportistas al iniciar.</li>
+<li>Guardar los cambios realizados.</li>
+<li>Evitar identificadores duplicados.</li>
+<li>Controlar los errores al leer o escribir el fichero.</li>
+</ul>
+<h2 id="funcionalidades">Funcionalidades</h2>
+<p><strong>1. Registrar deportista</strong></p>
+<p>Solicitar los datos y comprobar que el identificador no existe
+previamente. La edad y el dorsal deberán ser valores válidos.</p>
+<p><strong>2. Mostrar plantilla</strong></p>
+<p>Mostrar todos los deportistas almacenados, indicando sus datos.</p>
+<p><strong>3. Buscar deportista</strong></p>
+<p>Permitir buscar un deportista mediante su DNI o identificador.</p>
+<p><strong>4. Modificar datos</strong></p>
+<p>Solicitar el identificador de un deportista y permitir actualizar sus
+datos.</p>
+<p><strong>5. Eliminar deportista</strong></p>
+<p>Eliminar un deportista a partir de su identificador.</p>
+<p><strong>6. Mostrar estadísticas</strong></p>
+<p>Mostrar:</p>
+<ul>
+<li>Número total de deportistas.</li>
+<li>Edad media de la plantilla.</li>
+<li>Deportista de mayor edad.</li>
+<li>Deportista de menor edad.</li>
+<li>Deportes diferentes practicados en el club.</li>
+</ul>
+<h2 id="condiciones-tecnicas">Condiciones técnicas</h2>
+<ul>
+<li>Utilizar listas y diccionarios.</li>
+<li>Utilizar bucles y estructuras condicionales.</li>
+<li>Utilizar métodos y funciones de Python.</li>
+<li>Trabajar con ficheros CSV.</li>
+<li>Gestionar las excepciones necesarias.</li>
+<li>Organizar el código en funciones para evitar repetir instrucciones.</li>
+<li>Comprobar que los datos introducidos por el usuario son válidos.</li>
+</ul>
+<h2 id="ampliaciones-voluntarias">Ampliaciones voluntarias</h2>
+<ul>
+<li>Permitir ordenar los deportistas por edad.</li>
+<li>Mostrar los deportistas de un deporte concreto.</li>
+<li>Calcular la edad media por deporte.</li>
+<li>Mostrar los deportes diferentes utilizando un conjunto.</li>
+<li>Incorporar una opción para exportar una clasificación.</li>
+</ul>
+<hr />
+<h1 id="7-resumen-de-la-unidad">7. Resumen de la unidad</h1>
+<p>Contenido      Qué hemos aprendido</p>
+<hr />
+<p>Listas         Almacenar y modificar colecciones ordenadas.
+  Matrices       Representar información en filas y columnas.
+  Excepciones    Controlar errores durante la ejecución.
+  Ficheros       Guardar y recuperar información.
+  Diccionarios   Organizar información mediante claves y valores.
+  Tuplas         Almacenar colecciones que no queremos modificar.
+  Conjuntos      Gestionar elementos sin duplicados.</p>
+<p>El objetivo final es que seamos capaces de desarrollar aplicaciones que
+no solo realicen operaciones, sino que también gestionen información y
+la conserven de forma permanente.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js"></script>
+        <script src="../../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
