@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>Práctica: Buscar el tesoro - CEDAP</title>
+        <link href="../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../../css/brands.min.css" rel="stylesheet">
+        <link href="../../../css/solid.min.css" rel="stylesheet">
+        <link href="../../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../..">CEDAP</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../../.." class="nav-link">🐍 Desarrollo de Aplicaciones en Python</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Entornos</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../entornos/ra/" class="dropdown-item">Ra</a>
+</li>
+                                    
+<li>
+    <a href="../../../entornos/ud1/" class="dropdown-item">UD1. Entornos de desarrollo en Python</a>
+</li>
+                                    
+<li>
+    <a href="../../../entornos/ud2/" class="dropdown-item">UD2. Fundamentos y nomenclatura en Python</a>
+</li>
+                                    
+<li>
+    <a href="../../../entornos/ud3/" class="dropdown-item">UD3. Gestión de proyectos Python: Git, entornos virtuales y dependencias</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Estructuras</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../ra/" class="dropdown-item">Ra</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Ud1</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../ud1/ejercicios_condi_compuestos/" class="dropdown-item">Ejercicios: Operadores lógicos en Python</a>
+</li>
+            
+<li>
+    <a href="../../ud1/ejercicios_operaciones/" class="dropdown-item">Ejercicios de Python: entrada de datos y operaciones</a>
+</li>
+            
+<li>
+    <a href="../../ud1/estru_control/" class="dropdown-item">UD1. Estructuras de control en Python</a>
+</li>
+            
+<li>
+    <a href="../../ud1/ud1_ejercicios/" class="dropdown-item">UD1. Ejercicios: Estructuras de control en Python</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Ud2</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">Práctica: Buscar el tesoro</a>
+</li>
+            
+<li>
+    <a href="../ud2/" class="dropdown-item">UD2. Estructuras de datos y gestión de información en Python</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../../ud1/ud1_ejercicios/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../ud2/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#practica-buscar-el-tesoro" class="nav-link">Práctica: Buscar el tesoro</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#1-objetivo" class="nav-link">1. Objetivo</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#menu-principal" class="nav-link">Menú principal</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#funcionalidades" class="nav-link">Funcionalidades</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#requisitos-tecnicos" class="nav-link">Requisitos técnicos</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#6-entrega" class="nav-link">6. Entrega</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="practica-buscar-el-tesoro">Práctica: Buscar el tesoro</h1>
+<h2 id="1-objetivo">1. Objetivo</h2>
+<p>Desarrollar una aplicación de consola en Python que simule un juego de
+búsqueda del tesoro.</p>
+<p>El programa utilizará una <strong>matriz de 3 filas y 3 columnas</strong>. En una de
+sus posiciones se encontrará un tesoro que se colocará de forma
+aleatoria al iniciar la aplicación.</p>
+<p>El jugador deberá intentar localizarlo indicando una fila y una columna.</p>
+<p>Con esta práctica trabajaremos listas bidimensionales, índices, bucles,
+condicionales, funciones, números aleatorios y control de excepciones.</p>
+<h2 id="menu-principal">Menú principal</h2>
+<p>Al iniciar el programa se creará el mapa y se mostrará el siguiente
+menú:</p>
+<pre><code class="language-text">================================
+          BUSCAR EL TESORO
+================================
+1. Ver mapa actual
+2. Ver mapa resuelto
+3. Jugar
+4. Ver estadísticas
+0. Salir
+================================
+</code></pre>
+<h2 id="funcionalidades">Funcionalidades</h2>
+<h3 id="opcion-1-ver-mapa-actual">Opción 1. Ver mapa actual</h3>
+<p>Mostrar la matriz sin revelar dónde está el tesoro. Se utilizará <code>?</code>
+para representar las casillas.</p>
+<p>Ejemplo:</p>
+<p><img alt="alt text" src="../image.png" /></p>
+<h3 id="opcion-2-ver-mapa-resuelto">Opción 2. Ver mapa resuelto</h3>
+<p>Mostrar la posición real del tesoro utilizando <code>T</code>.</p>
+<p>Ejemplo:</p>
+<p><img alt="alt text" src="../image-1.png" /></p>
+<p>Esta opción es informativa y no debe modificar el mapa ni contar como
+intento.</p>
+<h3 id="opcion-3-jugar">Opción 3. Jugar</h3>
+<p>Solicitar al usuario una fila y una columna, ambas entre 1 y 3.</p>
+<ul>
+<li>Si la posición no es válida, mostrar un mensaje de error.</li>
+<li>Si la posición es válida pero no contiene el tesoro, mostrar:
+    <code>¡Aquí no está el tesoro! Sigue buscando.</code></li>
+<li>Si el jugador encuentra el tesoro, mostrar un mensaje de
+    felicitación y generar automáticamente un nuevo mapa con el tesoro
+    en una posición aleatoria.</li>
+</ul>
+<p>El nuevo tesoro puede aparecer en cualquier casilla, incluida la
+posición anterior.</p>
+<h3 id="ver-estadisticas">Ver estadísticas</h3>
+<p>Mostrar:</p>
+<ul>
+<li>Número de intentos realizados para encontrar el tesoro actual.</li>
+<li>Número total de tesoros encontrados.</li>
+<li>Número total de mapas generados.</li>
+</ul>
+<p>El contador de intentos se reinicia al encontrar un tesoro. Los otros
+dos contadores se mantienen durante toda la ejecución.</p>
+<h3 id="opcion-0-salir">Opción 0. Salir</h3>
+<p>Finalizar el programa mostrando un mensaje de despedida.</p>
+<h2 id="requisitos-tecnicos">Requisitos técnicos</h2>
+<ol>
+<li>Crear una matriz de 3x3.</li>
+<li>Colocar el tesoro en una posición aleatoria utilizando el módulo
+    <code>random</code>.</li>
+<li>Utilizar funciones para organizar el código.</li>
+<li>Utilizar bucles para mostrar el menú y recorrer la matriz.</li>
+<li>Utilizar estructuras condicionales para controlar las opciones y
+    comprobar si se ha encontrado el tesoro.</li>
+<li>Controlar los errores cuando el usuario introduzca texto en lugar de
+    números.</li>
+<li>Validar que las filas y columnas estén comprendidas entre 1 y 3.</li>
+<li>Mostrar el mapa actual sin revelar el tesoro.</li>
+<li>Mostrar el mapa resuelto cuando se solicite.</li>
+<li>Generar un nuevo mapa cuando se encuentre el tesoro.</li>
+<li>Mantener y mostrar las estadísticas de la partida.</li>
+</ol>
+<h2 id="6-entrega">6. Entrega</h2>
+<p>Se entregará un único archivo Python llamado <code>buscar_tesoro.py</code>.</p>
+<p>El código deberá estar organizado, utilizar nombres de variables
+descriptivos y contener comentarios que faciliten su comprensión.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js"></script>
+        <script src="../../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
