@@ -198,7 +198,7 @@ para representar las casillas.</p>
 <p>Ejemplo:</p>
 <p><img alt="alt text" src="../image.png" /></p>
 <h3 id="opcion-2-ver-mapa-resuelto">Opción 2. Ver mapa resuelto</h3>
-<p>Mostrar la posición real del tesoro utilizando <code>T</code>.</p>
+<p>Mostrar la posición real del tesoro utilizando <code>💎</code>.</p>
 <p>Ejemplo:</p>
 <p><img alt="alt text" src="../image-1.png" /></p>
 <p>Esta opción es informativa y no debe modificar el mapa ni contar como
@@ -212,6 +212,7 @@ intento.</p>
 <li>Si el jugador encuentra el tesoro, mostrar un mensaje de
     felicitación y generar automáticamente un nuevo mapa con el tesoro
     en una posición aleatoria.</li>
+<li><span style="color: blue;">Cuando se selecciona una casilla que ya ha sido consultada se indica un mensaje de que esa casilla ya ha sido consultada, y cuenta como intento.</span></li>
 </ul>
 <p>El nuevo tesoro puede aparecer en cualquier casilla, incluida la
 posición anterior.</p>
@@ -221,9 +222,11 @@ posición anterior.</p>
 <li>Número de intentos realizados para encontrar el tesoro actual.</li>
 <li>Número total de tesoros encontrados.</li>
 <li>Número total de mapas generados.</li>
+<li><span style="color: blue;">Mejor partida jugada (encuentra el tesoro más pronto)</span></li>
+<li><span style="color: blue;">Peor partida jugada (encuentra el tesoro con un máximo de intentos)</span></li>
 </ul>
-<p>El contador de intentos se reinicia al encontrar un tesoro. Los otros
-dos contadores se mantienen durante toda la ejecución.</p>
+<p>El contador de intentos se reinicia al encontrar un tesoro. Los <span style="color: blue;">demás</span>
+ contadores se mantienen durante toda la ejecución.</p>
 <h3 id="opcion-0-salir">Opción 0. Salir</h3>
 <p>Finalizar el programa mostrando un mensaje de despedida.</p>
 <h2 id="requisitos-tecnicos">Requisitos técnicos</h2>
